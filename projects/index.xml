@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Brandon Castellano</title>
-    <link>http://www.bcastell.com/projects/index.xml</link>
+    <link>https://www.bcastell.com/projects/index.xml</link>
     <description>Recent content in Projects on Brandon Castellano</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; 2017, Brandon Castellano.  All rights reserved.</copyright>
-    <atom:link href="http://www.bcastell.com/projects/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.bcastell.com/projects/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Biopsy Bot</title>
-      <link>http://www.bcastell.com/projects/BiopsyBot/</link>
+      <link>https://www.bcastell.com/projects/BiopsyBot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.bcastell.com/projects/BiopsyBot/</guid>
+      <guid>https://www.bcastell.com/projects/BiopsyBot/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;http://www.bcastell.com/img/projects/biopsybot/header.jpg&#34; alt=&#34;Biopsy Bot in Action&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.bcastell.com/img/projects/biopsybot/header.jpg&#34; alt=&#34;Biopsy Bot in Action&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;general-overview&#34;&gt;General Overview&lt;/h2&gt;
 
@@ -63,7 +63,7 @@
 
 &lt;p&gt;This was a group project, with the team involving me (Brandon Castellano), Daren Michener, Ryan Mantha, and Brock Turner. Here’s a picture of us hard at work on the software, in a lab room we probably spent far too much time in together (from left-to-right is Brock, Ryan, and Daren):&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;http://www.bcastell.com/img/projects/biopsybot/team.jpg&#34; alt=&#34;Biopsy Bot in Action&#34; width=&#34;90%&#34; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://www.bcastell.com/img/projects/biopsybot/team.jpg&#34; alt=&#34;Biopsy Bot in Action&#34; width=&#34;90%&#34; /&gt;&lt;/center&gt;
 &lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Overall the project was very successful, achieving all of the requirements set by the task, and was one of the highest ranking competetors in field testing.  Although challenging at times, it was a very fun project to work on, and I had a great time working with the team.  Lastly, thanks again to Darren, Brock, and Ryan, for all their ingenuity, hard work, and dedication in helping make Biopsy Bot.&lt;/p&gt;
@@ -72,10 +72,10 @@
     
     <item>
       <title>DVR-Scan</title>
-      <link>http://www.bcastell.com/projects/DVR-Scan/</link>
+      <link>https://www.bcastell.com/projects/DVR-Scan/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.bcastell.com/projects/DVR-Scan/</guid>
+      <guid>https://www.bcastell.com/projects/DVR-Scan/</guid>
       <description>
 
 &lt;p&gt;For a full list of projects, see my Github repos.&lt;/p&gt;
@@ -92,10 +92,10 @@
     
     <item>
       <title>PySceneDetect</title>
-      <link>http://www.bcastell.com/projects/PySceneDetect/</link>
+      <link>https://www.bcastell.com/projects/PySceneDetect/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.bcastell.com/projects/PySceneDetect/</guid>
+      <guid>https://www.bcastell.com/projects/PySceneDetect/</guid>
       <description>
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
