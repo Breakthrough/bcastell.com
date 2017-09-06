@@ -2,137 +2,137 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.bcastell.com/blog/2015/10/10/migrate-from-jekyll/</loc>
+    <loc>http://www.bcastell.com/blog/2015/10/10/migrate-from-jekyll/</loc>
     <lastmod>2015-10-10T13:07:31+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/blog/2015/10/02/linked-post/</loc>
+    <loc>http://www.bcastell.com/blog/2015/10/02/linked-post/</loc>
     <lastmod>2015-10-02T21:49:20+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/blog/2015/09/17/go-is-for-lovers/</loc>
+    <loc>http://www.bcastell.com/blog/2015/09/17/go-is-for-lovers/</loc>
     <lastmod>2015-09-17T13:47:08+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/blog/2015/08/03/hugo-is-for-lovers/</loc>
+    <loc>http://www.bcastell.com/blog/2015/08/03/hugo-is-for-lovers/</loc>
     <lastmod>2015-08-03T13:39:46+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/blog/2015/06/24/creating-a-new-theme/</loc>
+    <loc>http://www.bcastell.com/blog/2015/06/24/creating-a-new-theme/</loc>
     <lastmod>2015-06-24T13:50:46+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/projects/BiopsyBot/</loc>
+    <loc>http://www.bcastell.com/projects/BiopsyBot/</loc>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/blog/</loc>
+    <loc>http://www.bcastell.com/blog/</loc>
     <lastmod>2015-10-10T13:07:31+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/</loc>
+    <loc>http://www.bcastell.com/</loc>
     <lastmod>2015-10-10T13:07:31+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/categories/</loc>
+    <loc>http://www.bcastell.com/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/contact/</loc>
+    <loc>http://www.bcastell.com/contact/</loc>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/projects/DVR-Scan/</loc>
+    <loc>http://www.bcastell.com/projects/DVR-Scan/</loc>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/faq/</loc>
+    <loc>http://www.bcastell.com/faq/</loc>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/tags/go/</loc>
+    <loc>http://www.bcastell.com/tags/go/</loc>
     <lastmod>2015-09-17T13:47:08+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/tags/golang/</loc>
+    <loc>http://www.bcastell.com/tags/golang/</loc>
     <lastmod>2015-10-02T21:49:20+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/tags/hugo/</loc>
+    <loc>http://www.bcastell.com/tags/hugo/</loc>
     <lastmod>2015-10-02T21:49:20+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/tags/ipsum/</loc>
+    <loc>http://www.bcastell.com/tags/ipsum/</loc>
     <lastmod>2015-10-10T13:07:31+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/categories/lorem/</loc>
+    <loc>http://www.bcastell.com/categories/lorem/</loc>
     <lastmod>2015-10-10T13:07:31+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/tags/programming/</loc>
+    <loc>http://www.bcastell.com/tags/programming/</loc>
     <lastmod>2015-10-02T21:49:20+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/categories/programming/</loc>
+    <loc>http://www.bcastell.com/categories/programming/</loc>
     <lastmod>2015-10-02T21:49:20+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/projects/</loc>
+    <loc>http://www.bcastell.com/projects/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/projects/</loc>
+    <loc>http://www.bcastell.com/projects/</loc>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/categories/pseudo/</loc>
+    <loc>http://www.bcastell.com/categories/pseudo/</loc>
     <lastmod>2015-08-03T13:39:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/projects/PySceneDetect/</loc>
+    <loc>http://www.bcastell.com/projects/PySceneDetect/</loc>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/categories/starting/</loc>
+    <loc>http://www.bcastell.com/categories/starting/</loc>
     <lastmod>2015-06-24T13:50:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/tags/</loc>
+    <loc>http://www.bcastell.com/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/tags/theme/</loc>
+    <loc>http://www.bcastell.com/tags/theme/</loc>
     <lastmod>2015-10-02T21:49:20+02:00</lastmod>
     <priority>0</priority>
   </url>
