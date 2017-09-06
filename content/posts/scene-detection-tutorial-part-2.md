@@ -3,7 +3,7 @@ title = "Scene Detection with Python and OpenCV, Part 2"
 date = "2017-09-06T01:14:08+02:00"
 aliases = ["tech-articles/pyscenedetect-tutorial-part-2"]
 tags = ["python", "technical article", "tutorial"]
-categories = ["programming"]
+categories = ["Tutorials", "Programming"]
 banner = "img/banners/banner-2.jpg"
 +++
 

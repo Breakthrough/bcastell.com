@@ -10,8 +10,14 @@ googleAnalytics = ""
 # Define the number of posts per page
 paginate = 10
 
+pygmentsStyle = "monokai"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
 [params]
-    viewMorePostLink = "/blog/"
+    viewMorePostLink = "/posts/"
     author = "Breakthrough"
 
     # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
@@ -42,7 +48,8 @@ paginate = 10
     longitude = "-77.028333"
 
 [Permalinks]
-    blog = "/blog/:year/:month/:day/:filename/"
+    #blog = "/blog/:filename/"
+    posts = "/posts/:filename/"
 
 [[params.menu]]
     name = "Home"
@@ -56,7 +63,7 @@ paginate = 10
 
 [[params.menu]]
     name = "Posts"
-    url  = "/blog/"
+    url  = "/posts/"
     weight = 3
 
 [[params.menu]]

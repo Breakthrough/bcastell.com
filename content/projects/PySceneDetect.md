@@ -1,6 +1,9 @@
 +++
 title = "PySceneDetect"
 id = "pyscenedetect-projectpage"
+categories = ["Projects"]
+type = "posts"
+tags = ["Python", "OpenCV", "FOSS"]
 +++
 
 

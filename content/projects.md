@@ -19,7 +19,8 @@ Click here to view the main PySceneDetect project page.
 -------------------------------------------------------------------------------
 
 <a href="{{< relref "projects/PySceneDetect.md" >}}">
-### DVR-Scan &#x1f4fc;
+### DVR-Scan <img src="/img/projects/dvr-scan/logo_small.png" alt="DVR-Scan Logo"/>
+
 </a>
 
 DVR-Scan is a cross-platform command-line (CLI) application that automatically detects motion events in video files (e.g. security camera footage). In addition to locating both the time and duration of each motion event, DVR-Scan will save the footage of each motion event to a new, separate video clip. Not only is DVR-Scan free and open-source software (you can find DVR-Scan on Github), it's written in Python, based on Numpy and OpenCV, and was built to be extendable and hackable.
@@ -44,7 +45,7 @@ Click here to view the Biopsy Bot project page.
 
 ## Other Open-Source Projects
 
-For a full list of open-source software projects I've created, maintained, or otherwise contributed to, you can check out <a href="https://github.com/Breakthrough">my profile page on Github</a> (username Breakthrough).
+For a full list of projects on this website, see <a href="/categories/projects/">the <b>Projects</b> category</a>.  For a full list of open-source software projects I've created, maintained, or otherwise contributed to, you can check out <a href="https://github.com/Breakthrough">my profile page on Github</a> (username Breakthrough).
 
 -------------------------------------------------------------------------------
 

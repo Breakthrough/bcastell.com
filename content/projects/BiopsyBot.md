@@ -1,6 +1,8 @@
 +++
 title = "Biopsy Bot"
 id = "biopsybot-projectpage"
+categories = ["Projects"]
+type = "posts"
 +++
 
 <img src="/img/projects/biopsybot/header.jpg" alt="Biopsy Bot in Action" width="100%" />
