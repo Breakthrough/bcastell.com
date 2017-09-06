@@ -1,4 +1,4 @@
-baseurl = "http://www.bcastell.com/"
+baseurl = "https://www.bcastell.com/"
 title = "Brandon Castellano"
 theme = "hugo-universal-theme"
 languageCode = "en-us"
