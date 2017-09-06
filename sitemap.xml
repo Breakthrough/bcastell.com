@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.bcastell.com/blog/2017/09/06/scene-detection-tutorial-part-2/</loc>
+    <lastmod>2017-09-06T01:14:08+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.bcastell.com/blog/2017/09/06/scene-detection-tutorial-part-1/</loc>
     <lastmod>2017-09-06T01:12:08+02:00</lastmod>
   </url>
@@ -37,13 +42,13 @@
   
   <url>
     <loc>https://www.bcastell.com/blog/</loc>
-    <lastmod>2017-09-06T01:12:08+02:00</lastmod>
+    <lastmod>2017-09-06T01:14:08+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.bcastell.com/</loc>
-    <lastmod>2017-09-06T01:12:08+02:00</lastmod>
+    <lastmod>2017-09-06T01:14:08+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -102,7 +107,7 @@
   
   <url>
     <loc>https://www.bcastell.com/categories/programming/</loc>
-    <lastmod>2017-09-06T01:12:08+02:00</lastmod>
+    <lastmod>2017-09-06T01:14:08+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -127,7 +132,7 @@
   
   <url>
     <loc>https://www.bcastell.com/tags/python/</loc>
-    <lastmod>2017-09-06T01:12:08+02:00</lastmod>
+    <lastmod>2017-09-06T01:14:08+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -144,7 +149,7 @@
   
   <url>
     <loc>https://www.bcastell.com/tags/technical-article/</loc>
-    <lastmod>2017-09-06T01:12:08+02:00</lastmod>
+    <lastmod>2017-09-06T01:14:08+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -156,7 +161,7 @@
   
   <url>
     <loc>https://www.bcastell.com/tags/tutorial/</loc>
-    <lastmod>2017-09-06T01:12:08+02:00</lastmod>
+    <lastmod>2017-09-06T01:14:08+02:00</lastmod>
     <priority>0</priority>
   </url>
   
