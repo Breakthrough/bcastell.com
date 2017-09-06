@@ -11,10 +11,10 @@
     
     <item>
       <title>Go is for lovers</title>
-      <link>https://www.bcastell.com/blog/2015/09/17/go-is-for-lovers/</link>
+      <link>https://www.bcastell.com/posts/go-is-for-lovers/</link>
       <pubDate>Thu, 17 Sep 2015 13:47:08 +0200</pubDate>
       
-      <guid>https://www.bcastell.com/blog/2015/09/17/go-is-for-lovers/</guid>
+      <guid>https://www.bcastell.com/posts/go-is-for-lovers/</guid>
       <description>
 
 &lt;p&gt;Hugo uses the excellent &lt;a href=&#34;http://golang.org/&amp;gt;&#34;&gt;go&lt;/a&gt; &lt;a href=&#34;http://golang.org/pkg/html/template/&amp;gt;&#34;&gt;html/template&lt;/a&gt; library for

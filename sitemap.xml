@@ -2,37 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.bcastell.com/blog/2017/09/06/scene-detection-tutorial-part-2/</loc>
+    <loc>https://www.bcastell.com/posts/test_post/</loc>
+    <lastmod>2017-09-06T14:02:03-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.bcastell.com/posts/scene-detection-tutorial-part-2/</loc>
     <lastmod>2017-09-06T01:14:08+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/blog/2017/09/06/scene-detection-tutorial-part-1/</loc>
+    <loc>https://www.bcastell.com/posts/scene-detection-tutorial-part-1/</loc>
     <lastmod>2017-09-06T01:12:08+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/blog/2015/10/10/migrate-from-jekyll/</loc>
+    <loc>https://www.bcastell.com/posts/migrate-from-jekyll/</loc>
     <lastmod>2015-10-10T13:07:31+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/blog/2015/10/02/linked-post/</loc>
+    <loc>https://www.bcastell.com/posts/linked-post/</loc>
     <lastmod>2015-10-02T21:49:20+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/blog/2015/09/17/go-is-for-lovers/</loc>
+    <loc>https://www.bcastell.com/posts/go-is-for-lovers/</loc>
     <lastmod>2015-09-17T13:47:08+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/blog/2015/08/03/hugo-is-for-lovers/</loc>
+    <loc>https://www.bcastell.com/posts/hugo-is-for-lovers/</loc>
     <lastmod>2015-08-03T13:39:46+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/blog/2015/06/24/creating-a-new-theme/</loc>
+    <loc>https://www.bcastell.com/posts/creating-a-new-theme/</loc>
     <lastmod>2015-06-24T13:50:46+02:00</lastmod>
   </url>
   
@@ -41,14 +46,8 @@
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/blog/</loc>
-    <lastmod>2017-09-06T01:14:08+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.bcastell.com/</loc>
-    <lastmod>2017-09-06T01:14:08+02:00</lastmod>
+    <lastmod>2017-09-06T14:02:03-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -67,6 +66,11 @@
   
   <url>
     <loc>https://www.bcastell.com/faq/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.bcastell.com/tags/foss/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -100,14 +104,36 @@
   </url>
   
   <url>
+    <loc>https://www.bcastell.com/tags/opencv/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.bcastell.com/categories/posts/</loc>
+    <lastmod>2017-09-06T14:02:03-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.bcastell.com/posts/</loc>
+    <lastmod>2017-09-06T14:02:03-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.bcastell.com/categories/programming/</loc>
+    <lastmod>2017-09-06T14:02:03-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.bcastell.com/tags/programming/</loc>
     <lastmod>2015-10-02T21:49:20+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/categories/programming/</loc>
-    <lastmod>2017-09-06T01:14:08+02:00</lastmod>
+    <loc>https://www.bcastell.com/categories/projects/</loc>
     <priority>0</priority>
   </url>
   
@@ -132,7 +158,7 @@
   
   <url>
     <loc>https://www.bcastell.com/tags/python/</loc>
-    <lastmod>2017-09-06T01:14:08+02:00</lastmod>
+    <lastmod>2017-09-06T14:02:03-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -149,7 +175,7 @@
   
   <url>
     <loc>https://www.bcastell.com/tags/technical-article/</loc>
-    <lastmod>2017-09-06T01:14:08+02:00</lastmod>
+    <lastmod>2017-09-06T14:02:03-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -161,6 +187,12 @@
   
   <url>
     <loc>https://www.bcastell.com/tags/tutorial/</loc>
+    <lastmod>2017-09-06T14:02:03-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.bcastell.com/categories/tutorials/</loc>
     <lastmod>2017-09-06T01:14:08+02:00</lastmod>
     <priority>0</priority>
   </url>

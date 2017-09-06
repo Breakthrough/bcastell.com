@@ -10,11 +10,22 @@
     <atom:link href="https://www.bcastell.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>test_post</title>
+      <link>https://www.bcastell.com/posts/test_post/</link>
+      <pubDate>Wed, 06 Sep 2017 14:02:03 -0400</pubDate>
+      
+      <guid>https://www.bcastell.com/posts/test_post/</guid>
+      <description>&lt;p&gt;This is a test post.
+a&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Scene Detection with Python and OpenCV, Part 2</title>
-      <link>https://www.bcastell.com/blog/2017/09/06/scene-detection-tutorial-part-2/</link>
+      <link>https://www.bcastell.com/posts/scene-detection-tutorial-part-2/</link>
       <pubDate>Wed, 06 Sep 2017 01:14:08 +0200</pubDate>
       
-      <guid>https://www.bcastell.com/blog/2017/09/06/scene-detection-tutorial-part-2/</guid>
+      <guid>https://www.bcastell.com/posts/scene-detection-tutorial-part-2/</guid>
       <description>
 
 &lt;h1 id=&#34;part-2-adaptive-threshold-detection&#34;&gt;Part 2: Adaptive Threshold Detection&lt;/h1&gt;
@@ -25,15 +36,39 @@
     
     <item>
       <title>Scene Detection with Python and OpenCV, Part 1</title>
-      <link>https://www.bcastell.com/blog/2017/09/06/scene-detection-tutorial-part-1/</link>
+      <link>https://www.bcastell.com/posts/scene-detection-tutorial-part-1/</link>
       <pubDate>Wed, 06 Sep 2017 01:12:08 +0200</pubDate>
       
-      <guid>https://www.bcastell.com/blog/2017/09/06/scene-detection-tutorial-part-1/</guid>
+      <guid>https://www.bcastell.com/posts/scene-detection-tutorial-part-1/</guid>
       <description>
 
 &lt;h1 id=&#34;part-1-threshold-fade-to-black-detection&#34;&gt;Part 1: Threshold/Fade-to-Black Detection&lt;/h1&gt;
 
 &lt;p&gt;This tutorial is currently being migrated from the old location.  In the meantime, you can view the cached version of the previous, complete version on The Wayback Machine &lt;a href=&#34;https://web.archive.org/web/20160316225649/http://www.bcastell.com/tech-articles/pyscenedetect-tutorial-part-1/&#34;&gt;by clicking here&lt;/a&gt;.  Thank you for your patience during this time.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>PySceneDetect</title>
+      <link>https://www.bcastell.com/projects/PySceneDetect/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bcastell.com/projects/PySceneDetect/</guid>
+      <description>
+
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;PySceneDetect is a command-line application and a Python library for detecting scene changes in videos, automatically splitting the video into separate clips. Not only is it free and open-source software (FOSS), but there are several detection methods available (see Features), from simple threshold-based fade in/out detection, to advanced content aware fast-cut detection.&lt;/p&gt;
+
+&lt;h2 id=&#34;download&#34;&gt;Download&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://pyscenedetect.readthedocs.io/en/latest/download/&#34;&gt;Click here&lt;/a&gt; to download the latest release of PySceneDetect.  Note that PySceneDetect is cross-platform, and is supported for Windows, Linux, and OSX.&lt;/p&gt;
+
+&lt;p&gt;The latest development version can be found at &lt;a href=&#34;https://github.com/Breakthrough/PySceneDetect/&#34;&gt;the PySceneDetect project page at Github&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;documentation&#34;&gt;Documentation&lt;/h2&gt;
+
+&lt;p&gt;There is extensive documentation available for PySceneDetect on Read the Docs at &lt;a href=&#34;http://pyscenedetect.readthedocs.io/en/latest/&#34;&gt;pyscenedetect.readthedocs.io&lt;/a&gt;.  This includes a &lt;a href=&#34;http://pyscenedetect.readthedocs.io/en/latest/examples/usage/&#34;&gt;getting started guide&lt;/a&gt;, examples, and an overview of the Python API.  Note that while the Python API is still unstable, and subject to change in subsequent releases (this does not affect the main command-line program).&lt;/p&gt;
 </description>
     </item>
     

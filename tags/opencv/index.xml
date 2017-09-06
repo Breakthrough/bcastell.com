@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Opencv on Brandon Castellano</title>
+    <link>https://www.bcastell.com/tags/opencv/index.xml</link>
+    <description>Recent content in Opencv on Brandon Castellano</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright &amp;copy; 2017, Brandon Castellano.  All rights reserved.</copyright>
+    <atom:link href="https://www.bcastell.com/tags/opencv/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>PySceneDetect</title>
+      <link>https://www.bcastell.com/projects/PySceneDetect/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bcastell.com/projects/PySceneDetect/</guid>
+      <description>
+
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;PySceneDetect is a command-line application and a Python library for detecting scene changes in videos, automatically splitting the video into separate clips. Not only is it free and open-source software (FOSS), but there are several detection methods available (see Features), from simple threshold-based fade in/out detection, to advanced content aware fast-cut detection.&lt;/p&gt;
+
+&lt;h2 id=&#34;download&#34;&gt;Download&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://pyscenedetect.readthedocs.io/en/latest/download/&#34;&gt;Click here&lt;/a&gt; to download the latest release of PySceneDetect.  Note that PySceneDetect is cross-platform, and is supported for Windows, Linux, and OSX.&lt;/p&gt;
+
+&lt;p&gt;The latest development version can be found at &lt;a href=&#34;https://github.com/Breakthrough/PySceneDetect/&#34;&gt;the PySceneDetect project page at Github&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;documentation&#34;&gt;Documentation&lt;/h2&gt;
+
+&lt;p&gt;There is extensive documentation available for PySceneDetect on Read the Docs at &lt;a href=&#34;http://pyscenedetect.readthedocs.io/en/latest/&#34;&gt;pyscenedetect.readthedocs.io&lt;/a&gt;.  This includes a &lt;a href=&#34;http://pyscenedetect.readthedocs.io/en/latest/examples/usage/&#34;&gt;getting started guide&lt;/a&gt;, examples, and an overview of the Python API.  Note that while the Python API is still unstable, and subject to change in subsequent releases (this does not affect the main command-line program).&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

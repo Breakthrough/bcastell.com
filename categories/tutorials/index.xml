@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutorials on Brandon Castellano</title>
+    <link>https://www.bcastell.com/categories/tutorials/index.xml</link>
+    <description>Recent content in Tutorials on Brandon Castellano</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright &amp;copy; 2017, Brandon Castellano.  All rights reserved.</copyright>
+    <atom:link href="https://www.bcastell.com/categories/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Scene Detection with Python and OpenCV, Part 2</title>
+      <link>https://www.bcastell.com/posts/scene-detection-tutorial-part-2/</link>
+      <pubDate>Wed, 06 Sep 2017 01:14:08 +0200</pubDate>
+      
+      <guid>https://www.bcastell.com/posts/scene-detection-tutorial-part-2/</guid>
+      <description>
+
+&lt;h1 id=&#34;part-2-adaptive-threshold-detection&#34;&gt;Part 2: Adaptive Threshold Detection&lt;/h1&gt;
+
+&lt;p&gt;This tutorial is currently being migrated from the old location.  In the meantime, you can view the cached version of the previous, complete version on The Wayback Machine &lt;a href=&#34;https://web.archive.org/web/20160316124732/http://www.bcastell.com/tech-articles/pyscenedetect-tutorial-part-2/&#34;&gt;by clicking here&lt;/a&gt;.  Thank you for your patience during this time.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Scene Detection with Python and OpenCV, Part 1</title>
+      <link>https://www.bcastell.com/posts/scene-detection-tutorial-part-1/</link>
+      <pubDate>Wed, 06 Sep 2017 01:12:08 +0200</pubDate>
+      
+      <guid>https://www.bcastell.com/posts/scene-detection-tutorial-part-1/</guid>
+      <description>
+
+&lt;h1 id=&#34;part-1-threshold-fade-to-black-detection&#34;&gt;Part 1: Threshold/Fade-to-Black Detection&lt;/h1&gt;
+
+&lt;p&gt;This tutorial is currently being migrated from the old location.  In the meantime, you can view the cached version of the previous, complete version on The Wayback Machine &lt;a href=&#34;https://web.archive.org/web/20160316225649/http://www.bcastell.com/tech-articles/pyscenedetect-tutorial-part-1/&#34;&gt;by clicking here&lt;/a&gt;.  Thank you for your patience during this time.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -10,11 +10,22 @@
     <atom:link href="https://www.bcastell.com/categories/programming/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>test_post</title>
+      <link>https://www.bcastell.com/posts/test_post/</link>
+      <pubDate>Wed, 06 Sep 2017 14:02:03 -0400</pubDate>
+      
+      <guid>https://www.bcastell.com/posts/test_post/</guid>
+      <description>&lt;p&gt;This is a test post.
+a&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Scene Detection with Python and OpenCV, Part 2</title>
-      <link>https://www.bcastell.com/blog/2017/09/06/scene-detection-tutorial-part-2/</link>
+      <link>https://www.bcastell.com/posts/scene-detection-tutorial-part-2/</link>
       <pubDate>Wed, 06 Sep 2017 01:14:08 +0200</pubDate>
       
-      <guid>https://www.bcastell.com/blog/2017/09/06/scene-detection-tutorial-part-2/</guid>
+      <guid>https://www.bcastell.com/posts/scene-detection-tutorial-part-2/</guid>
       <description>
 
 &lt;h1 id=&#34;part-2-adaptive-threshold-detection&#34;&gt;Part 2: Adaptive Threshold Detection&lt;/h1&gt;
@@ -25,10 +36,10 @@
     
     <item>
       <title>Scene Detection with Python and OpenCV, Part 1</title>
-      <link>https://www.bcastell.com/blog/2017/09/06/scene-detection-tutorial-part-1/</link>
+      <link>https://www.bcastell.com/posts/scene-detection-tutorial-part-1/</link>
       <pubDate>Wed, 06 Sep 2017 01:12:08 +0200</pubDate>
       
-      <guid>https://www.bcastell.com/blog/2017/09/06/scene-detection-tutorial-part-1/</guid>
+      <guid>https://www.bcastell.com/posts/scene-detection-tutorial-part-1/</guid>
       <description>
 
 &lt;h1 id=&#34;part-1-threshold-fade-to-black-detection&#34;&gt;Part 1: Threshold/Fade-to-Black Detection&lt;/h1&gt;
@@ -39,10 +50,10 @@
     
     <item>
       <title>Linked post</title>
-      <link>https://www.bcastell.com/blog/2015/10/02/linked-post/</link>
+      <link>https://www.bcastell.com/posts/linked-post/</link>
       <pubDate>Fri, 02 Oct 2015 21:49:20 +0200</pubDate>
       
-      <guid>https://www.bcastell.com/blog/2015/10/02/linked-post/</guid>
+      <guid>https://www.bcastell.com/posts/linked-post/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m a linked post in the menu. You can add other posts by adding the following line to the frontmatter:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;menu = &amp;quot;main&amp;quot;
@@ -58,10 +69,10 @@
     
     <item>
       <title>Go is for lovers</title>
-      <link>https://www.bcastell.com/blog/2015/09/17/go-is-for-lovers/</link>
+      <link>https://www.bcastell.com/posts/go-is-for-lovers/</link>
       <pubDate>Thu, 17 Sep 2015 13:47:08 +0200</pubDate>
       
-      <guid>https://www.bcastell.com/blog/2015/09/17/go-is-for-lovers/</guid>
+      <guid>https://www.bcastell.com/posts/go-is-for-lovers/</guid>
       <description>
 
 &lt;p&gt;Hugo uses the excellent &lt;a href=&#34;http://golang.org/&amp;gt;&#34;&gt;go&lt;/a&gt; &lt;a href=&#34;http://golang.org/pkg/html/template/&amp;gt;&#34;&gt;html/template&lt;/a&gt; library for
