@@ -1,0 +1,4 @@
+weight: 4
+name: "User Interface Design & Implementation"
+icon: "fa fa-user"
+description: "I also have experience in UI design and Implementation, again with a wide variety of technologies and projects.  These include several applications, mostly related to computer vision, that use Gtk+ / PyGTK for cross-platform support, designing a video game using the Qt4 framework, and using SDL/OpenGL for implementing real-time overlays for multiple video streams."

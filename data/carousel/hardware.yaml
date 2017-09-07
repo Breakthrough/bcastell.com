@@ -1,0 +1,8 @@
+weight: 3
+title: "Hardware Projects & Robots"
+description: >
+  <ul class="list-style-none">
+     <li>Some of the projects I've worked on include Biopsy Bot (a remote control robot with a personality), as well as Bin Seeker, a hydraulic arm for waste/recycling collection vehicles.</li>
+     <li>For more information, check out the Projects page!</li>
+   </ul>
+image: "img/carousel/template-mac.png"

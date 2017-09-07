@@ -1,0 +1,9 @@
+weight: 2
+title: "Software Projects"
+description: >
+  <ul class="list-style-none">
+    <li>DVR-Scan - Free software that processes security camera footage, extracting only the clips containing motion.</li>
+    <li>PySceneDetect - Open source software and Python library, allows detection/splitting of scene changes in video files.</li>
+    <li>To see more, check out the Projects page!</li>
+  </ul>
+image: "img/carousel/template-easy-customize.png"
