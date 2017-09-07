@@ -1,4 +1,4 @@
 weight: 3
-name: "Technologies At A Glance"
+name: "Languages, Platforms, Libraries, and Experience"
 icon: "fa fa-globe"
-description: "There are some languages and platforms/libraries I have gained significant experience using over the years, as well as the use of similar or competing technologies.  Much of my experience is with designing real-time robotics and/or computer-vision related systems, using C/C++ or Python, distributing for the Linux or Windows platforms (usually both, including compatibility for OS X as well)."
+description: "There are some languages and platforms/libraries I have gained significant experience using over the years, as well as the use of similar or competing technologies.  Much of my experience is with designing real-time robotics and/or computer-vision related systems, using C/C++ or Python, distributing for the Linux or Windows platforms (usually both, including compatibility for OS X as well). I also have experience with user interface design and implementation, for robotics and computer vision systems.  These include several applications for clients that use either Gtk+ / PyGTK for cross-platform support, Qt4 (being ported to 5) both through C++ or PySide/PyQt, or using SDL/OpenGL for implementing real-time overlays for multiple video streams."

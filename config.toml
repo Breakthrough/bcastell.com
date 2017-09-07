@@ -52,29 +52,24 @@ pygmentsStyle = "monokai"
     posts = "/posts/:filename/"
 
 [[params.menu]]
-    name = "Home"
-    url  = "/"
-    weight = 1
-
-[[params.menu]]
     name = "Projects"
     url  = "/projects/"
-    weight = 2
+    weight = 1
 
 [[params.menu]]
     name = "Posts"
     url  = "/posts/"
-    weight = 3
+    weight = 2
 
 [[params.menu]]
-    name = "FAQ"
-    url  = "/faq/"
-    weight = 4
+    name = "About"
+    url  = "/about/"
+    weight = 3
 
 [[params.menu]]
     name = "Contact"
     url  = "/contact/"
-    weight = 5
+    weight = 4
 
 # Enable and disable widgets for the right sidebar
 [params.widgets]
@@ -105,17 +100,17 @@ pygmentsStyle = "monokai"
 [params.see_more]
     enable = true
     icon = "fa fa-file-code-o"
-    title = "Do you want to see more?"
-    subtitle = "We have prepared for you more than 40 different HTML pages, including 5 variations of homepage."
-    link_url = "#"
-    link_text = "Check other homepages"
+    title = "Want more information?"
+    subtitle = "For more information about me, my professional activities, or the website itself, visit the About page for more details.  For the latest project updates, posts, tutorials, or articles, keep scrolling down, or visit the Posts page."
+    link_url = "/about/"
+    link_text = "View The About Page"
 
 [params.clients]
     enable = true
     # All clients are defined in their own files. You can find example items
     # at 'exampleSite/data/clients'.
     # For more informtion take a look at the README.
-    title = "Our Clients"
+    title = "Clients, Companies, and Employers"
     subtitle = ""
 
 [params.recent_posts]
