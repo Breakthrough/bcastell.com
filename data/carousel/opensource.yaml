@@ -1,4 +1,6 @@
 weight: 1
 title: "The Home of Brandon Castellano"
-description: "<p>Welcome to my website, which hosts a variety of content and posts, both personal and professional.</p><p>Information and updates regarding several open source projects, like PySceneDetect and DVR-Scan, is also available (see the Projects page).</p>"
+description: >
+  <p style="font-size: 110%;">Welcome to my website, which hosts a variety of content and posts, both personal and professional.</p>
+  <p style="font-size: 110%;">Information and updates regarding several open source projects, including PySceneDetect and DVR-Scan, can be found on the respective <a href="/projects/" class="btn btn-default">Projects</a> page.</p>
 image: "img/carousel/template-homepage.png"

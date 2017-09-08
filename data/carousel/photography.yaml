@@ -1,8 +1,6 @@
-weight: 4
+weight: 5
 title: "Photography and Other Media"
 description: >
-  <ul class="list-style-none">
-    <li>This website also includes some of my graphic design, photography, and video work.</li>
-    <li>A gallery is planned for the future, but for now, links to my Youtube and other gallery pages can be found on the About page.</li>
-  </ul>
+  <p style="font-size: 110%;">This website also includes some of my graphic design, photography, and video work.</p>
+  <p style="font-size: 110%;">A gallery is planned for the future, but for now, links to my Youtube and other gallery pages can be found on the About page.</p>
 image: "img/carousel/template-easy-code.png"

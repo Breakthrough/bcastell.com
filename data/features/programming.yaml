@@ -1,4 +1,6 @@
 weight: 1
 name: "Programming, Electrical Engineering, and Technology"
 icon: "fa fa-desktop"
-description: "This site focuses on both my personal and professional work, largely in the fields of programming and electrical engineering (overlapping with software/computer engineering and computer science).  I have experience with systems engineering for real-time robotics applications, computer vision, and hardware acceleration via GPGPU.  The most common technologies used for these projects include C/C++, Python, SDL, OpenCV, OpenGL, and CUDA (as well as similar technologies, like OpenCL). I also enjoy improving academia, and was a teaching assistant for a course involving the use of C++ and the Qt library to design a 2D arcade game."
+description: >
+  <p>This site focuses on both my personal and professional work, largely in the fields of programming and electrical engineering (overlapping with software/computer engineering and computer science).  I have experience with systems engineering for real-time robotics applications, computer vision, and hardware acceleration via GPGPU.</p>
+  <p>The most common technologies used for these projects include C/C++, Python, SDL, OpenCV, OpenGL, and CUDA (as well as similar technologies, like OpenCL). I also enjoy improving academia, and was a teaching assistant for a course involving the use of C++ and the Qt library to design a 2D arcade game.</p>

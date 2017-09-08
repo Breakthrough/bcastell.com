@@ -3,39 +3,20 @@
 <br />
 <br />
 
-
-<section class="bar background-white">
+<div class="bg-danger" style="padding:2em 0;">
     <div class="container">
         <div class="col-md-12">
             <div class="row">
                 <div class="col-md-4 text-center">
-                    <b>Warning!</b>
+                    <h3>WARNING</h3>
                 </div>
-                <div class="col-md-8">
-                    This page is currently under construction.  Note that some parts may be incomplete, and there will be occasional broken links.  Wherever possible, a link to cached content from the previous version of this website will be provided, using the <a href="https://archive.org/web/web.php" target="_blank">Wayback Machine</a>.
-                </div>
+                <div class="col-md-8"><b class="lead">
+                    This page is currently under construction.  Note that some parts may be incomplete, and there will be occasional broken links.  Wherever possible, a link to cached content from the previous version of this website will be provided.<br /><br />Thank you for your patience during this time.
+               </b> </div>
             </div>
         </div>
     </div>
-</section>
-
-
-    <div class="container">
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span2">
-          <!--Sidebar content-->
-          warning logo
-        </div>
-        <div class="span10">
-          <!--Body content-->
-          
-        </div>
-      </div>
-    </div>
-    </div>
-
-    
+</div>
 
 <br />
 <br />
@@ -54,7 +35,9 @@
                             <i class="{{ .icon }}"></i>
                         </div>
                         <h3>{{ .name }}</h3>
-                        <p>{{ .description }}</p>
+                        <div style="font-size:110%;">
+                            {{ .description | safeHTML }}
+                        </div>
                     </div>
                 </div>
                 {{ end }}

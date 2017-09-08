@@ -3,7 +3,8 @@ title = "PySceneDetect"
 id = "pyscenedetect-projectpage"
 categories = ["Projects"]
 type = "posts"
-tags = ["Python", "OpenCV", "FOSS"]
+tags = ["Python", "OpenCV", "computer vision", "video processing", "cross platform"]
+date = "2014-06-08"
 +++
 
 

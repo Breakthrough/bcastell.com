@@ -1,0 +1,6 @@
+weight: 3
+title: "Personal & Academic Engineering"
+description: >
+  <p style="font-size: 110%;">This is also home to some of the personal and academic projects I've worked on over the years.</p>
+  <p style="font-size: 110%;">These include Biopsy Bot, a remote control sample-collection robot, and a wireless 3D LED Display, called Triclysm, that includes the hardware schematics, firmware, and supporting software written in C++.</p>
+image: "img/carousel/template-mac.png"
