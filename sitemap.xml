@@ -12,11 +12,6 @@
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/posts/scene-detection-tutorial-part-1/</loc>
-    <lastmod>2017-09-06T01:12:08+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.bcastell.com/projects/DVR-Scan/</loc>
     <lastmod>2017-01-11T00:00:00+00:00</lastmod>
   </url>
@@ -49,6 +44,11 @@
   <url>
     <loc>https://www.bcastell.com/projects/PySceneDetect/</loc>
     <lastmod>2014-06-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.bcastell.com/posts/scene-detection-tutorial-part-1/</loc>
+    <lastmod>2013-10-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>

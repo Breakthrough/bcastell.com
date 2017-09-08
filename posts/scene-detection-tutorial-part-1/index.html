@@ -152,14 +152,190 @@
 
                     <div class="col-md-9" id="blog-post">
 
-                        <p class="text-muted text-uppercase mb-small text-right">September 6, 2017</p>
+                        <p class="text-muted text-uppercase mb-small text-right">October 19, 2013</p>
 
                         <div id="post-content">
                           
 
-<h1 id="part-1-threshold-fade-to-black-detection">Part 1: Threshold/Fade-to-Black Detection</h1>
+<h2 id="part-1-threshold-fade-to-black-detection">Part 1: Threshold/Fade-to-Black Detection</h2>
 
 <p>This tutorial is currently being migrated from the old location.  In the meantime, you can view the cached version of the previous, complete version on The Wayback Machine <a href="https://web.archive.org/web/20160316225649/http://www.bcastell.com/tech-articles/pyscenedetect-tutorial-part-1/">by clicking here</a>.  Thank you for your patience during this time.</p>
+
+<hr />
+
+<p>In the first part of this three-part tutorial, we will write a Python program, using the OpenCV library, to perform threshold-based scene detection, to determine the exact frames where scene transitions (fade ins/outs to/from black in this case) occur. In the following tutorials, we will optimize our scene detection algorithm, and use the output to create a scene list with proper timecodes (<a href="/posts/scene-detection-tutorial-part-2/">Part 2</a>) so a video can be split automatically into scenes. Lastly, we will cover how to detect content-based scene changes (in a future Part 3, coming soon), and combine this with the concepts from the previous tutorials to create a robust scene detection program.</p>
+
+<p>You can download the source code and test video from this tutorial via the Github repository (see the Releases page to download everything in a single zip/tar archive).</p>
+
+<hr />
+
+<h3 id="introduction-installation">Introduction &amp; Installation</h3>
+
+<p>The OpenCV bindings for Python allow you to quickly experiment with images/videos. Specifically, the OpenCV library handles all the low-level interfacing to actually decode video data (using FFmpeg, and thus is compatible with many different video formats), and uniquely, the returned video frames – as well as other image objects for that matter – can be accessed as a <a href="http://numpy.scipy.org/">NumPy</a> array. This allows you to perform MATLAB/Octave-like operations on the image data easily and concisely.</p>
+
+<p>Firstly, this tutorial assumes that you have installed Python 2.7 (I believe at the time of writing this, the OpenCV bindings are only available for 2.7), as well as the OpenCV bindings themselves. If you are a Windows user, you might want to see <a href="http://stackoverflow.com/questions/4709301/installing-opencv-on-windows-7-for-python-2-7">this question on Stack Overflow</a>; on Linux, I was able to install the bindings right from my package manager. To verify that everything is installed correctly, fire up a Python console, and type <code>import cv2</code>. If there are no errors, everything should be set up correctly!</p>
+
+<hr />
+
+<h3 id="the-problem-at-hand">The Problem at Hand</h3>
+
+<p>The goals of this program (PySceneDetect) are to detect when a scene change in a video occurs. In this particular tutorial, we will focus on fades in from, or out to black. The following figure depicts the type of scene changes we will be detecting:</p>
+
+<div style="background:#334455;padding:0.75em;margin:1em 4em;"><center>
+<img src="/img/tutorials/scenedetect/fadetypes.png" alt="Types of Scene Changes"/>
+</center></div>
+
+<p>The output of PySceneDetect will be a text-file containing the timestamps of each event (either a fade-from or fade-to black). The idea is that these timecodes can then be used to split the source video into individual scenes with another program (mkvmerge, VideoDub, etc…). In this part of the tutorial, we will print the time and frame number for each fade event to the console.</p>
+
+<hr />
+
+<h3 id="decoding-video-frames">Decoding Video Frames</h3>
+
+<p>Let’s begin by creating a <a href="http://docs.opencv.org/modules/highgui/doc/reading_and_writing_images_and_video.html#videocapture">VideoCapture object</a>, which can be used to open either a camera stream or a video file, and retrieve individual frames. Let’s assume the name of the video is passed as the first argument to the script, and do some simple error checking and cleanup just to be safe:</p>
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">sys</span>
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">cv2</span>
+ 
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">main</span>():
+    <span style="color: #008000; font-weight: bold">if</span> <span style="color: #008000">len</span>(sys<span style="color: #666666">.</span>argv) <span style="color: #666666">&lt;</span> <span style="color: #666666">2</span>:
+        <span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Error - file name must be specified as first argument.&quot;</span>
+        <span style="color: #008000; font-weight: bold">return</span>
+ 
+    cap <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>VideoCapture()
+    cap<span style="color: #666666">.</span>open(sys<span style="color: #666666">.</span>argv[<span style="color: #666666">1</span>])
+ 
+    <span style="color: #008000; font-weight: bold">if</span> <span style="color: #AA22FF; font-weight: bold">not</span> cap<span style="color: #666666">.</span>isOpened():
+        <span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Fatal error - could not open video </span><span style="color: #BB6688; font-weight: bold">%s</span><span style="color: #BA2121">.&quot;</span> <span style="color: #666666">%</span> sys<span style="color: #666666">.</span>argv[<span style="color: #666666">1</span>]
+        <span style="color: #008000; font-weight: bold">return</span>
+    <span style="color: #008000; font-weight: bold">else</span>:
+        <span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Parsing video </span><span style="color: #BB6688; font-weight: bold">%s</span><span style="color: #BA2121">...&quot;</span> <span style="color: #666666">%</span> sys<span style="color: #666666">.</span>argv[<span style="color: #666666">1</span>]
+ 
+    <span style="color: #408080; font-style: italic"># Do stuff with cap here.</span>
+ 
+    cap<span style="color: #666666">.</span>release()
+ 
+ 
+<span style="color: #008000; font-weight: bold">if</span> <span style="color: #19177C">__name__</span> <span style="color: #666666">==</span> <span style="color: #BA2121">&quot;__main__&quot;</span>:
+    main()
+</pre></div>
+
+
+<p>Once we have a valid VideoCapture object (i.e. the isOpened() method returns true), we can use <a href="http://docs.opencv.org/modules/highgui/doc/reading_and_writing_images_and_video.html#videocapture-read">the <code>read()</code> method</a> to start grabbing frames. Note that read() returns a tuple in the form (retval, image), and when retval is returned as false, this denotes that there are no more frames in the object to grab (and thus we are at the end of the video). Let’s make a loop to scan through the video and retrieve each frame, as well as print some basic information about the video):</p>
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>width  <span style="color: #666666">=</span> cap<span style="color: #666666">.</span>get(cv2<span style="color: #666666">.</span>cv<span style="color: #666666">.</span>CV_CAP_PROP_FRAME_WIDTH)
+height <span style="color: #666666">=</span> cap<span style="color: #666666">.</span>get(cv2<span style="color: #666666">.</span>cv<span style="color: #666666">.</span>CV_CAP_PROP_FRAME_HEIGHT)
+<span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Video Resolution: </span><span style="color: #BB6688; font-weight: bold">%d</span><span style="color: #BA2121"> x </span><span style="color: #BB6688; font-weight: bold">%d</span><span style="color: #BA2121">&quot;</span> <span style="color: #666666">%</span> (width, height)
+ 
+<span style="color: #008000; font-weight: bold">while</span> <span style="color: #008000">True</span>:
+    (rv, im) <span style="color: #666666">=</span> cap<span style="color: #666666">.</span>read()   <span style="color: #408080; font-style: italic"># im is a valid image if and only if rv is true</span>
+    <span style="color: #008000; font-weight: bold">if</span> <span style="color: #AA22FF; font-weight: bold">not</span> rv:
+        <span style="color: #008000; font-weight: bold">break</span>
+    <span style="color: #408080; font-style: italic"># Do stuff with im here.</span>
+ 
+frame_count <span style="color: #666666">=</span> cap<span style="color: #666666">.</span>get(cv2<span style="color: #666666">.</span>cv<span style="color: #666666">.</span>CV_CAP_PROP_POS_FRAMES)  <span style="color: #408080; font-style: italic"># current capture position</span>
+<span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Read </span><span style="color: #BB6688; font-weight: bold">%d</span><span style="color: #BA2121"> frames from video.&quot;</span> <span style="color: #666666">%</span> frame_count
+</pre></div>
+
+
+<p>Note that the returned image <code>im</code> is a Mat type object, and can be accessed with the same methods as a NumPy array due to the compatibility in it’s implementation.</p>
+
+<hr />
+
+<h3 id="working-with-images-detecting-scene-changes">Working With Images &amp; Detecting Scene Changes</h3>
+
+<p>Now that we have the image, we need to analyze it to determine when a scene cut occurs. Since we want to know when we have faded in or out of black, we can compute the average intensity of the pixels in the image, and compare this with a set threshold denoting the black level. We need to compare the average to a threshold and not simply zero, since compression artifacts or encoders sometimes will not produce a fully black frame.</p>
+
+<p>Since we have the ability to access <code>im</code> as if it were a NumPy array, we can use <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.mean.html#numpy.ndarray.mean">the <code>mean()</code> ndarray method</a> on <code>im</code> to compute the average intensity of the pixels in the frame. We can compare this value to our set threshold, as well as the average intensity of the past frame (to determine if we are fading in to or out from a scene) to determine where the scene cuts occur by modifying the above while-loop as follows:</p>
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic"># Allow the threshold to be passed as an optional second argument to the script.</span>
+threshold <span style="color: #666666">=</span> <span style="color: #666666">15</span>
+<span style="color: #008000; font-weight: bold">if</span> <span style="color: #008000">len</span>(sys<span style="color: #666666">.</span>argv) <span style="color: #666666">&gt;</span> <span style="color: #666666">2</span> <span style="color: #AA22FF; font-weight: bold">and</span> <span style="color: #008000">int</span>(sys<span style="color: #666666">.</span>argv[<span style="color: #666666">2</span>]) <span style="color: #666666">&gt;</span> <span style="color: #666666">0</span>:
+    threshold <span style="color: #666666">=</span> <span style="color: #008000">int</span>(sys<span style="color: #666666">.</span>argv[<span style="color: #666666">2</span>])
+<span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Detecting scenes with threshold </span><span style="color: #BB6688; font-weight: bold">%d</span><span style="color: #BA2121">.&quot;</span> <span style="color: #666666">%</span> threshold
+ 
+last_mean <span style="color: #666666">=</span> <span style="color: #666666">0</span>       <span style="color: #408080; font-style: italic"># Mean pixel intensity of the *last* frame we processed.</span>
+ 
+<span style="color: #008000; font-weight: bold">while</span> <span style="color: #008000">True</span>:
+    (rv, im) <span style="color: #666666">=</span> cap<span style="color: #666666">.</span>read()   <span style="color: #408080; font-style: italic"># im is a valid image if and only if rv is true</span>
+    <span style="color: #008000; font-weight: bold">if</span> <span style="color: #AA22FF; font-weight: bold">not</span> rv:
+        <span style="color: #008000; font-weight: bold">break</span>
+    frame_mean <span style="color: #666666">=</span> im<span style="color: #666666">.</span>mean()
+ 
+    <span style="color: #408080; font-style: italic"># Detect fade in from black.</span>
+    <span style="color: #008000; font-weight: bold">if</span> frame_mean <span style="color: #666666">&gt;=</span> threshold <span style="color: #AA22FF; font-weight: bold">and</span> last_mean <span style="color: #666666">&lt;</span> threshold:
+        <span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Detected fade in at </span><span style="color: #BB6688; font-weight: bold">%d</span><span style="color: #BA2121">ms (frame </span><span style="color: #BB6688; font-weight: bold">%d</span><span style="color: #BA2121">).&quot;</span> <span style="color: #666666">%</span> (
+            cap<span style="color: #666666">.</span>get(cv2<span style="color: #666666">.</span>cv<span style="color: #666666">.</span>CV_CAP_PROP_POS_MSEC),
+            cap<span style="color: #666666">.</span>get(cv2<span style="color: #666666">.</span>cv<span style="color: #666666">.</span>CV_CAP_PROP_POS_FRAMES) )
+ 
+    <span style="color: #408080; font-style: italic"># Detect fade out to black.</span>
+    <span style="color: #008000; font-weight: bold">elif</span> frame_mean <span style="color: #666666">&lt;</span> threshold <span style="color: #AA22FF; font-weight: bold">and</span> last_mean <span style="color: #666666">&gt;=</span> threshold:
+        <span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Detected fade out at </span><span style="color: #BB6688; font-weight: bold">%d</span><span style="color: #BA2121">ms (frame </span><span style="color: #BB6688; font-weight: bold">%d</span><span style="color: #BA2121">).&quot;</span> <span style="color: #666666">%</span> (
+            cap<span style="color: #666666">.</span>get(cv2<span style="color: #666666">.</span>cv<span style="color: #666666">.</span>CV_CAP_PROP_POS_MSEC),
+            cap<span style="color: #666666">.</span>get(cv2<span style="color: #666666">.</span>cv<span style="color: #666666">.</span>CV_CAP_PROP_POS_FRAMES) )
+ 
+    last_mean <span style="color: #666666">=</span> frame_mean     <span style="color: #408080; font-style: italic"># Store current mean to compare in next iteration.</span>
+</pre></div>
+
+
+<p>And it’s that easy – you now know when a scene is fading in or out from your videos, based on the defined threshold! While the timecode is presented in milliseconds, a frame number is also shown, which should help if you just want to manually find scene changes in a video. In practice, I found the <code>mean()</code> methods provided by OpenCV and NumPy to be fairly slower than computing the average from the sum and image size:</p>
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    <span style="color: #408080; font-style: italic"># Compute mean intensity of pixels in frame.</span>
+    <span style="color: #408080; font-style: italic"># Previously: frame_mean = im.mean()</span>
+    frame_mean <span style="color: #666666">=</span> np<span style="color: #666666">.</span>sum(im) <span style="color: #666666">/</span> <span style="color: #008000">float</span>(im<span style="color: #666666">.</span>shape[<span style="color: #666666">0</span>] <span style="color: #666666">*</span> im<span style="color: #666666">.</span>shape[<span style="color: #666666">1</span>] <span style="color: #666666">*</span> im<span style="color: #666666">.</span>shape[<span style="color: #666666">2</span>])
+    <span style="color: #408080; font-style: italic"># Dividing the sum by the image size is 35-40% faster than using</span>
+    <span style="color: #408080; font-style: italic"># either im.mean() or np.mean(im).</span>
+</pre></div>
+
+
+<p>This change brings the runtime down from 4.10 seconds to 2.86 seconds (for parsing the entire <code>testvideo.mp4</code> file), with a resulting increase in processing speed from 176 FPS to 251 FPS.</p>
+
+<hr />
+
+<h3 id="testing-conclusion">Testing &amp; Conclusion</h3>
+
+<p>You can download the source code and test video from this tutorial via <a href="https://github.com/Breakthrough/python-scene-detection-tutorial">the Github repository</a> (see <a href="https://github.com/Breakthrough/python-scene-detection-tutorial/releases/">the Releases page</a> to download everything in a single zip/tar archive). The code from this part is in <a href="https://github.com/Breakthrough/python-scene-detection-tutorial/blob/master/examples/part1-threshold.py">the file <code>part1-threshold.py</code></a>.</p>
+
+<p>Invoking the Python program for this part using the included <code>testvideo.mp4</code> file, you should obtain this output:</p>
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>&gt; python ./part1-threshold.py testvideo.mp4
+Parsing video testvideo.mp4...
+Video Resolution: 1280 x 720
+Detecting scenes with threshold = 15.
+ 
+Detected fade in at 1167ms (frame 35).
+Detected fade out at 6172ms (frame 185).
+Detected fade in at 7440ms (frame 223).
+Detected fade out at 11945ms (frame 358).
+Detected fade in at 13480ms (frame 404).
+Detected fade out at 23156ms (frame 694).
+Read 719 frames from video in 2.86 seconds (avg. 251.1 FPS).
+</pre></div>
+
+
+<p>If we change the threshold from 15 to 50, we see that it has the expected result for each type of cut. Hard cuts are unaffected, and the fade in/out times are shifted forwards/backwards in time, respectively:</p>
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>&gt; python ./part1-threshold.py testvideo.mp4 50
+Parsing video testvideo.mp4...
+Video Resolution: 1280 x 720
+Detecting scenes with threshold = 50.
+ 
+Detected fade in at 1167ms (frame 35).
+Detected fade out at 6172ms (frame 185).
+Detected fade in at 7974ms (frame 239).
+Detected fade out at 11411ms (frame 342).
+Detected fade in at 13913ms (frame 417).
+Detected fade out at 22722ms (frame 681).
+Read 719 frames from video in 2.96 seconds (avg. 242.9 FPS).
+</pre></div>
+
+
+<p>Just as expected! And that’s all for the first part. You can use the program for this part as-is, for a quick method to determine the frame numbers where transitions to/from black occur in a video; see the header of the <code>part1-threshold.py</code> file for usage details.</p>
+
+<p>The next tutorial in the series is <a href="/posts/scene-detection-tutorial-part-2/">Part 2: Adaptive Threshold Detection</a>, where we optimize the performance of the algorithm, and use the output to export a list of scenes/chapters (instead of fades).</p>
+
+<hr />
+
+<p>Post last updated September 15, 2014, and moved to new location on September 8, 2017.</p>
 
                         </div>
                         
@@ -388,19 +564,6 @@
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
-                        <a href="https://www.bcastell.com/posts/scene-detection-tutorial-part-1/">
-                          
-                            <img src="https://www.bcastell.com/img/banners/banner-2.jpg" class="img-responsive" alt="">
-                          
-                        </a>
-                    </div>
-                    <div class="name same-height-always">
-                        <h5><a href="https://www.bcastell.com/posts/scene-detection-tutorial-part-1/">Scene Detection with Python and OpenCV, Part 1</a></h5>
-                    </div>
-                </div>
-                
-                <div class="item same-height-row clearfix">
-                    <div class="image same-height-always">
                         <a href="https://www.bcastell.com/projects/DVR-Scan/">
                           
                             <img src="https://www.bcastell.com/img/projects/dvr-scan/logo_full.png" class="img-responsive" alt="">
@@ -409,6 +572,19 @@
                     </div>
                     <div class="name same-height-always">
                         <h5><a href="https://www.bcastell.com/projects/DVR-Scan/">DVR-Scan</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://www.bcastell.com/posts/migrate-from-jekyll/">
+                          
+                            <img src="https://www.bcastell.com/img/banners/banner-5.jpg" class="img-responsive" alt="">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://www.bcastell.com/posts/migrate-from-jekyll/">Migrate from Jekyll</a></h5>
                     </div>
                 </div>
                 
