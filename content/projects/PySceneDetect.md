@@ -5,6 +5,7 @@ categories = ["Projects"]
 type = "posts"
 tags = ["Python", "OpenCV", "computer vision", "video processing", "cross platform"]
 date = "2014-06-08"
+banner = "img/scenedetect-2.jpg"
 +++
 
 

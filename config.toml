@@ -10,7 +10,8 @@ googleAnalytics = ""
 # Define the number of posts per page
 paginate = 10
 
-pygmentsStyle = "monokai"
+pygmentsuseclasses = false
+pygmentsStyle = "default"
 
 [taxonomies]
   category = "categories"

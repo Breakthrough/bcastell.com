@@ -43,6 +43,18 @@ Click here to view the Biopsy Bot project page.
 
 -------------------------------------------------------------------------------
 
+<a href="{{< relref "projects/Triclysm.md" >}}">
+### Triclysm &#x1f52c;
+</a>
+
+A 3D LED display project, including hardware (electrical schematics, components, and microcontroller firmware) and software to develop and wirelessly transmit 3D videos/animations to the display.  The design is extendable, with the default configuration supporting a greyscale 8x8x8/512 voxel or 4096-colour RGB 4x4x4/64 voxel display.
+
+<a href="{{< relref "projects/Triclysm.md" >}}">
+Click here to view the Triclysm project page.
+</a>
+
+-------------------------------------------------------------------------------
+
 ## Other Open-Source Projects
 
 For a full list of projects on this website, see <a href="/categories/projects/">the <b>Projects</b> category</a>.  For a full list of open-source software projects I've created, maintained, or otherwise contributed to, you can check out <a href="https://github.com/Breakthrough">my profile page on Github</a> (username Breakthrough).

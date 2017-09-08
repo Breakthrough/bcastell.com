@@ -5,6 +5,7 @@ categories = ["Projects"]
 type = "posts"
 date = "2011-12-05"
 tags = ["hardware", "robotics"]
+banner = "img/projects/biopsybot/thumbnail.jpg"
 +++
 
 <img src="/img/projects/biopsybot/header.jpg" alt="Biopsy Bot in Action" width="100%" />
