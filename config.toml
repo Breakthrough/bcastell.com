@@ -111,8 +111,7 @@ pygmentsStyle = "monokai"
     # at 'exampleSite/data/clients'.
     # For more informtion take a look at the README.
     title = "Clients, Companies, and Employers"
-    subtitle = ""
-
+    subtitle = "The following is a list of companies which I either maintain a professional relationship with, have been employed by, or otherwise performed some professional work/service.  For details, click the logo of interest below."
 [params.recent_posts]
     enable = true
     title = "Latest Articles, Blogs, and Posts"
