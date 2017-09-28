@@ -25,6 +25,11 @@ Below you can find a list of my professional/academic experience, some of my acc
 
 ## My Background & Experience
 
+
+### Education
+
+I hold a **B.E.Sc in Electrical Engineering** from the [*University of Western Ontario*](http://uwo.ca/).  The focus of my studies was real-time and embedded control systems, with significant overlap in the areas of computer engineering and computer science.  I also have experience taking post-graduate courses in parallel processing and GPGPU optimization, having applied these skills to real-world robotic systems, mainly focused on using image processing for object and pose recognition.
+
 ### Employers
 
 The following is a list of companies I have worked for in the past (note this list may not always be up to date):
@@ -32,22 +37,22 @@ The following is a list of companies I have worked for in the past (note this li
 
  - [**Eagle Vision Systems**](http://eaglevisionsystems.com/)
    - *Engineering Manager*, Product Development
-   - Design and implementation of a system to allow automated waste/recycling collection for vehicles with external hydraulic arms
-   - Assigned/authored patent (see below) for overall process, with real-world testing being performed currently<br /><br />
+     - Design and implementation of a system to allow automated waste/recycling collection for vehicles with external hydraulic arms
+     - Assigned/authored patent (see below) for overall process, with real-world testing being performed currently
+     - Technologies used include C++, OpenCV, SDL/OpenGL, CAN/Serial interfaces to sensor and hydraulic controllers, USB CMOS cameras, a Linux-based operating system, and the Nvidia Jetson platform for future GPGPU acceleration, along with a physical touchscreen display for operator feedback and system monitoring<br /><br />
 
  - [**University of Western Ontario**](http://uwo.ca/)
    - *Research Assistant*, Robotic Mushroom Farming
-   - Tasked with development of the stereoscopic/3D camera hardware required for generating a depth map of mushrooms farm
-   - Depth map used to resolve/estimate location, size, and pose of individual mushrooms, to be harvested by a robotic manipulator<br /><br />
+     - Tasked with development of the stereoscopic/3D camera hardware required for generating a depth map of mushrooms farm
+     - Depth map used to resolve/estimate location, size, and pose of individual mushrooms, to be harvested by a robotic manipulator<br />
+   - *Teaching Assistant*, Software Engineering SE2250: Software Construction
+     - Helped students during lab hours with course fundamentals, and graded projects, tests, and exams
+     - Involved teaching of Git, C++, and Qt, and other utilities to demonstrate Linux-based development using command-line tools
+     - Final project involved building an interactive Puzzle Bobble-like game utilizing path planning and collision detection<br /><br />
 
  - [**Ontario Power Generation**](http://www.opg.com/)
 
  - [**Toronto Hydro Corporation**](http://www.torontohydro.com)
-
-
-### Education
-
-I hold a **B.E.Sc in Electrical Engineering** from the [*University of Western Ontario*](http://uwo.ca/).  The focus of my studies was real-time and embedded control systems, with significant overlap in the areas of computer engineering and computer science.  I also have experience taking post-graduate courses in parallel processing and GPGPU optimization, and have applied these skills to real-world robotic systems, mainly using image processing for object and pose recognition.
 
 ### Patents
 
@@ -76,9 +81,10 @@ Based on my experience with image processing, especially in the areas of Python 
 
 You can find me at the following websites:
 
-    Super User (Breakthrough)
-    Github (Breakthrough)
-    Wikipedia (bcastell)
+ - [Super User (Breakthrough)](https://superuser.com/users/6887/breakthrough)
+ - [Stack Overflow (Breakthrough)](https://stackoverflow.com/users/159447/breakthrough)
+ - [Github (Breakthrough)](https://github.com/Breakthrough)
+ - [Wikipedia (bcastell)](https://en.wikipedia.org/wiki/User:Bcastell)
 
 Note that the usernames listed above are not unique.  Only the accounts in the list above are truly me.
 
