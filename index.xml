@@ -343,18 +343,65 @@ Read 719 frames from video in 2.96 seconds (avg. 242.9 FPS).
     </item>
     
     <item>
-      <title></title>
+      <title>About</title>
+      <link>https://www.bcastell.com/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bcastell.com/about/</guid>
+      <description>
+
+&lt;p&gt;Hi there!  This is the personal website of Brandon Castellano (sometimes known as Breakthrough).  Here, you can find my blog, technical articles, and various projects (software &amp;amp; hardware) I’m working on.&lt;/p&gt;
+
+&lt;p&gt;As for my background, I hold a B.E.Sc in Electrical Engineering, and am pursuing a M.E.Sc in Robotics and Control.  I’m “fluent” in a wide variety of programming languages, my favourites being C++, Python, and C# (although I’ve worked with Assembly, C, and PHP).  And for the curious, I’m both a Windows and Linux user (Xubuntu being my distribution of choice at the moment).&lt;/p&gt;
+
+&lt;h2 id=&#34;contact-me&#34;&gt;Contact Me&lt;/h2&gt;
+
+&lt;p&gt;I’m still sorting out the best method of contact if you should need to get in touch with me.  For now, leave a comment on this page.&lt;/p&gt;
+
+&lt;h2 id=&#34;across-the-web&#34;&gt;Across The Web&lt;/h2&gt;
+
+&lt;p&gt;You can find me at the following websites:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Super User (Breakthrough)
+Github (Breakthrough)
+Wikipedia (bcastell)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note that the usernames listed above are not unique.  Only the accounts in the list above are truly me.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://www.bcastell.com/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bcastell.com/contact/</guid>
+      <description>
+
+&lt;h2 id=&#34;location-and-contact-me&#34;&gt;Location and Contact Me&lt;/h2&gt;
+
+&lt;p&gt;If you should need to get in touch with me, the quickest way would be to leave a comment on &lt;a href=&#34;https://www.bcastell.com/posts&#34;&gt;any posts&lt;/a&gt;.  You can also contact me through any of my other official accounts/services listed on &lt;a href=&#34;https://www.bcastell.com/about/&#34;&gt;the About page&lt;/a&gt; (under the &amp;ldquo;Across The Web&amp;rdquo; section).&lt;/p&gt;
+
+&lt;p&gt;Lastly, the below contact form can be used to contact me for serious inquiries.  Right now it is a work-in-progress, but this message will be removed once it has been verified as working.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Note that I am currently in the Greater Toronto Area.  The map below is at a location near-by, but not exactly, where I reside.  In the past, I have also lived in London and Guelph, both for academic, and professional/work-relatd purposes.  For potential employers/contracts, I am flexible in terms of location, remote work, and if necessary, relocation.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
       <link>https://www.bcastell.com/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.bcastell.com/projects/</guid>
       <description>
 
-&lt;p&gt;+++.&lt;/p&gt;
+&lt;hr /&gt;
 
-&lt;h2 id=&#34;9&#34;&gt;9+&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.bcastell.com/projects/PySceneDetect/&#34;&gt; www.formspree.io&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.bcastell.com/projects/PySceneDetect/&#34;&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;pyscenedetect-x1f3a5&#34;&gt;PySceneDetect &amp;#x1f3a5;&lt;/h3&gt;
 
@@ -415,55 +462,6 @@ Click here to view the Triclysm project page.
 &lt;p&gt;For a full list of projects on this website, see &lt;a href=&#34;https://www.bcastell.com/categories/projects/&#34;&gt;the &lt;b&gt;Projects&lt;/b&gt; category&lt;/a&gt;.  For a full list of open-source software projects I&amp;rsquo;ve created, maintained, or otherwise contributed to, you can check out &lt;a href=&#34;https://github.com/Breakthrough&#34;&gt;my profile page on Github&lt;/a&gt; (username Breakthrough).&lt;/p&gt;
 
 &lt;hr /&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://www.bcastell.com/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.bcastell.com/about/</guid>
-      <description>
-
-&lt;p&gt;Hi there!  This is the personal website of Brandon Castellano (sometimes known as Breakthrough).  Here, you can find my blog, technical articles, and various projects (software &amp;amp; hardware) I’m working on.&lt;/p&gt;
-
-&lt;p&gt;As for my background, I hold a B.E.Sc in Electrical Engineering, and am pursuing a M.E.Sc in Robotics and Control.  I’m “fluent” in a wide variety of programming languages, my favourites being C++, Python, and C# (although I’ve worked with Assembly, C, and PHP).  And for the curious, I’m both a Windows and Linux user (Xubuntu being my distribution of choice at the moment).&lt;/p&gt;
-
-&lt;h2 id=&#34;contact-me&#34;&gt;Contact Me&lt;/h2&gt;
-
-&lt;p&gt;I’m still sorting out the best method of contact if you should need to get in touch with me.  For now, leave a comment on this page.&lt;/p&gt;
-
-&lt;h2 id=&#34;across-the-web&#34;&gt;Across The Web&lt;/h2&gt;
-
-&lt;p&gt;You can find me at the following websites:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Super User (Breakthrough)
-Github (Breakthrough)
-Wikipedia (bcastell)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Note that the usernames listed above are not unique.  Only the accounts in the list above are truly me.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://www.bcastell.com/contact/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.bcastell.com/contact/</guid>
-      <description>
-
-&lt;h2 id=&#34;location-and-contact-me&#34;&gt;Location and Contact Me&lt;/h2&gt;
-
-&lt;p&gt;If you should need to get in touch with me, the quickest way would be to leave a comment on &lt;a href=&#34;https://www.bcastell.com/posts&#34;&gt;any posts&lt;/a&gt;.  You can also contact me through any of my other official accounts/services listed on &lt;a href=&#34;https://www.bcastell.com/about/&#34;&gt;the About page&lt;/a&gt; (under the &amp;ldquo;Across The Web&amp;rdquo; section).&lt;/p&gt;
-
-&lt;p&gt;Lastly, the below contact form can be used to contact me for serious inquiries.  Right now it is a work-in-progress, but this message will be removed once it has been verified as working.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Note that I am currently in the Greater Toronto Area.  The map below is at a location near-by, but not exactly, where I reside.  In the past, I have also lived in London and Guelph, both for academic, and professional/work-relatd purposes.  For potential employers/contracts, I am flexible in terms of location, remote work, and if necessary, relocation.&lt;/p&gt;
 </description>
     </item>
     
