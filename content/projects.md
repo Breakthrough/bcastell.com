@@ -15,14 +15,14 @@ Click here to view the main PySceneDetect project page.
 
 -------------------------------------------------------------------------------
 
-<a href="{{< relref "projects/PySceneDetect.md" >}}">
+<a href="{{< relref "projects/DVR-Scan.md" >}}">
 ### DVR-Scan <img src="/img/projects/dvr-scan/logo_small.png" alt="DVR-Scan Logo"/>
 
 </a>
 
 DVR-Scan is a cross-platform command-line (CLI) application that automatically detects motion events in video files (e.g. security camera footage). In addition to locating both the time and duration of each motion event, DVR-Scan will save the footage of each motion event to a new, separate video clip. Not only is DVR-Scan free and open-source software (you can find DVR-Scan on Github), it's written in Python, based on Numpy and OpenCV, and was built to be extendable and hackable.
 
-<a href="{{< relref "projects/PySceneDetect.md" >}}">
+<a href="{{< relref "projects/DVR-Scan.md" >}}">
 Click here to view the DVR-Scan project page.
 </a>
 
