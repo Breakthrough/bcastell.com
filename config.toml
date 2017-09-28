@@ -43,8 +43,7 @@ pygmentsStyle = "vs"
     copyright = "Copyright &copy; 2017 Brandon Castellano.  All rights reserved."
     date_format = "2017-01-16"
     logo = "img/logo.png"
-    address = """
-<br /><br /><img src="/img/carousel/bc02.jpg" width="100%" />
+    address = """<br /><img src="/img/carousel/bc02.jpg" width="80%" /><br /><br />
       """
     latitude = "-12.043333"
     longitude = "-77.028333"
