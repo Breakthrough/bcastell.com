@@ -346,6 +346,26 @@ CMPS ADDA [NUM1_UPPER], [NUM2_UPPER]
     </item>
     
     <item>
+      <title>Fixing the XAnalogTV Screensaver</title>
+      <link>https://www.bcastell.com/posts/fixing-xanalogtv/</link>
+      <pubDate>Mon, 10 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bcastell.com/posts/fixing-xanalogtv/</guid>
+      <description>&lt;p&gt;A few days ago, I discovered the awesome XAnalogTV screensaver included with XScreenSaver. I was very impressed with the visuals, which include a very accurate simulation of a conventional “tube” television implementing the analog NTSC TV standard. There was just one problem – I couldn’t get XAnalogTV to fill my screen:&lt;/p&gt;
+
+&lt;div style=&#34;background:#eee;padding:1em;margin:1em 10%;border:1px solid #ccc;&#34;&gt;&lt;center&gt;
+&lt;img src=&#34;https://www.bcastell.com/img/xanalogtv_cutoff.jpg&#34; alt=&#34;XAnalogTV with Incorrect Scaling&#34; width=&#34;70%&#34;/&gt;
+&lt;div class=&#34;text-small&#34; style=&#34;padding-top:1em;&#34;&gt;
+In the source code, the virtual &#34;display&#34; is forced to be within 15% of a standard 4:3 display. Any screen which is outside of this 15% range is just clipped, as shown in this image.
+&lt;/div&gt;&lt;/center&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Post last updated January 15, 2013, and moved to new location on September 28, 2017.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Biopsy Bot</title>
       <link>https://www.bcastell.com/projects/BiopsyBot/</link>
       <pubDate>Mon, 05 Dec 2011 00:00:00 +0000</pubDate>
@@ -414,15 +434,89 @@ CMPS ADDA [NUM1_UPPER], [NUM2_UPPER]
       <guid>https://www.bcastell.com/about/</guid>
       <description>
 
-&lt;p&gt;Hi there!  This is the personal website of Brandon Castellano (sometimes known as Breakthrough).  Here, you can find my blog, technical articles, and various projects (software &amp;amp; hardware) I’m working on.&lt;/p&gt;
+&lt;div class=&#34;bg-status&#34; style=&#34;padding:2em 0;&#34;&gt;
+    &lt;div class=&#34;container&#34;&gt;
+        &lt;div class=&#34;col-md-12&#34;&gt;
+            &lt;div class=&#34;row&#34;&gt;
+                &lt;div class=&#34;col-md-8&#34;&gt;
+Hi there!  This is the personal website of Brandon Castellano (sometimes known as Breakthrough).  Here, you can find my blog, technical articles, and various projects (software &amp; hardware) I’m working on.
+&lt;br /&gt;&lt;br /&gt;
+As for my background, I hold a B.E.Sc in Electrical Engineering, with the majority of my professional experience in the areas of robotics and real-time control systems.  I’m “fluent” in a wide variety of programming languages, my favourites being C++, Python, and C# (although I’ve worked with Assembly, C, PHP, and Go).  For the curious, I’m both a Windows and Linux user (with Xubuntu being my desktop distribution of choice at the moment, and Debian-based for embedded ARM systems).
+&lt;br /&gt;&lt;br /&gt;
+Below you can find a list of my professional/academic experience, some of my accounts across the web, and methods to contact me.
+&lt;br /&gt;&lt;br /&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;col-md-4 text-center&#34;&gt;&lt;img src=&#34;https://www.bcastell.com/img/bc00sq.jpg&#34; alt=&#34;Portrait of Me&#34; width=&#34;100%&#34;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
 
-&lt;p&gt;As for my background, I hold a B.E.Sc in Electrical Engineering, and am pursuing a M.E.Sc in Robotics and Control.  I’m “fluent” in a wide variety of programming languages, my favourites being C++, Python, and C# (although I’ve worked with Assembly, C, and PHP).  And for the curious, I’m both a Windows and Linux user (Xubuntu being my distribution of choice at the moment).&lt;/p&gt;
+&lt;hr /&gt;
 
-&lt;h2 id=&#34;contact-me&#34;&gt;Contact Me&lt;/h2&gt;
+&lt;h2 id=&#34;my-background-experience&#34;&gt;My Background &amp;amp; Experience&lt;/h2&gt;
 
-&lt;p&gt;I’m still sorting out the best method of contact if you should need to get in touch with me.  For now, leave a comment on this page.&lt;/p&gt;
+&lt;h3 id=&#34;employers&#34;&gt;Employers&lt;/h3&gt;
 
-&lt;h2 id=&#34;across-the-web&#34;&gt;Across The Web&lt;/h2&gt;
+&lt;p&gt;The following is a list of companies I have worked for in the past (note this list may not always be up to date):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://eaglevisionsystems.com/&#34;&gt;&lt;strong&gt;Eagle Vision Systems&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Engineering Manager&lt;/em&gt;, Product Development&lt;/li&gt;
+&lt;li&gt;Design and implementation of a system to allow automated waste/recycling collection for vehicles with external hydraulic arms&lt;/li&gt;
+&lt;li&gt;Assigned/authored patent (see below) for overall process, with real-world testing being performed currently&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://uwo.ca/&#34;&gt;&lt;strong&gt;University of Western Ontario&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Research Assistant&lt;/em&gt;, Robotic Mushroom Farming&lt;/li&gt;
+&lt;li&gt;Tasked with development of the stereoscopic/3D camera hardware required for generating a depth map of mushrooms farm&lt;/li&gt;
+&lt;li&gt;Depth map used to resolve/estimate location, size, and pose of individual mushrooms, to be harvested by a robotic manipulator&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.opg.com/&#34;&gt;&lt;strong&gt;Ontario Power Generation&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.torontohydro.com&#34;&gt;&lt;strong&gt;Toronto Hydro Corporation&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;education&#34;&gt;Education&lt;/h3&gt;
+
+&lt;p&gt;I hold a &lt;strong&gt;B.E.Sc in Electrical Engineering&lt;/strong&gt; from the &lt;a href=&#34;http://uwo.ca/&#34;&gt;&lt;em&gt;University of Western Ontario&lt;/em&gt;&lt;/a&gt;.  The focus of my studies was real-time and embedded control systems, with significant overlap in the areas of computer engineering and computer science.  I also have experience taking post-graduate courses in parallel processing and GPGPU optimization, and have applied these skills to real-world robotic systems, mainly using image processing for object and pose recognition.&lt;/p&gt;
+
+&lt;h3 id=&#34;patents&#34;&gt;Patents&lt;/h3&gt;
+
+&lt;p&gt;The following is a list of patents I have authored/co-authored:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://patents.google.com/patent/US9403278B1&#34;&gt;&lt;strong&gt;US9403278B1: Systems and methods for detecting and picking up a waste receptacle&lt;/strong&gt; (link)&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Patent covers the use of sensors and/or computer vision to allow automated control of a hydraulic arm on waste collection vehicles, allowing for a much faster pickup cycle, reduction in driver workload and training requirements, and improved overall safety via greater spatial awareness&lt;/li&gt;
+&lt;li&gt;Co-authored patent as part of my work for Eagle Vision Systems, where a successful implementation of the system was developed&lt;/li&gt;
+&lt;li&gt;The initial development implementation was successful, with real-world testing currently ongoing&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;literature&#34;&gt;Literature&lt;/h3&gt;
+
+&lt;p&gt;Based on my experience with image processing, especially in the areas of Python and OpenCV, I have participated in the development of the following published books:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.packtpub.com/application-development/learning-opencv-3-computer-vision-python-second-edition&#34;&gt;&lt;strong&gt;Learning OpenCV 3 Computer Vision with Python&lt;/strong&gt; - Second Edition (link)&lt;/a&gt;, Packt Publishing
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Role&lt;/em&gt;: selected as final reviewer, tasked with verifying and/or rewriting code samples for the new edition to comply with the latest version of OpenCV&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Authors&lt;/em&gt;: Joe Minichino, Joseph Howse&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Publish Date&lt;/em&gt;: September 2015&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;across-the-web&#34;&gt;Across the Web&lt;/h2&gt;
 
 &lt;p&gt;You can find me at the following websites:&lt;/p&gt;
 
@@ -432,6 +526,14 @@ Wikipedia (bcastell)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Note that the usernames listed above are not unique.  Only the accounts in the list above are truly me.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;contact-me&#34;&gt;Contact Me&lt;/h2&gt;
+
+&lt;p&gt;I’m still sorting out the best method of contact if you should need to get in touch with me.  For now, leave a comment on a post on this website, or feel free to contact me through one of my official accounts at one of the third-party services listed above.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -443,7 +545,7 @@ Wikipedia (bcastell)
       <guid>https://www.bcastell.com/contact/</guid>
       <description>
 
-&lt;h2 id=&#34;location-and-contact-me&#34;&gt;Location and Contact Me&lt;/h2&gt;
+&lt;h2 id=&#34;location-contact-information&#34;&gt;Location &amp;amp; Contact Information&lt;/h2&gt;
 
 &lt;p&gt;If you should need to get in touch with me, the quickest way would be to leave a comment on &lt;a href=&#34;https://www.bcastell.com/posts&#34;&gt;any posts&lt;/a&gt;.  You can also contact me through any of my other official accounts/services listed on &lt;a href=&#34;https://www.bcastell.com/about/&#34;&gt;the About page&lt;/a&gt; (under the &amp;ldquo;Across The Web&amp;rdquo; section).&lt;/p&gt;
 

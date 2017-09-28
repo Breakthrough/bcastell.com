@@ -37,6 +37,11 @@
   </url>
   
   <url>
+    <loc>https://www.bcastell.com/posts/fixing-xanalogtv/</loc>
+    <lastmod>2012-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.bcastell.com/projects/BiopsyBot/</loc>
     <lastmod>2011-12-05T00:00:00+00:00</lastmod>
   </url>
@@ -48,6 +53,12 @@
   <url>
     <loc>https://www.bcastell.com/</loc>
     <lastmod>2017-09-28T12:57:00-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.bcastell.com/tags/c/</loc>
+    <lastmod>2012-09-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

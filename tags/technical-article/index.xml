@@ -277,5 +277,25 @@ CMPS ADDA [NUM1_UPPER], [NUM2_UPPER]
 </description>
     </item>
     
+    <item>
+      <title>Fixing the XAnalogTV Screensaver</title>
+      <link>https://www.bcastell.com/posts/fixing-xanalogtv/</link>
+      <pubDate>Mon, 10 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bcastell.com/posts/fixing-xanalogtv/</guid>
+      <description>&lt;p&gt;A few days ago, I discovered the awesome XAnalogTV screensaver included with XScreenSaver. I was very impressed with the visuals, which include a very accurate simulation of a conventional “tube” television implementing the analog NTSC TV standard. There was just one problem – I couldn’t get XAnalogTV to fill my screen:&lt;/p&gt;
+
+&lt;div style=&#34;background:#eee;padding:1em;margin:1em 10%;border:1px solid #ccc;&#34;&gt;&lt;center&gt;
+&lt;img src=&#34;https://www.bcastell.com/img/xanalogtv_cutoff.jpg&#34; alt=&#34;XAnalogTV with Incorrect Scaling&#34; width=&#34;70%&#34;/&gt;
+&lt;div class=&#34;text-small&#34; style=&#34;padding-top:1em;&#34;&gt;
+In the source code, the virtual &#34;display&#34; is forced to be within 15% of a standard 4:3 display. Any screen which is outside of this 15% range is just clipped, as shown in this image.
+&lt;/div&gt;&lt;/center&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Post last updated January 15, 2013, and moved to new location on September 28, 2017.&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
