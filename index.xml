@@ -445,6 +445,10 @@ Below you can find a list of my professional/academic experience, some of my acc
 
 &lt;h2 id=&#34;my-background-experience&#34;&gt;My Background &amp;amp; Experience&lt;/h2&gt;
 
+&lt;h3 id=&#34;education&#34;&gt;Education&lt;/h3&gt;
+
+&lt;p&gt;I hold a &lt;strong&gt;B.E.Sc in Electrical Engineering&lt;/strong&gt; from the &lt;a href=&#34;http://uwo.ca/&#34;&gt;&lt;em&gt;University of Western Ontario&lt;/em&gt;&lt;/a&gt;.  The focus of my studies was real-time and embedded control systems, with significant overlap in the areas of computer engineering and computer science.  I also have experience taking post-graduate courses in parallel processing and GPGPU optimization, having applied these skills to real-world robotic systems, mainly focused on using image processing for object and pose recognition.&lt;/p&gt;
+
 &lt;h3 id=&#34;employers&#34;&gt;Employers&lt;/h3&gt;
 
 &lt;p&gt;The following is a list of companies I have worked for in the past (note this list may not always be up to date):&lt;/p&gt;
@@ -453,27 +457,37 @@ Below you can find a list of my professional/academic experience, some of my acc
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://eaglevisionsystems.com/&#34;&gt;&lt;strong&gt;Eagle Vision Systems&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Engineering Manager&lt;/em&gt;, Product Development&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Engineering Manager&lt;/em&gt;, Product Development
+
+&lt;ul&gt;
 &lt;li&gt;Design and implementation of a system to allow automated waste/recycling collection for vehicles with external hydraulic arms&lt;/li&gt;
-&lt;li&gt;Assigned/authored patent (see below) for overall process, with real-world testing being performed currently&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Assigned/authored patent (see below) for overall process, with real-world testing being performed currently&lt;/li&gt;
+&lt;li&gt;Technologies used include C++, OpenCV, SDL/OpenGL, CAN/Serial interfaces to sensor and hydraulic controllers, USB CMOS cameras, a Linux-based operating system, and the Nvidia Jetson platform for future GPGPU acceleration, along with a physical touchscreen display for operator feedback and system monitoring&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://uwo.ca/&#34;&gt;&lt;strong&gt;University of Western Ontario&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Research Assistant&lt;/em&gt;, Robotic Mushroom Farming&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Research Assistant&lt;/em&gt;, Robotic Mushroom Farming
+
+&lt;ul&gt;
 &lt;li&gt;Tasked with development of the stereoscopic/3D camera hardware required for generating a depth map of mushrooms farm&lt;/li&gt;
-&lt;li&gt;Depth map used to resolve/estimate location, size, and pose of individual mushrooms, to be harvested by a robotic manipulator&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Depth map used to resolve/estimate location, size, and pose of individual mushrooms, to be harvested by a robotic manipulator&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Teaching Assistant&lt;/em&gt;, Software Engineering SE2250: Software Construction
+
+&lt;ul&gt;
+&lt;li&gt;Helped students during lab hours with course fundamentals, and graded projects, tests, and exams&lt;/li&gt;
+&lt;li&gt;Involved teaching of Git, C++, and Qt, and other utilities to demonstrate Linux-based development using command-line tools&lt;/li&gt;
+&lt;li&gt;Final project involved building an interactive Puzzle Bobble-like game utilizing path planning and collision detection&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.opg.com/&#34;&gt;&lt;strong&gt;Ontario Power Generation&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.torontohydro.com&#34;&gt;&lt;strong&gt;Toronto Hydro Corporation&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h3 id=&#34;education&#34;&gt;Education&lt;/h3&gt;
-
-&lt;p&gt;I hold a &lt;strong&gt;B.E.Sc in Electrical Engineering&lt;/strong&gt; from the &lt;a href=&#34;http://uwo.ca/&#34;&gt;&lt;em&gt;University of Western Ontario&lt;/em&gt;&lt;/a&gt;.  The focus of my studies was real-time and embedded control systems, with significant overlap in the areas of computer engineering and computer science.  I also have experience taking post-graduate courses in parallel processing and GPGPU optimization, and have applied these skills to real-world robotic systems, mainly using image processing for object and pose recognition.&lt;/p&gt;
 
 &lt;h3 id=&#34;patents&#34;&gt;Patents&lt;/h3&gt;
 
@@ -509,10 +523,12 @@ Below you can find a list of my professional/academic experience, some of my acc
 
 &lt;p&gt;You can find me at the following websites:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;Super User (Breakthrough)
-Github (Breakthrough)
-Wikipedia (bcastell)
-&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://superuser.com/users/6887/breakthrough&#34;&gt;Super User (Breakthrough)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/users/159447/breakthrough&#34;&gt;Stack Overflow (Breakthrough)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Breakthrough&#34;&gt;Github (Breakthrough)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/User:Bcastell&#34;&gt;Wikipedia (bcastell)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;Note that the usernames listed above are not unique.  Only the accounts in the list above are truly me.&lt;/p&gt;
 
