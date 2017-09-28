@@ -7,11 +7,6 @@
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/posts/test_post/</loc>
-    <lastmod>2017-09-06T14:02:03-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.bcastell.com/posts/scene-detection-tutorial-part-2/</loc>
     <lastmod>2017-09-06T01:14:08+02:00</lastmod>
   </url>
@@ -115,7 +110,7 @@
   
   <url>
     <loc>https://www.bcastell.com/posts/</loc>
-    <lastmod>2017-09-06T14:02:03-04:00</lastmod>
+    <lastmod>2017-09-06T01:14:08+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -143,7 +138,7 @@
   
   <url>
     <loc>https://www.bcastell.com/tags/python/</loc>
-    <lastmod>2017-09-06T14:02:03-04:00</lastmod>
+    <lastmod>2017-09-06T01:14:08+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -166,13 +161,13 @@
   
   <url>
     <loc>https://www.bcastell.com/categories/technical-articles/</loc>
-    <lastmod>2017-09-06T14:02:03-04:00</lastmod>
+    <lastmod>2012-10-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.bcastell.com/tags/tutorial/</loc>
-    <lastmod>2017-09-06T14:02:03-04:00</lastmod>
+    <lastmod>2017-09-06T01:14:08+02:00</lastmod>
     <priority>0</priority>
   </url>
   
