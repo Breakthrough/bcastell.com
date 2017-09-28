@@ -1,12 +1,8 @@
-+++
-title = "Projects"
-+++
++++.
+9+
+--------
 
-<b>The following list showcases some of my open-source software projects:</b>
-
--------------------------------------------------------------------------------
-
-<a href="{{< relref "projects/PySceneDetect.md" >}}">
+<a href="{{< relref "projects/PySceneDetect.md" >}}"> www.formspree.io
 ### PySceneDetect &#x1f3a5;
 </a>
 
@@ -44,7 +40,7 @@ Click here to view the Biopsy Bot project page.
 -------------------------------------------------------------------------------
 
 <a href="{{< relref "projects/Triclysm.md" >}}">
-### Triclysm &#x1f52c;
+### Triclysm <img src="/img/triclysm-screenshot-00.png" alt="Triclysm SCreenshot" width="64"/>
 </a>
 
 A 3D LED display project, including hardware (electrical schematics, components, and microcontroller firmware) and software to develop and wirelessly transmit 3D videos/animations to the display.  The design is extendable, with the default configuration supporting a greyscale 8x8x8/512 voxel or 4096-colour RGB 4x4x4/64 voxel display.

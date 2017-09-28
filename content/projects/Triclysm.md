@@ -5,6 +5,7 @@ categories = ["Projects"]
 type = "posts"
 tags = ["C++", "Lua", "OpenCV", "computer vision", "video processing", "cross platform", "open source"]
 date = "2017-09-28T12:57:00-05:00"
+banner = "img/triclysm-screenshot-00.png"
 +++
 
 ## Triclysm
