@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.bcastell.com/projects/Triclysm/</loc>
+    <lastmod>2017-09-28T12:57:00-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.bcastell.com/posts/test_post/</loc>
     <lastmod>2017-09-06T14:02:03-04:00</lastmod>
   </url>
@@ -14,31 +19,6 @@
   <url>
     <loc>https://www.bcastell.com/projects/DVR-Scan/</loc>
     <lastmod>2017-01-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.bcastell.com/posts/migrate-from-jekyll/</loc>
-    <lastmod>2015-10-10T13:07:31+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.bcastell.com/posts/linked-post/</loc>
-    <lastmod>2015-10-02T21:49:20+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.bcastell.com/posts/go-is-for-lovers/</loc>
-    <lastmod>2015-09-17T13:47:08+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.bcastell.com/posts/hugo-is-for-lovers/</loc>
-    <lastmod>2015-08-03T13:39:46+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.bcastell.com/posts/creating-a-new-theme/</loc>
-    <lastmod>2015-06-24T13:50:46+02:00</lastmod>
   </url>
   
   <url>
@@ -62,7 +42,13 @@
   
   <url>
     <loc>https://www.bcastell.com/</loc>
-    <lastmod>2017-09-06T14:02:03-04:00</lastmod>
+    <lastmod>2017-09-28T12:57:00-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.bcastell.com/tags/c&#43;&#43;/</loc>
+    <lastmod>2017-09-28T12:57:00-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -73,7 +59,7 @@
   
   <url>
     <loc>https://www.bcastell.com/tags/computer-vision/</loc>
-    <lastmod>2017-01-11T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-28T12:57:00-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -83,19 +69,7 @@
   
   <url>
     <loc>https://www.bcastell.com/tags/cross-platform/</loc>
-    <lastmod>2017-01-11T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.bcastell.com/tags/go/</loc>
-    <lastmod>2015-09-17T13:47:08+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.bcastell.com/tags/golang/</loc>
-    <lastmod>2015-10-02T21:49:20+02:00</lastmod>
+    <lastmod>2017-09-28T12:57:00-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -106,26 +80,20 @@
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/tags/hugo/</loc>
-    <lastmod>2015-10-02T21:49:20+02:00</lastmod>
+    <loc>https://www.bcastell.com/tags/lua/</loc>
+    <lastmod>2017-09-28T12:57:00-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/tags/ipsum/</loc>
-    <lastmod>2015-10-10T13:07:31+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.bcastell.com/categories/lorem/</loc>
-    <lastmod>2015-10-10T13:07:31+02:00</lastmod>
+    <loc>https://www.bcastell.com/tags/open-source/</loc>
+    <lastmod>2017-09-28T12:57:00-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.bcastell.com/tags/opencv/</loc>
-    <lastmod>2017-01-11T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-28T12:57:00-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -142,31 +110,19 @@
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/tags/programming/</loc>
-    <lastmod>2015-10-02T21:49:20+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.bcastell.com/categories/projects/</loc>
-    <lastmod>2017-01-11T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-28T12:57:00-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.bcastell.com/projects/</loc>
-    <lastmod>2017-01-11T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-28T12:57:00-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.bcastell.com/projects/</loc>
-  </url>
-  
-  <url>
-    <loc>https://www.bcastell.com/categories/pseudo/</loc>
-    <lastmod>2015-08-03T13:39:46+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -178,12 +134,6 @@
   <url>
     <loc>https://www.bcastell.com/tags/robotics/</loc>
     <lastmod>2011-12-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.bcastell.com/categories/starting/</loc>
-    <lastmod>2015-06-24T13:50:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -205,12 +155,6 @@
   </url>
   
   <url>
-    <loc>https://www.bcastell.com/tags/theme/</loc>
-    <lastmod>2015-10-02T21:49:20+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.bcastell.com/tags/tutorial/</loc>
     <lastmod>2017-09-06T14:02:03-04:00</lastmod>
     <priority>0</priority>
@@ -224,7 +168,7 @@
   
   <url>
     <loc>https://www.bcastell.com/tags/video-processing/</loc>
-    <lastmod>2017-01-11T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-28T12:57:00-05:00</lastmod>
     <priority>0</priority>
   </url>
   

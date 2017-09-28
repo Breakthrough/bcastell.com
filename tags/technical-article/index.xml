@@ -6,7 +6,7 @@
     <description>Recent content in Technical Article on Brandon Castellano</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright &amp;copy; 2017, Brandon Castellano.  All rights reserved.</copyright>
+    <copyright>Copyright &amp;copy; 2017 Brandon Castellano.  All rights reserved.</copyright>
     <atom:link href="https://www.bcastell.com/tags/technical-article/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -67,47 +67,47 @@
 
 &lt;p&gt;Let’s begin by creating a &lt;a href=&#34;http://docs.opencv.org/modules/highgui/doc/reading_and_writing_images_and_video.html#videocapture&#34;&gt;VideoCapture object&lt;/a&gt;, which can be used to open either a camera stream or a video file, and retrieve individual frames. Let’s assume the name of the video is passed as the first argument to the script, and do some simple error checking and cleanup just to be safe:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #0000FF; font-weight: bold&#34;&gt;sys&lt;/span&gt;
-&lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #0000FF; font-weight: bold&#34;&gt;cv2&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #0000ff&#34;&gt;import&lt;/span&gt; sys
+&lt;span style=&#34;color: #0000ff&#34;&gt;import&lt;/span&gt; cv2
  
-&lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #0000FF&#34;&gt;main&lt;/span&gt;():
-    &lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #008000&#34;&gt;len&lt;/span&gt;(sys&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;argv) &lt;span style=&#34;color: #666666&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;2&lt;/span&gt;:
-        &lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #BA2121&#34;&gt;&amp;quot;Error - file name must be specified as first argument.&amp;quot;&lt;/span&gt;
-        &lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;return&lt;/span&gt;
+&lt;span style=&#34;color: #0000ff&#34;&gt;def&lt;/span&gt; main():
+    &lt;span style=&#34;color: #0000ff&#34;&gt;if&lt;/span&gt; len(sys.argv) &amp;lt; 2:
+        &lt;span style=&#34;color: #0000ff&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #a31515&#34;&gt;&amp;quot;Error - file name must be specified as first argument.&amp;quot;&lt;/span&gt;
+        &lt;span style=&#34;color: #0000ff&#34;&gt;return&lt;/span&gt;
  
-    cap &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; cv2&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;VideoCapture()
-    cap&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;open(sys&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;argv[&lt;span style=&#34;color: #666666&#34;&gt;1&lt;/span&gt;])
+    cap = cv2.VideoCapture()
+    cap.open(sys.argv[1])
  
-    &lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #AA22FF; font-weight: bold&#34;&gt;not&lt;/span&gt; cap&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;isOpened():
-        &lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #BA2121&#34;&gt;&amp;quot;Fatal error - could not open video &lt;/span&gt;&lt;span style=&#34;color: #BB6688; font-weight: bold&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #BA2121&#34;&gt;.&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; sys&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;argv[&lt;span style=&#34;color: #666666&#34;&gt;1&lt;/span&gt;]
-        &lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;return&lt;/span&gt;
-    &lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;else&lt;/span&gt;:
-        &lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #BA2121&#34;&gt;&amp;quot;Parsing video &lt;/span&gt;&lt;span style=&#34;color: #BB6688; font-weight: bold&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color: #BA2121&#34;&gt;...&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; sys&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;argv[&lt;span style=&#34;color: #666666&#34;&gt;1&lt;/span&gt;]
+    &lt;span style=&#34;color: #0000ff&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #0000ff&#34;&gt;not&lt;/span&gt; cap.isOpened():
+        &lt;span style=&#34;color: #0000ff&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #a31515&#34;&gt;&amp;quot;Fatal error - could not open video %s.&amp;quot;&lt;/span&gt; % sys.argv[1]
+        &lt;span style=&#34;color: #0000ff&#34;&gt;return&lt;/span&gt;
+    &lt;span style=&#34;color: #0000ff&#34;&gt;else&lt;/span&gt;:
+        &lt;span style=&#34;color: #0000ff&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #a31515&#34;&gt;&amp;quot;Parsing video %s...&amp;quot;&lt;/span&gt; % sys.argv[1]
  
-    &lt;span style=&#34;color: #408080; font-style: italic&#34;&gt;# Do stuff with cap here.&lt;/span&gt;
+    &lt;span style=&#34;color: #008000&#34;&gt;# Do stuff with cap here.&lt;/span&gt;
  
-    cap&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;release()
+    cap.release()
  
  
-&lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #19177C&#34;&gt;__name__&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color: #BA2121&#34;&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;:
+&lt;span style=&#34;color: #0000ff&#34;&gt;if&lt;/span&gt; __name__ == &lt;span style=&#34;color: #a31515&#34;&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;:
     main()
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Once we have a valid VideoCapture object (i.e. the isOpened() method returns true), we can use &lt;a href=&#34;http://docs.opencv.org/modules/highgui/doc/reading_and_writing_images_and_video.html#videocapture-read&#34;&gt;the &lt;code&gt;read()&lt;/code&gt; method&lt;/a&gt; to start grabbing frames. Note that read() returns a tuple in the form (retval, image), and when retval is returned as false, this denotes that there are no more frames in the object to grab (and thus we are at the end of the video). Let’s make a loop to scan through the video and retrieve each frame, as well as print some basic information about the video):&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;width  &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; cap&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;get(cv2&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;cv&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;CV_CAP_PROP_FRAME_WIDTH)
-height &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; cap&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;get(cv2&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;cv&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;CV_CAP_PROP_FRAME_HEIGHT)
-&lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #BA2121&#34;&gt;&amp;quot;Video Resolution: &lt;/span&gt;&lt;span style=&#34;color: #BB6688; font-weight: bold&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color: #BA2121&#34;&gt; x &lt;/span&gt;&lt;span style=&#34;color: #BB6688; font-weight: bold&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color: #BA2121&#34;&gt;&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; (width, height)
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;width  = cap.get(cv2.cv.CV_CAP_PROP_FRAME_WIDTH)
+height = cap.get(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT)
+&lt;span style=&#34;color: #0000ff&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #a31515&#34;&gt;&amp;quot;Video Resolution: %d x %d&amp;quot;&lt;/span&gt; % (width, height)
  
-&lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color: #008000&#34;&gt;True&lt;/span&gt;:
-    (rv, im) &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; cap&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;read()   &lt;span style=&#34;color: #408080; font-style: italic&#34;&gt;# im is a valid image if and only if rv is true&lt;/span&gt;
-    &lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #AA22FF; font-weight: bold&#34;&gt;not&lt;/span&gt; rv:
-        &lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;break&lt;/span&gt;
-    &lt;span style=&#34;color: #408080; font-style: italic&#34;&gt;# Do stuff with im here.&lt;/span&gt;
+&lt;span style=&#34;color: #0000ff&#34;&gt;while&lt;/span&gt; True:
+    (rv, im) = cap.read()   &lt;span style=&#34;color: #008000&#34;&gt;# im is a valid image if and only if rv is true&lt;/span&gt;
+    &lt;span style=&#34;color: #0000ff&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #0000ff&#34;&gt;not&lt;/span&gt; rv:
+        &lt;span style=&#34;color: #0000ff&#34;&gt;break&lt;/span&gt;
+    &lt;span style=&#34;color: #008000&#34;&gt;# Do stuff with im here.&lt;/span&gt;
  
-frame_count &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; cap&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;get(cv2&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;cv&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;CV_CAP_PROP_POS_FRAMES)  &lt;span style=&#34;color: #408080; font-style: italic&#34;&gt;# current capture position&lt;/span&gt;
-&lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #BA2121&#34;&gt;&amp;quot;Read &lt;/span&gt;&lt;span style=&#34;color: #BB6688; font-weight: bold&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color: #BA2121&#34;&gt; frames from video.&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; frame_count
+frame_count = cap.get(cv2.cv.CV_CAP_PROP_POS_FRAMES)  &lt;span style=&#34;color: #008000&#34;&gt;# current capture position&lt;/span&gt;
+&lt;span style=&#34;color: #0000ff&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #a31515&#34;&gt;&amp;quot;Read %d frames from video.&amp;quot;&lt;/span&gt; % frame_count
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -121,43 +121,43 @@ frame_count &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; cap&lt;spa
 
 &lt;p&gt;Since we have the ability to access &lt;code&gt;im&lt;/code&gt; as if it were a NumPy array, we can use &lt;a href=&#34;http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.mean.html#numpy.ndarray.mean&#34;&gt;the &lt;code&gt;mean()&lt;/code&gt; ndarray method&lt;/a&gt; on &lt;code&gt;im&lt;/code&gt; to compute the average intensity of the pixels in the frame. We can compare this value to our set threshold, as well as the average intensity of the past frame (to determine if we are fading in to or out from a scene) to determine where the scene cuts occur by modifying the above while-loop as follows:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #408080; font-style: italic&#34;&gt;# Allow the threshold to be passed as an optional second argument to the script.&lt;/span&gt;
-threshold &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;15&lt;/span&gt;
-&lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #008000&#34;&gt;len&lt;/span&gt;(sys&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;argv) &lt;span style=&#34;color: #666666&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color: #AA22FF; font-weight: bold&#34;&gt;and&lt;/span&gt; &lt;span style=&#34;color: #008000&#34;&gt;int&lt;/span&gt;(sys&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;argv[&lt;span style=&#34;color: #666666&#34;&gt;2&lt;/span&gt;]) &lt;span style=&#34;color: #666666&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;0&lt;/span&gt;:
-    threshold &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #008000&#34;&gt;int&lt;/span&gt;(sys&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;argv[&lt;span style=&#34;color: #666666&#34;&gt;2&lt;/span&gt;])
-&lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #BA2121&#34;&gt;&amp;quot;Detecting scenes with threshold &lt;/span&gt;&lt;span style=&#34;color: #BB6688; font-weight: bold&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color: #BA2121&#34;&gt;.&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; threshold
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #008000&#34;&gt;# Allow the threshold to be passed as an optional second argument to the script.&lt;/span&gt;
+threshold = 15
+&lt;span style=&#34;color: #0000ff&#34;&gt;if&lt;/span&gt; len(sys.argv) &amp;gt; 2 &lt;span style=&#34;color: #0000ff&#34;&gt;and&lt;/span&gt; int(sys.argv[2]) &amp;gt; 0:
+    threshold = int(sys.argv[2])
+&lt;span style=&#34;color: #0000ff&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #a31515&#34;&gt;&amp;quot;Detecting scenes with threshold %d.&amp;quot;&lt;/span&gt; % threshold
  
-last_mean &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;0&lt;/span&gt;       &lt;span style=&#34;color: #408080; font-style: italic&#34;&gt;# Mean pixel intensity of the *last* frame we processed.&lt;/span&gt;
+last_mean = 0       &lt;span style=&#34;color: #008000&#34;&gt;# Mean pixel intensity of the *last* frame we processed.&lt;/span&gt;
  
-&lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color: #008000&#34;&gt;True&lt;/span&gt;:
-    (rv, im) &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; cap&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;read()   &lt;span style=&#34;color: #408080; font-style: italic&#34;&gt;# im is a valid image if and only if rv is true&lt;/span&gt;
-    &lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #AA22FF; font-weight: bold&#34;&gt;not&lt;/span&gt; rv:
-        &lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;break&lt;/span&gt;
-    frame_mean &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; im&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;mean()
+&lt;span style=&#34;color: #0000ff&#34;&gt;while&lt;/span&gt; True:
+    (rv, im) = cap.read()   &lt;span style=&#34;color: #008000&#34;&gt;# im is a valid image if and only if rv is true&lt;/span&gt;
+    &lt;span style=&#34;color: #0000ff&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #0000ff&#34;&gt;not&lt;/span&gt; rv:
+        &lt;span style=&#34;color: #0000ff&#34;&gt;break&lt;/span&gt;
+    frame_mean = im.mean()
  
-    &lt;span style=&#34;color: #408080; font-style: italic&#34;&gt;# Detect fade in from black.&lt;/span&gt;
-    &lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;if&lt;/span&gt; frame_mean &lt;span style=&#34;color: #666666&#34;&gt;&amp;gt;=&lt;/span&gt; threshold &lt;span style=&#34;color: #AA22FF; font-weight: bold&#34;&gt;and&lt;/span&gt; last_mean &lt;span style=&#34;color: #666666&#34;&gt;&amp;lt;&lt;/span&gt; threshold:
-        &lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #BA2121&#34;&gt;&amp;quot;Detected fade in at &lt;/span&gt;&lt;span style=&#34;color: #BB6688; font-weight: bold&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color: #BA2121&#34;&gt;ms (frame &lt;/span&gt;&lt;span style=&#34;color: #BB6688; font-weight: bold&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color: #BA2121&#34;&gt;).&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; (
-            cap&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;get(cv2&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;cv&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;CV_CAP_PROP_POS_MSEC),
-            cap&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;get(cv2&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;cv&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;CV_CAP_PROP_POS_FRAMES) )
+    &lt;span style=&#34;color: #008000&#34;&gt;# Detect fade in from black.&lt;/span&gt;
+    &lt;span style=&#34;color: #0000ff&#34;&gt;if&lt;/span&gt; frame_mean &amp;gt;= threshold &lt;span style=&#34;color: #0000ff&#34;&gt;and&lt;/span&gt; last_mean &amp;lt; threshold:
+        &lt;span style=&#34;color: #0000ff&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #a31515&#34;&gt;&amp;quot;Detected fade in at %dms (frame %d).&amp;quot;&lt;/span&gt; % (
+            cap.get(cv2.cv.CV_CAP_PROP_POS_MSEC),
+            cap.get(cv2.cv.CV_CAP_PROP_POS_FRAMES) )
  
-    &lt;span style=&#34;color: #408080; font-style: italic&#34;&gt;# Detect fade out to black.&lt;/span&gt;
-    &lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;elif&lt;/span&gt; frame_mean &lt;span style=&#34;color: #666666&#34;&gt;&amp;lt;&lt;/span&gt; threshold &lt;span style=&#34;color: #AA22FF; font-weight: bold&#34;&gt;and&lt;/span&gt; last_mean &lt;span style=&#34;color: #666666&#34;&gt;&amp;gt;=&lt;/span&gt; threshold:
-        &lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #BA2121&#34;&gt;&amp;quot;Detected fade out at &lt;/span&gt;&lt;span style=&#34;color: #BB6688; font-weight: bold&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color: #BA2121&#34;&gt;ms (frame &lt;/span&gt;&lt;span style=&#34;color: #BB6688; font-weight: bold&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color: #BA2121&#34;&gt;).&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;%&lt;/span&gt; (
-            cap&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;get(cv2&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;cv&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;CV_CAP_PROP_POS_MSEC),
-            cap&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;get(cv2&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;cv&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;CV_CAP_PROP_POS_FRAMES) )
+    &lt;span style=&#34;color: #008000&#34;&gt;# Detect fade out to black.&lt;/span&gt;
+    &lt;span style=&#34;color: #0000ff&#34;&gt;elif&lt;/span&gt; frame_mean &amp;lt; threshold &lt;span style=&#34;color: #0000ff&#34;&gt;and&lt;/span&gt; last_mean &amp;gt;= threshold:
+        &lt;span style=&#34;color: #0000ff&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #a31515&#34;&gt;&amp;quot;Detected fade out at %dms (frame %d).&amp;quot;&lt;/span&gt; % (
+            cap.get(cv2.cv.CV_CAP_PROP_POS_MSEC),
+            cap.get(cv2.cv.CV_CAP_PROP_POS_FRAMES) )
  
-    last_mean &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; frame_mean     &lt;span style=&#34;color: #408080; font-style: italic&#34;&gt;# Store current mean to compare in next iteration.&lt;/span&gt;
+    last_mean = frame_mean     &lt;span style=&#34;color: #008000&#34;&gt;# Store current mean to compare in next iteration.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;And it’s that easy – you now know when a scene is fading in or out from your videos, based on the defined threshold! While the timecode is presented in milliseconds, a frame number is also shown, which should help if you just want to manually find scene changes in a video. In practice, I found the &lt;code&gt;mean()&lt;/code&gt; methods provided by OpenCV and NumPy to be fairly slower than computing the average from the sum and image size:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span style=&#34;color: #408080; font-style: italic&#34;&gt;# Compute mean intensity of pixels in frame.&lt;/span&gt;
-    &lt;span style=&#34;color: #408080; font-style: italic&#34;&gt;# Previously: frame_mean = im.mean()&lt;/span&gt;
-    frame_mean &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; np&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;sum(im) &lt;span style=&#34;color: #666666&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color: #008000&#34;&gt;float&lt;/span&gt;(im&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;shape[&lt;span style=&#34;color: #666666&#34;&gt;0&lt;/span&gt;] &lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt; im&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;shape[&lt;span style=&#34;color: #666666&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color: #666666&#34;&gt;*&lt;/span&gt; im&lt;span style=&#34;color: #666666&#34;&gt;.&lt;/span&gt;shape[&lt;span style=&#34;color: #666666&#34;&gt;2&lt;/span&gt;])
-    &lt;span style=&#34;color: #408080; font-style: italic&#34;&gt;# Dividing the sum by the image size is 35-40% faster than using&lt;/span&gt;
-    &lt;span style=&#34;color: #408080; font-style: italic&#34;&gt;# either im.mean() or np.mean(im).&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span style=&#34;color: #008000&#34;&gt;# Compute mean intensity of pixels in frame.&lt;/span&gt;
+    &lt;span style=&#34;color: #008000&#34;&gt;# Previously: frame_mean = im.mean()&lt;/span&gt;
+    frame_mean = np.sum(im) / float(im.shape[0] * im.shape[1] * im.shape[2])
+    &lt;span style=&#34;color: #008000&#34;&gt;# Dividing the sum by the image size is 35-40% faster than using&lt;/span&gt;
+    &lt;span style=&#34;color: #008000&#34;&gt;# either im.mean() or np.mean(im).&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -171,7 +171,7 @@ last_mean &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; &lt;span sty
 
 &lt;p&gt;Invoking the Python program for this part using the included &lt;code&gt;testvideo.mp4&lt;/code&gt; file, you should obtain this output:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; python ./part1-threshold.py testvideo.mp4
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; python ./part1-threshold.py testvideo.mp4
 Parsing video testvideo.mp4...
 Video Resolution: 1280 x 720
 Detecting scenes with threshold = 15.
@@ -188,7 +188,7 @@ Read 719 frames from video in 2.86 seconds (avg. 251.1 FPS).
 
 &lt;p&gt;If we change the threshold from 15 to 50, we see that it has the expected result for each type of cut. Hard cuts are unaffected, and the fade in/out times are shifted forwards/backwards in time, respectively:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; python ./part1-threshold.py testvideo.mp4 50
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; python ./part1-threshold.py testvideo.mp4 50
 Parsing video testvideo.mp4...
 Video Resolution: 1280 x 720
 Detecting scenes with threshold = 50.

@@ -6,9 +6,27 @@
     <description>Recent content in Projects on Brandon Castellano</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright &amp;copy; 2017, Brandon Castellano.  All rights reserved.</copyright>
-    <lastBuildDate>Wed, 11 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <copyright>Copyright &amp;copy; 2017 Brandon Castellano.  All rights reserved.</copyright>
+    <lastBuildDate>Thu, 28 Sep 2017 12:57:00 -0500</lastBuildDate>
     <atom:link href="https://www.bcastell.com/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Triclysm</title>
+      <link>https://www.bcastell.com/projects/Triclysm/</link>
+      <pubDate>Thu, 28 Sep 2017 12:57:00 -0500</pubDate>
+      
+      <guid>https://www.bcastell.com/projects/Triclysm/</guid>
+      <description>
+
+&lt;h2 id=&#34;triclysm&#34;&gt;Triclysm&lt;/h2&gt;
+
+&lt;p&gt;Project Overview:  &lt;a href=&#34;https://github.com/Triclysm&#34;&gt;https://github.com/Triclysm&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Triclysm/Previewer-Legacy&#34;&gt;Triclysm Previewer (link)&lt;/a&gt;: cross-platform software for developing, previewing, and streaming (via Ethernet or Wi-Fi) to a physical LED cube/voxel-based display.  Cross-platform, written in C++, using SDL/OpenGL as a back-end, with Lua as the primary scripting language for animations.&lt;/p&gt;
+
+&lt;p&gt;In the future, a rewrite is planned, utilizing Python for a majority of the code, and allowing it to be used for animation development as well.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>DVR-Scan</title>

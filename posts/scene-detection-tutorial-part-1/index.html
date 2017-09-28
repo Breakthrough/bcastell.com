@@ -193,47 +193,47 @@
 
 <p>Let’s begin by creating a <a href="http://docs.opencv.org/modules/highgui/doc/reading_and_writing_images_and_video.html#videocapture">VideoCapture object</a>, which can be used to open either a camera stream or a video file, and retrieve individual frames. Let’s assume the name of the video is passed as the first argument to the script, and do some simple error checking and cleanup just to be safe:</p>
 
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">sys</span>
-<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">cv2</span>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span><span style="color: #0000ff">import</span> sys
+<span style="color: #0000ff">import</span> cv2
  
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">main</span>():
-    <span style="color: #008000; font-weight: bold">if</span> <span style="color: #008000">len</span>(sys<span style="color: #666666">.</span>argv) <span style="color: #666666">&lt;</span> <span style="color: #666666">2</span>:
-        <span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Error - file name must be specified as first argument.&quot;</span>
-        <span style="color: #008000; font-weight: bold">return</span>
+<span style="color: #0000ff">def</span> main():
+    <span style="color: #0000ff">if</span> len(sys.argv) &lt; 2:
+        <span style="color: #0000ff">print</span> <span style="color: #a31515">&quot;Error - file name must be specified as first argument.&quot;</span>
+        <span style="color: #0000ff">return</span>
  
-    cap <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>VideoCapture()
-    cap<span style="color: #666666">.</span>open(sys<span style="color: #666666">.</span>argv[<span style="color: #666666">1</span>])
+    cap = cv2.VideoCapture()
+    cap.open(sys.argv[1])
  
-    <span style="color: #008000; font-weight: bold">if</span> <span style="color: #AA22FF; font-weight: bold">not</span> cap<span style="color: #666666">.</span>isOpened():
-        <span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Fatal error - could not open video </span><span style="color: #BB6688; font-weight: bold">%s</span><span style="color: #BA2121">.&quot;</span> <span style="color: #666666">%</span> sys<span style="color: #666666">.</span>argv[<span style="color: #666666">1</span>]
-        <span style="color: #008000; font-weight: bold">return</span>
-    <span style="color: #008000; font-weight: bold">else</span>:
-        <span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Parsing video </span><span style="color: #BB6688; font-weight: bold">%s</span><span style="color: #BA2121">...&quot;</span> <span style="color: #666666">%</span> sys<span style="color: #666666">.</span>argv[<span style="color: #666666">1</span>]
+    <span style="color: #0000ff">if</span> <span style="color: #0000ff">not</span> cap.isOpened():
+        <span style="color: #0000ff">print</span> <span style="color: #a31515">&quot;Fatal error - could not open video %s.&quot;</span> % sys.argv[1]
+        <span style="color: #0000ff">return</span>
+    <span style="color: #0000ff">else</span>:
+        <span style="color: #0000ff">print</span> <span style="color: #a31515">&quot;Parsing video %s...&quot;</span> % sys.argv[1]
  
-    <span style="color: #408080; font-style: italic"># Do stuff with cap here.</span>
+    <span style="color: #008000"># Do stuff with cap here.</span>
  
-    cap<span style="color: #666666">.</span>release()
+    cap.release()
  
  
-<span style="color: #008000; font-weight: bold">if</span> <span style="color: #19177C">__name__</span> <span style="color: #666666">==</span> <span style="color: #BA2121">&quot;__main__&quot;</span>:
+<span style="color: #0000ff">if</span> __name__ == <span style="color: #a31515">&quot;__main__&quot;</span>:
     main()
 </pre></div>
 
 
 <p>Once we have a valid VideoCapture object (i.e. the isOpened() method returns true), we can use <a href="http://docs.opencv.org/modules/highgui/doc/reading_and_writing_images_and_video.html#videocapture-read">the <code>read()</code> method</a> to start grabbing frames. Note that read() returns a tuple in the form (retval, image), and when retval is returned as false, this denotes that there are no more frames in the object to grab (and thus we are at the end of the video). Let’s make a loop to scan through the video and retrieve each frame, as well as print some basic information about the video):</p>
 
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>width  <span style="color: #666666">=</span> cap<span style="color: #666666">.</span>get(cv2<span style="color: #666666">.</span>cv<span style="color: #666666">.</span>CV_CAP_PROP_FRAME_WIDTH)
-height <span style="color: #666666">=</span> cap<span style="color: #666666">.</span>get(cv2<span style="color: #666666">.</span>cv<span style="color: #666666">.</span>CV_CAP_PROP_FRAME_HEIGHT)
-<span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Video Resolution: </span><span style="color: #BB6688; font-weight: bold">%d</span><span style="color: #BA2121"> x </span><span style="color: #BB6688; font-weight: bold">%d</span><span style="color: #BA2121">&quot;</span> <span style="color: #666666">%</span> (width, height)
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>width  = cap.get(cv2.cv.CV_CAP_PROP_FRAME_WIDTH)
+height = cap.get(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT)
+<span style="color: #0000ff">print</span> <span style="color: #a31515">&quot;Video Resolution: %d x %d&quot;</span> % (width, height)
  
-<span style="color: #008000; font-weight: bold">while</span> <span style="color: #008000">True</span>:
-    (rv, im) <span style="color: #666666">=</span> cap<span style="color: #666666">.</span>read()   <span style="color: #408080; font-style: italic"># im is a valid image if and only if rv is true</span>
-    <span style="color: #008000; font-weight: bold">if</span> <span style="color: #AA22FF; font-weight: bold">not</span> rv:
-        <span style="color: #008000; font-weight: bold">break</span>
-    <span style="color: #408080; font-style: italic"># Do stuff with im here.</span>
+<span style="color: #0000ff">while</span> True:
+    (rv, im) = cap.read()   <span style="color: #008000"># im is a valid image if and only if rv is true</span>
+    <span style="color: #0000ff">if</span> <span style="color: #0000ff">not</span> rv:
+        <span style="color: #0000ff">break</span>
+    <span style="color: #008000"># Do stuff with im here.</span>
  
-frame_count <span style="color: #666666">=</span> cap<span style="color: #666666">.</span>get(cv2<span style="color: #666666">.</span>cv<span style="color: #666666">.</span>CV_CAP_PROP_POS_FRAMES)  <span style="color: #408080; font-style: italic"># current capture position</span>
-<span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Read </span><span style="color: #BB6688; font-weight: bold">%d</span><span style="color: #BA2121"> frames from video.&quot;</span> <span style="color: #666666">%</span> frame_count
+frame_count = cap.get(cv2.cv.CV_CAP_PROP_POS_FRAMES)  <span style="color: #008000"># current capture position</span>
+<span style="color: #0000ff">print</span> <span style="color: #a31515">&quot;Read %d frames from video.&quot;</span> % frame_count
 </pre></div>
 
 
@@ -247,43 +247,43 @@ frame_count <span style="color: #666666">=</span> cap<span style="color: #666666
 
 <p>Since we have the ability to access <code>im</code> as if it were a NumPy array, we can use <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.mean.html#numpy.ndarray.mean">the <code>mean()</code> ndarray method</a> on <code>im</code> to compute the average intensity of the pixels in the frame. We can compare this value to our set threshold, as well as the average intensity of the past frame (to determine if we are fading in to or out from a scene) to determine where the scene cuts occur by modifying the above while-loop as follows:</p>
 
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic"># Allow the threshold to be passed as an optional second argument to the script.</span>
-threshold <span style="color: #666666">=</span> <span style="color: #666666">15</span>
-<span style="color: #008000; font-weight: bold">if</span> <span style="color: #008000">len</span>(sys<span style="color: #666666">.</span>argv) <span style="color: #666666">&gt;</span> <span style="color: #666666">2</span> <span style="color: #AA22FF; font-weight: bold">and</span> <span style="color: #008000">int</span>(sys<span style="color: #666666">.</span>argv[<span style="color: #666666">2</span>]) <span style="color: #666666">&gt;</span> <span style="color: #666666">0</span>:
-    threshold <span style="color: #666666">=</span> <span style="color: #008000">int</span>(sys<span style="color: #666666">.</span>argv[<span style="color: #666666">2</span>])
-<span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Detecting scenes with threshold </span><span style="color: #BB6688; font-weight: bold">%d</span><span style="color: #BA2121">.&quot;</span> <span style="color: #666666">%</span> threshold
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span><span style="color: #008000"># Allow the threshold to be passed as an optional second argument to the script.</span>
+threshold = 15
+<span style="color: #0000ff">if</span> len(sys.argv) &gt; 2 <span style="color: #0000ff">and</span> int(sys.argv[2]) &gt; 0:
+    threshold = int(sys.argv[2])
+<span style="color: #0000ff">print</span> <span style="color: #a31515">&quot;Detecting scenes with threshold %d.&quot;</span> % threshold
  
-last_mean <span style="color: #666666">=</span> <span style="color: #666666">0</span>       <span style="color: #408080; font-style: italic"># Mean pixel intensity of the *last* frame we processed.</span>
+last_mean = 0       <span style="color: #008000"># Mean pixel intensity of the *last* frame we processed.</span>
  
-<span style="color: #008000; font-weight: bold">while</span> <span style="color: #008000">True</span>:
-    (rv, im) <span style="color: #666666">=</span> cap<span style="color: #666666">.</span>read()   <span style="color: #408080; font-style: italic"># im is a valid image if and only if rv is true</span>
-    <span style="color: #008000; font-weight: bold">if</span> <span style="color: #AA22FF; font-weight: bold">not</span> rv:
-        <span style="color: #008000; font-weight: bold">break</span>
-    frame_mean <span style="color: #666666">=</span> im<span style="color: #666666">.</span>mean()
+<span style="color: #0000ff">while</span> True:
+    (rv, im) = cap.read()   <span style="color: #008000"># im is a valid image if and only if rv is true</span>
+    <span style="color: #0000ff">if</span> <span style="color: #0000ff">not</span> rv:
+        <span style="color: #0000ff">break</span>
+    frame_mean = im.mean()
  
-    <span style="color: #408080; font-style: italic"># Detect fade in from black.</span>
-    <span style="color: #008000; font-weight: bold">if</span> frame_mean <span style="color: #666666">&gt;=</span> threshold <span style="color: #AA22FF; font-weight: bold">and</span> last_mean <span style="color: #666666">&lt;</span> threshold:
-        <span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Detected fade in at </span><span style="color: #BB6688; font-weight: bold">%d</span><span style="color: #BA2121">ms (frame </span><span style="color: #BB6688; font-weight: bold">%d</span><span style="color: #BA2121">).&quot;</span> <span style="color: #666666">%</span> (
-            cap<span style="color: #666666">.</span>get(cv2<span style="color: #666666">.</span>cv<span style="color: #666666">.</span>CV_CAP_PROP_POS_MSEC),
-            cap<span style="color: #666666">.</span>get(cv2<span style="color: #666666">.</span>cv<span style="color: #666666">.</span>CV_CAP_PROP_POS_FRAMES) )
+    <span style="color: #008000"># Detect fade in from black.</span>
+    <span style="color: #0000ff">if</span> frame_mean &gt;= threshold <span style="color: #0000ff">and</span> last_mean &lt; threshold:
+        <span style="color: #0000ff">print</span> <span style="color: #a31515">&quot;Detected fade in at %dms (frame %d).&quot;</span> % (
+            cap.get(cv2.cv.CV_CAP_PROP_POS_MSEC),
+            cap.get(cv2.cv.CV_CAP_PROP_POS_FRAMES) )
  
-    <span style="color: #408080; font-style: italic"># Detect fade out to black.</span>
-    <span style="color: #008000; font-weight: bold">elif</span> frame_mean <span style="color: #666666">&lt;</span> threshold <span style="color: #AA22FF; font-weight: bold">and</span> last_mean <span style="color: #666666">&gt;=</span> threshold:
-        <span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Detected fade out at </span><span style="color: #BB6688; font-weight: bold">%d</span><span style="color: #BA2121">ms (frame </span><span style="color: #BB6688; font-weight: bold">%d</span><span style="color: #BA2121">).&quot;</span> <span style="color: #666666">%</span> (
-            cap<span style="color: #666666">.</span>get(cv2<span style="color: #666666">.</span>cv<span style="color: #666666">.</span>CV_CAP_PROP_POS_MSEC),
-            cap<span style="color: #666666">.</span>get(cv2<span style="color: #666666">.</span>cv<span style="color: #666666">.</span>CV_CAP_PROP_POS_FRAMES) )
+    <span style="color: #008000"># Detect fade out to black.</span>
+    <span style="color: #0000ff">elif</span> frame_mean &lt; threshold <span style="color: #0000ff">and</span> last_mean &gt;= threshold:
+        <span style="color: #0000ff">print</span> <span style="color: #a31515">&quot;Detected fade out at %dms (frame %d).&quot;</span> % (
+            cap.get(cv2.cv.CV_CAP_PROP_POS_MSEC),
+            cap.get(cv2.cv.CV_CAP_PROP_POS_FRAMES) )
  
-    last_mean <span style="color: #666666">=</span> frame_mean     <span style="color: #408080; font-style: italic"># Store current mean to compare in next iteration.</span>
+    last_mean = frame_mean     <span style="color: #008000"># Store current mean to compare in next iteration.</span>
 </pre></div>
 
 
 <p>And it’s that easy – you now know when a scene is fading in or out from your videos, based on the defined threshold! While the timecode is presented in milliseconds, a frame number is also shown, which should help if you just want to manually find scene changes in a video. In practice, I found the <code>mean()</code> methods provided by OpenCV and NumPy to be fairly slower than computing the average from the sum and image size:</p>
 
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    <span style="color: #408080; font-style: italic"># Compute mean intensity of pixels in frame.</span>
-    <span style="color: #408080; font-style: italic"># Previously: frame_mean = im.mean()</span>
-    frame_mean <span style="color: #666666">=</span> np<span style="color: #666666">.</span>sum(im) <span style="color: #666666">/</span> <span style="color: #008000">float</span>(im<span style="color: #666666">.</span>shape[<span style="color: #666666">0</span>] <span style="color: #666666">*</span> im<span style="color: #666666">.</span>shape[<span style="color: #666666">1</span>] <span style="color: #666666">*</span> im<span style="color: #666666">.</span>shape[<span style="color: #666666">2</span>])
-    <span style="color: #408080; font-style: italic"># Dividing the sum by the image size is 35-40% faster than using</span>
-    <span style="color: #408080; font-style: italic"># either im.mean() or np.mean(im).</span>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>    <span style="color: #008000"># Compute mean intensity of pixels in frame.</span>
+    <span style="color: #008000"># Previously: frame_mean = im.mean()</span>
+    frame_mean = np.sum(im) / float(im.shape[0] * im.shape[1] * im.shape[2])
+    <span style="color: #008000"># Dividing the sum by the image size is 35-40% faster than using</span>
+    <span style="color: #008000"># either im.mean() or np.mean(im).</span>
 </pre></div>
 
 
@@ -297,7 +297,7 @@ last_mean <span style="color: #666666">=</span> <span style="color: #666666">0</
 
 <p>Invoking the Python program for this part using the included <code>testvideo.mp4</code> file, you should obtain this output:</p>
 
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>&gt; python ./part1-threshold.py testvideo.mp4
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>&gt; python ./part1-threshold.py testvideo.mp4
 Parsing video testvideo.mp4...
 Video Resolution: 1280 x 720
 Detecting scenes with threshold = 15.
@@ -314,7 +314,7 @@ Read 719 frames from video in 2.86 seconds (avg. 251.1 FPS).
 
 <p>If we change the threshold from 15 to 50, we see that it has the expected result for each type of cut. Hard cuts are unaffected, and the fade in/out times are shifted forwards/backwards in time, respectively:</p>
 
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>&gt; python ./part1-threshold.py testvideo.mp4 50
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>&gt; python ./part1-threshold.py testvideo.mp4 50
 Parsing video testvideo.mp4...
 Video Resolution: 1280 x 720
 Detecting scenes with threshold = 50.
@@ -406,19 +406,10 @@ Read 719 frames from video in 2.96 seconds (avg. 242.9 FPS).
     <div class="panel-body">
         <ul class="nav nav-pills nav-stacked">
             
-            <li><a href="https://www.bcastell.com/categories/lorem">lorem (1)</a>
+            <li><a href="https://www.bcastell.com/categories/programming">programming (2)</a>
             </li>
             
-            <li><a href="https://www.bcastell.com/categories/programming">programming (4)</a>
-            </li>
-            
-            <li><a href="https://www.bcastell.com/categories/projects">projects (3)</a>
-            </li>
-            
-            <li><a href="https://www.bcastell.com/categories/pseudo">pseudo (1)</a>
-            </li>
-            
-            <li><a href="https://www.bcastell.com/categories/starting">starting (1)</a>
+            <li><a href="https://www.bcastell.com/categories/projects">projects (4)</a>
             </li>
             
             <li><a href="https://www.bcastell.com/categories/technical-articles">technical-articles (1)</a>
@@ -446,31 +437,25 @@ Read 719 frames from video in 2.96 seconds (avg. 242.9 FPS).
     <div class="panel-body">
         <ul class="tag-cloud">
             
+            <li><a href="https://www.bcastell.com/tags/c&#43;&#43;"><i class="fa fa-tags"></i> c&#43;&#43;</a>
+            </li>
+            
             <li><a href="https://www.bcastell.com/tags/computer-vision"><i class="fa fa-tags"></i> computer-vision</a>
             </li>
             
             <li><a href="https://www.bcastell.com/tags/cross-platform"><i class="fa fa-tags"></i> cross-platform</a>
             </li>
             
-            <li><a href="https://www.bcastell.com/tags/go"><i class="fa fa-tags"></i> go</a>
-            </li>
-            
-            <li><a href="https://www.bcastell.com/tags/golang"><i class="fa fa-tags"></i> golang</a>
-            </li>
-            
             <li><a href="https://www.bcastell.com/tags/hardware"><i class="fa fa-tags"></i> hardware</a>
             </li>
             
-            <li><a href="https://www.bcastell.com/tags/hugo"><i class="fa fa-tags"></i> hugo</a>
+            <li><a href="https://www.bcastell.com/tags/lua"><i class="fa fa-tags"></i> lua</a>
             </li>
             
-            <li><a href="https://www.bcastell.com/tags/ipsum"><i class="fa fa-tags"></i> ipsum</a>
+            <li><a href="https://www.bcastell.com/tags/open-source"><i class="fa fa-tags"></i> open-source</a>
             </li>
             
             <li><a href="https://www.bcastell.com/tags/opencv"><i class="fa fa-tags"></i> opencv</a>
-            </li>
-            
-            <li><a href="https://www.bcastell.com/tags/programming"><i class="fa fa-tags"></i> programming</a>
             </li>
             
             <li><a href="https://www.bcastell.com/tags/python"><i class="fa fa-tags"></i> python</a>
@@ -480,9 +465,6 @@ Read 719 frames from video in 2.96 seconds (avg. 242.9 FPS).
             </li>
             
             <li><a href="https://www.bcastell.com/tags/technical-article"><i class="fa fa-tags"></i> technical-article</a>
-            </li>
-            
-            <li><a href="https://www.bcastell.com/tags/theme"><i class="fa fa-tags"></i> theme</a>
             </li>
             
             <li><a href="https://www.bcastell.com/tags/tutorial"><i class="fa fa-tags"></i> tutorial</a>
@@ -538,6 +520,19 @@ Read 719 frames from video in 2.96 seconds (avg. 242.9 FPS).
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
+                        <a href="https://www.bcastell.com/projects/Triclysm/">
+                          
+                            <img src="https://www.bcastell.com/img/placeholder.png" class="img-responsive" alt="">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://www.bcastell.com/projects/Triclysm/">Triclysm</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
                         <a href="https://www.bcastell.com/posts/test_post/">
                           
                             <img src="https://www.bcastell.com/img/banners/banner-5.jpg" class="img-responsive" alt="">
@@ -572,19 +567,6 @@ Read 719 frames from video in 2.96 seconds (avg. 242.9 FPS).
                     </div>
                     <div class="name same-height-always">
                         <h5><a href="https://www.bcastell.com/projects/DVR-Scan/">DVR-Scan</a></h5>
-                    </div>
-                </div>
-                
-                <div class="item same-height-row clearfix">
-                    <div class="image same-height-always">
-                        <a href="https://www.bcastell.com/posts/migrate-from-jekyll/">
-                          
-                            <img src="https://www.bcastell.com/img/banners/banner-5.jpg" class="img-responsive" alt="">
-                          
-                        </a>
-                    </div>
-                    <div class="name same-height-always">
-                        <h5><a href="https://www.bcastell.com/posts/migrate-from-jekyll/">Migrate from Jekyll</a></h5>
                     </div>
                 </div>
                 
@@ -624,7 +606,7 @@ Read 719 frames from video in 2.96 seconds (avg. 242.9 FPS).
     <div class="container">
         <div class="col-md-12">
             
-            <p class="pull-left">Copyright &copy; 2017, Brandon Castellano.  All rights reserved.</p>
+            <p class="pull-left">Copyright &copy; 2017 Brandon Castellano.  All rights reserved.</p>
             
             <p class="pull-right">
               Template by <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
