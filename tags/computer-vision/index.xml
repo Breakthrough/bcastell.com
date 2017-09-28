@@ -19,11 +19,17 @@
 
 &lt;h2 id=&#34;triclysm&#34;&gt;Triclysm&lt;/h2&gt;
 
-&lt;p&gt;Project Overview:  &lt;a href=&#34;https://github.com/Triclysm&#34;&gt;https://github.com/Triclysm&lt;/a&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://github.com/Triclysm/Previewer-Legacy&#34;&gt;Triclysm Previewer (link)&lt;/a&gt;: cross-platform software for developing, previewing, and streaming (via Ethernet or Wi-Fi) to a physical LED cube/voxel-based display.  Cross-platform, written in C++, using SDL/OpenGL as a back-end, with Lua as the primary scripting language for animations.&lt;/p&gt;
+&lt;h3 id=&#34;project-overview&#34;&gt;Project Overview&lt;/h3&gt;
 
-&lt;p&gt;In the future, a rewrite is planned, utilizing Python for a majority of the code, and allowing it to be used for animation development as well.&lt;/p&gt;
+&lt;p&gt;See the Triclysm project on Github at the following URL: &lt;a href=&#34;https://github.com/Triclysm&#34;&gt;https://github.com/Triclysm&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;triclysm-previewer&#34;&gt;Triclysm Previewer&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Triclysm/Previewer-Legacy&#34;&gt;Triclysm Previewer (link)&lt;/a&gt; is a cross-platform application for developing, previewing, and streaming (via Ethernet or Wi-Fi) to a physical LED cube/voxel-based display.  Cross-platform, written in C++, using SDL/OpenGL as a back-end, with Lua as the primary scripting language for animations.&lt;/p&gt;
+
+&lt;p&gt;In the future, a rewrite is planned, utilizing Python for a majority of the code, and allowing it to be used for animation development as well.  However, the existing code-base has been successfully tested on an 8x8x8 monochrome LED cube (giving 1024 total levels of brightness at the maximum refresh rate), as well as a 4x4x4 RGB LED cube, with a total of 4096 individual colour combinations.&lt;/p&gt;
 </description>
     </item>
     
@@ -37,7 +43,21 @@
 
 &lt;h2 id=&#34;dvr-scan-img-src-img-projects-dvr-scan-logo-full-png-alt-dvr-scan-logo-width-20&#34;&gt;DVR-Scan &lt;img src=&#34;https://www.bcastell.com/img/projects/dvr-scan/logo_full.png&#34; alt=&#34;DVR-Scan Logo&#34; width=20%/&gt;&lt;/h2&gt;
 
-&lt;p&gt;Description coming soon.  Website:  &lt;a href=&#34;http://dvr-scan.readthedocs.io&#34;&gt;http://dvr-scan.readthedocs.io&lt;/a&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;overview&#34;&gt;Overview&lt;/h3&gt;
+
+&lt;p&gt;DVR-Scan is a command-line application for detecting areas in a video that contain motion, automatically extracting each motion segment as a separate file for further viewing or processing.  This makes managing a large amount of footage from, for example, security cameras/DVRs, a much more manageable task, as only the areas of interest need to be reviewed after processing with DVR-Scan.&lt;/p&gt;
+
+&lt;p&gt;See &lt;a href=&#34;http://dvr-scan.readthedocs.io/en/latest/&#34;&gt;DVR-Scan on Readthedocs&lt;/a&gt; for more information.&lt;/p&gt;
+
+&lt;h3 id=&#34;download&#34;&gt;Download&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://dvr-scan.readthedocs.io/en/latest/download/&#34;&gt;Click here&lt;/a&gt; to download the latest release of DVR-Scan.  Note that DVR-Scan is cross-platform, and is supported for Windows, Linux, and OSX, with a binary installer included for Windows users (installation instructions for Linux/OSX users can be found &lt;a href=&#34;http://dvr-scan.readthedocs.io/en/latest/guide/installing/&#34;&gt;in the documentation&lt;/a&gt;).&lt;/p&gt;
+
+&lt;h3 id=&#34;documentation&#34;&gt;Documentation&lt;/h3&gt;
+
+&lt;p&gt;There is extensive documentation available for DVR-Scan on Read the Docs at &lt;a href=&#34;http://dvr-scan.readthedocs.io/en/latest/&#34;&gt;dvr-scan.readthedocs.io&lt;/a&gt;.  This includes a &lt;a href=&#34;http://pyscenedetect.readthedocs.io/en/latest/examples/usage/&#34;&gt;getting started guide&lt;/a&gt;, which includes some examples to help you get started with DVR-Scan.&lt;/p&gt;
 </description>
     </item>
     
@@ -49,17 +69,21 @@
       <guid>https://www.bcastell.com/projects/PySceneDetect/</guid>
       <description>
 
-&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;h2 id=&#34;pyscenedetect&#34;&gt;PySceneDetect&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;overview&#34;&gt;Overview&lt;/h3&gt;
 
 &lt;p&gt;PySceneDetect is a command-line application and a Python library for detecting scene changes in videos, automatically splitting the video into separate clips. Not only is it free and open-source software (FOSS), but there are several detection methods available (see Features), from simple threshold-based fade in/out detection, to advanced content aware fast-cut detection.&lt;/p&gt;
 
-&lt;h2 id=&#34;download&#34;&gt;Download&lt;/h2&gt;
+&lt;h3 id=&#34;download&#34;&gt;Download&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://pyscenedetect.readthedocs.io/en/latest/download/&#34;&gt;Click here&lt;/a&gt; to download the latest release of PySceneDetect.  Note that PySceneDetect is cross-platform, and is supported for Windows, Linux, and OSX.&lt;/p&gt;
 
 &lt;p&gt;The latest development version can be found at &lt;a href=&#34;https://github.com/Breakthrough/PySceneDetect/&#34;&gt;the PySceneDetect project page at Github&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;documentation&#34;&gt;Documentation&lt;/h2&gt;
+&lt;h3 id=&#34;documentation&#34;&gt;Documentation&lt;/h3&gt;
 
 &lt;p&gt;There is extensive documentation available for PySceneDetect on Read the Docs at &lt;a href=&#34;http://pyscenedetect.readthedocs.io/en/latest/&#34;&gt;pyscenedetect.readthedocs.io&lt;/a&gt;.  This includes a &lt;a href=&#34;http://pyscenedetect.readthedocs.io/en/latest/examples/usage/&#34;&gt;getting started guide&lt;/a&gt;, examples, and an overview of the Python API.  Note that while the Python API is still unstable, and subject to change in subsequent releases (this does not affect the main command-line program).&lt;/p&gt;
 </description>
