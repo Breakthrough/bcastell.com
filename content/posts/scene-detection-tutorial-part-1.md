@@ -4,7 +4,7 @@ date = "2013-10-19"
 aliases = ["tech-articles/pyscenedetect-tutorial-part-1"]
 tags = ["python", "technical article", "tutorial"]
 categories = ["Tutorials", "Programming"]
-banner = "img/banners/banner-2.jpg"
+banner = "img/scenedetect-pycv.png"
 +++
 
 ## Part 1: Threshold/Fade-to-Black Detection 

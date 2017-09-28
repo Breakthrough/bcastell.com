@@ -4,7 +4,7 @@ date = "2017-09-06T01:14:08+02:00"
 aliases = ["tech-articles/pyscenedetect-tutorial-part-2"]
 tags = ["python", "technical article", "tutorial"]
 categories = ["Tutorials", "Programming"]
-banner = "img/banners/banner-2.jpg"
+banner = "img/scenedetect-pycv-2.png"
 +++
 
 # Part 2: Adaptive Threshold Detection
