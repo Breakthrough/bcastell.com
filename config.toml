@@ -44,6 +44,7 @@ pygmentsStyle = "vs"
     date_format = "2017-01-16"
     logo = "img/logo.png"
     address = """
+<br /><br /><img src="/img/carousel/bc02.jpg" width="100%" />
       """
     latitude = "-12.043333"
     longitude = "-77.028333"

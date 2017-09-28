@@ -3,7 +3,7 @@ title = "Contact"
 id = "contact"
 +++
 
-## Location and Contact Me
+## Location & Contact Information
 
 If you should need to get in touch with me, the quickest way would be to leave a comment on [any posts](/posts).  You can also contact me through any of my other official accounts/services listed on <a href="{{< relref "about.md" >}}">the About page</a> (under the "Across The Web" section).
 
