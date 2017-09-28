@@ -1,8 +1,9 @@
-+++.
-9+
++++
+title = "Projects"
++++
 --------
 
-<a href="{{< relref "projects/PySceneDetect.md" >}}"> www.formspree.io
+<a href="{{< relref "projects/PySceneDetect.md" >}}">
 ### PySceneDetect &#x1f3a5;
 </a>
 
