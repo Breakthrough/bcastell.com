@@ -473,9 +473,9 @@ Below you can find a list of my professional/academic experience, some of my acc
 
 &lt;p&gt;I hold a &lt;strong&gt;B.E.Sc in Electrical Engineering&lt;/strong&gt; from the &lt;a href=&#34;http://uwo.ca/&#34;&gt;&lt;em&gt;University of Western Ontario&lt;/em&gt;&lt;/a&gt;.  The focus of my studies was real-time and embedded control systems, with significant overlap in the areas of computer engineering and computer science.  I also have experience taking post-graduate courses in parallel processing and GPGPU optimization, having applied these skills to real-world robotic systems, mainly focused on using image processing for object and pose recognition.&lt;/p&gt;
 
-&lt;h3 id=&#34;employers&#34;&gt;Employers&lt;/h3&gt;
+&lt;h3 id=&#34;employers-and-start-ups&#34;&gt;Employers and Start-ups&lt;/h3&gt;
 
-&lt;p&gt;The following is a list of companies I have worked for in the past (note this list may not always be up to date):&lt;/p&gt;
+&lt;p&gt;The following is a list of companies I have worked for in the past, or have been on professional terms with, in no particular order:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://eaglevisionsystems.com/&#34;&gt;&lt;strong&gt;Eagle Vision Systems&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
@@ -486,7 +486,7 @@ Below you can find a list of my professional/academic experience, some of my acc
 &lt;ul&gt;
 &lt;li&gt;Design and implementation of a system to allow automated waste/recycling collection for vehicles with external hydraulic arms&lt;/li&gt;
 &lt;li&gt;Assigned/authored patent (see below) for overall process, with real-world testing being performed currently&lt;/li&gt;
-&lt;li&gt;Technologies used include C++, OpenCV, SDL/OpenGL, CAN/Serial interfaces to sensor and hydraulic controllers, USB CMOS cameras, a Linux-based operating system, and the Nvidia Jetson platform for future GPGPU acceleration, along with a physical touchscreen display for operator feedback and system monitoring&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Technologies used include C++, Python, OpenCV, SDL/OpenGL, CAN/Serial interfaces to sensor and hydraulic controllers, USB CMOS cameras, a Linux-based operating system, and the Nvidia Jetson platform for future GPGPU acceleration, along with a physical touchscreen display for operator feedback and system monitoring&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 
@@ -508,9 +508,30 @@ Below you can find a list of my professional/academic experience, some of my acc
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.opg.com/&#34;&gt;&lt;strong&gt;Ontario Power Generation&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.opg.com/&#34;&gt;&lt;strong&gt;Ontario Power Generation&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.torontohydro.com&#34;&gt;&lt;strong&gt;Toronto Hydro Corporation&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Market Operations&lt;/em&gt;, Portfolio Management
+
+&lt;ul&gt;
+&lt;li&gt;Tasked with creating an extensive reporting tool to determine the costs incurred when using generators to provide voltage support, as well as optimize the operation of the generator facilities for a significant saving in costs&lt;/li&gt;
+&lt;li&gt;Performed weekly audit of hydroelectric generating station water usage, and implemented various optimizations and enhancements to the existing auditing system&lt;/li&gt;
+&lt;li&gt;Performed daily data scraping and reporting of fuel cost inputs, for analysis and forecasting models to estimate electricity pricing and costs&lt;/li&gt;
+&lt;li&gt;Much of the technologies involved include Microsoft Excel, Microsoft Access, VBA, SQL, and some Java tools&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.torontohydro.com&#34;&gt;&lt;strong&gt;Toronto Hydro Corporation&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Capacity Planning&lt;/em&gt;, Records Management
+
+&lt;ul&gt;
+&lt;li&gt;Created internal tools to assist with parsing large amounts of data used by the asset management/tracking and geographical information systems (GIS)&lt;/li&gt;
+&lt;li&gt;Assisted in the creation of a power systems training course (related to substation design) for employees focused or with backgrounds in related engineering roles&lt;/li&gt;
+&lt;li&gt;Wrote various data analysis and reporting applications using C# and the .NET Framework, including the Microsoft Office interop assemblies&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;patents&#34;&gt;Patents&lt;/h3&gt;
@@ -560,7 +581,7 @@ Below you can find a list of my professional/academic experience, some of my acc
 
 &lt;h2 id=&#34;contact-me&#34;&gt;Contact Me&lt;/h2&gt;
 
-&lt;p&gt;I’m still sorting out the best method of contact if you should need to get in touch with me.  For now, leave a comment on a post on this website, or feel free to contact me through one of my official accounts at one of the third-party services listed above.&lt;/p&gt;
+&lt;p&gt;To contact me, visit the &lt;a href=&#34;https://www.bcastell.com/contact/&#34;&gt;Contact page (link)&lt;/a&gt; for details.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 </description>
