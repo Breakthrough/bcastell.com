@@ -30,16 +30,15 @@ Below you can find a list of my professional/academic experience, some of my acc
 
 I hold a **B.E.Sc in Electrical Engineering** from the [*University of Western Ontario*](http://uwo.ca/).  The focus of my studies was real-time and embedded control systems, with significant overlap in the areas of computer engineering and computer science.  I also have experience taking post-graduate courses in parallel processing and GPGPU optimization, having applied these skills to real-world robotic systems, mainly focused on using image processing for object and pose recognition.
 
-### Employers
+### Employers and Start-ups
 
-The following is a list of companies I have worked for in the past (note this list may not always be up to date):
-
+The following is a list of companies I have worked for in the past, or have been on professional terms with, in no particular order:
 
  - [**Eagle Vision Systems**](http://eaglevisionsystems.com/)
    - *Engineering Manager*, Product Development
      - Design and implementation of a system to allow automated waste/recycling collection for vehicles with external hydraulic arms
      - Assigned/authored patent (see below) for overall process, with real-world testing being performed currently
-     - Technologies used include C++, OpenCV, SDL/OpenGL, CAN/Serial interfaces to sensor and hydraulic controllers, USB CMOS cameras, a Linux-based operating system, and the Nvidia Jetson platform for future GPGPU acceleration, along with a physical touchscreen display for operator feedback and system monitoring<br /><br />
+     - Technologies used include C++, Python, OpenCV, SDL/OpenGL, CAN/Serial interfaces to sensor and hydraulic controllers, USB CMOS cameras, a Linux-based operating system, and the Nvidia Jetson platform for future GPGPU acceleration, along with a physical touchscreen display for operator feedback and system monitoring<br /><br />
 
  - [**University of Western Ontario**](http://uwo.ca/)
    - *Research Assistant*, Robotic Mushroom Farming
@@ -51,8 +50,17 @@ The following is a list of companies I have worked for in the past (note this li
      - Final project involved building an interactive Puzzle Bobble-like game utilizing path planning and collision detection<br /><br />
 
  - [**Ontario Power Generation**](http://www.opg.com/)
+   - *Market Operations*, Portfolio Management
+     - Tasked with creating an extensive reporting tool to determine the costs incurred when using generators to provide voltage support, as well as optimize the operation of the generator facilities for a significant saving in costs
+     - Performed weekly audit of hydroelectric generating station water usage, and implemented various optimizations and enhancements to the existing auditing system
+     - Performed daily data scraping and reporting of fuel cost inputs, for analysis and forecasting models to estimate electricity pricing and costs
+     - Much of the technologies involved include Microsoft Excel, Microsoft Access, VBA, SQL, and some Java tools
 
  - [**Toronto Hydro Corporation**](http://www.torontohydro.com)
+   - *Capacity Planning*, Records Management
+     - Created internal tools to assist with parsing large amounts of data used by the asset management/tracking and geographical information systems (GIS)
+     - Assisted in the creation of a power systems training course (related to substation design) for employees focused or with backgrounds in related engineering roles
+     - Wrote various data analysis and reporting applications using C# and the .NET Framework, including the Microsoft Office interop assemblies
 
 ### Patents
 
@@ -94,6 +102,6 @@ Note that the usernames listed above are not unique.  Only the accounts in the l
 
 ## Contact Me
 
-I’m still sorting out the best method of contact if you should need to get in touch with me.  For now, leave a comment on a post on this website, or feel free to contact me through one of my official accounts at one of the third-party services listed above.
+To contact me, visit the <a href="{{< relref "contact.md" >}}">Contact page (link)</a> for details.
 
 <br />

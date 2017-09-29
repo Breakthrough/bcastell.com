@@ -37,7 +37,7 @@ pygmentsStyle = "vs"
     # - you're done. Happy mailing!
     #
     # Enable the contact form by entering your Formspree.io email
-    email = "your@email.com"
+    email = "breaka4+fs@gmail.com"
 
     about_us = "<p>Welcome to the personal website of Brandon \"Breakthrough\"  Castellano.  Here you'll find my blog posts, technical articles, and programming tutorials, as well as the various projects I'm working on.</p><p>Feel free to leave feedback, either in general or in regards to any projects and posts.  Note that the contents of this website may not be redistributed without explicit permission.</p>"
     copyright = "Copyright &copy; 2017 Brandon Castellano.  All rights reserved."
@@ -45,8 +45,8 @@ pygmentsStyle = "vs"
     logo = "img/logo.png"
     address = """<br /><img src="/img/carousel/bc02.jpg" width="80%" /><br /><br />
       """
-    latitude = "-12.043333"
-    longitude = "-77.028333"
+    latitude = "43.7679948"
+    longitude = "-79.4872856"
 
 [Permalinks]
     #blog = "/blog/:filename/"
