@@ -21,26 +21,6 @@
     </item>
     
     <item>
-      <title>DVR-Scan</title>
-      <link>https://www.bcastell.com/projects/dvr-scan/</link>
-      <pubDate>Wed, 11 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.bcastell.com/projects/dvr-scan/</guid>
-      <description>DVR-Scan  Overview DVR-Scan is a command-line application for detecting areas in a video that contain motion, automatically extracting each motion segment as a separate file for further viewing or processing. This makes managing a large amount of footage from, for example, security cameras/DVRs, a much more manageable task, as only the areas of interest need to be reviewed after processing with DVR-Scan.
-See DVR-Scan on Readthedocs for more information.</description>
-    </item>
-    
-    <item>
-      <title>PySceneDetect</title>
-      <link>https://www.bcastell.com/projects/pyscenedetect/</link>
-      <pubDate>Sun, 08 Jun 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.bcastell.com/projects/pyscenedetect/</guid>
-      <description>PySceneDetect Overview PySceneDetect is a command-line application and a Python library for detecting scene changes in videos, automatically splitting the video into separate clips. Not only is it free and open-source software (FOSS), but there are several detection methods available (see Features), from simple threshold-based fade in/out detection, to advanced content aware fast-cut detection.
-Download Click here to download the latest release of PySceneDetect. Note that PySceneDetect is cross-platform, and is supported for Windows, Linux, and OSX.</description>
-    </item>
-    
-    <item>
       <title>Scene Detection with Python and OpenCV, Part 1</title>
       <link>https://www.bcastell.com/posts/scene-detection-tutorial-part-1/</link>
       <pubDate>Sat, 19 Oct 2013 00:00:00 +0000</pubDate>
