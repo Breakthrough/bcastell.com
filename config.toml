@@ -1,3 +1,6 @@
+#
+# Build using Hugo 0.57.2
+#
 baseurl = "https://www.bcastell.com/"
 title = "Brandon Castellano"
 theme = "hugo-universal-theme"

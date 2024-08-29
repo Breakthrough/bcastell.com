@@ -3,14 +3,22 @@ title = "Contact"
 id = "contact"
 +++
 
-## Location & Contact Information
 
-For serious/professional inquiries, feel free to use the contact form below, and I will get back to you as soon as possible.
+## Social
 
-If you need to get in touch with me about a particular post/project, feel free to leave a comment on that particular [post](/posts)/[project](/projects) page.  Lastly, you can also contact me through any of my other official accounts/services listed on <a href="{{< relref "about.md" >}}">the About page</a> (under the "Across The Web" section).
+ - [Github: Breakthrough](https://github.com/Breakthrough)
+<img alt="GitHub followers" src="https://img.shields.io/github/followers/Breakthrough?style=flat">
+
+ - [Super User: Breakthrough](https://superuser.com/users/6887/breakthrough)
+<img alt="Stack Exchange reputation" src="https://img.shields.io/stackexchange/superuser/r/6887?style=flat">
+
+ - [Stack Overflow: Breakthrough](https://stackoverflow.com/users/159447/breakthrough)
+ <img alt="Stack Exchange reputation" src="https://img.shields.io/stackexchange/stackoverflow/r/159447?style=flat">
+
+ - [Wikipedia: bcastell](https://en.wikipedia.org/wiki/User:Bcastell)
+
+## Direct
+
+For professional inquiries, use the contact form below. You can also contact me through any of my other official accounts/services listed on <a href="{{< relref "about.md#across-the-web-social" >}}">the About page</a>.
 
 This is especially preferred in regards to any bug reports or feature requests, which should be submitted as an issue on the relevant project's Github Issues page.
-
----------
-
-Note that I am currently in the Greater Toronto Area.  The map below is at a location near-by, but not exactly, where I reside.  In the past, I have also lived in London and Guelph, both for academic, and professional/work-relatd purposes.  For potential employers/contracts, I am flexible in terms of location, remote work, and if necessary, relocation.
