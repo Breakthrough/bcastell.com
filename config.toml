@@ -35,8 +35,6 @@ pygmentsStyle = "vs"
     logo = "img/logo.png"
     address = """<br /><img src="/img/carousel/bc02.jpg" width="80%" /><br /><br />
       """
-    latitude = "43.7679948"
-    longitude = "-79.4872856"
 
 [Permalinks]
     #blog = "/blog/:filename/"
