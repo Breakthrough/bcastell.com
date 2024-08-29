@@ -2,13 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Brandon Castellano</title>
-    <link>https://www.bcastell.com/posts/index.xml</link>
+    <link>https://www.bcastell.com/posts/</link>
     <description>Recent content in Posts on Brandon Castellano</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright &amp;copy; 2017 Brandon Castellano.  All rights reserved.</copyright>
     <lastBuildDate>Wed, 06 Sep 2017 01:14:08 +0200</lastBuildDate>
-    <atom:link href="https://www.bcastell.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://www.bcastell.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Scene Detection with Python and OpenCV, Part 2</title>
@@ -16,12 +17,7 @@
       <pubDate>Wed, 06 Sep 2017 01:14:08 +0200</pubDate>
       
       <guid>https://www.bcastell.com/posts/scene-detection-tutorial-part-2/</guid>
-      <description>
-
-&lt;h1 id=&#34;part-2-adaptive-threshold-detection&#34;&gt;Part 2: Adaptive Threshold Detection&lt;/h1&gt;
-
-&lt;p&gt;This tutorial is currently being migrated from the old location.  In the meantime, you can view the cached version of the previous, complete version on The Wayback Machine &lt;a href=&#34;https://web.archive.org/web/20160316124732/http://www.bcastell.com/tech-articles/pyscenedetect-tutorial-part-2/&#34;&gt;by clicking here&lt;/a&gt;.  Thank you for your patience during this time.&lt;/p&gt;
-</description>
+      <description>Part 2: Adaptive Threshold Detection This tutorial is currently being migrated from the old location. In the meantime, you can view the cached version of the previous, complete version on The Wayback Machine by clicking here. Thank you for your patience during this time.</description>
     </item>
     
     <item>
@@ -30,188 +26,8 @@
       <pubDate>Sat, 19 Oct 2013 00:00:00 +0000</pubDate>
       
       <guid>https://www.bcastell.com/posts/scene-detection-tutorial-part-1/</guid>
-      <description>
-
-&lt;h2 id=&#34;part-1-threshold-fade-to-black-detection&#34;&gt;Part 1: Threshold/Fade-to-Black Detection&lt;/h2&gt;
-
-&lt;p&gt;This tutorial is currently being migrated from the old location.  In the meantime, you can view the cached version of the previous, complete version on The Wayback Machine &lt;a href=&#34;https://web.archive.org/web/20160316225649/http://www.bcastell.com/tech-articles/pyscenedetect-tutorial-part-1/&#34;&gt;by clicking here&lt;/a&gt;.  Thank you for your patience during this time.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;In the first part of this three-part tutorial, we will write a Python program, using the OpenCV library, to perform threshold-based scene detection, to determine the exact frames where scene transitions (fade ins/outs to/from black in this case) occur. In the following tutorials, we will optimize our scene detection algorithm, and use the output to create a scene list with proper timecodes (&lt;a href=&#34;https://www.bcastell.com/posts/scene-detection-tutorial-part-2/&#34;&gt;Part 2&lt;/a&gt;) so a video can be split automatically into scenes. Lastly, we will cover how to detect content-based scene changes (in a future Part 3, coming soon), and combine this with the concepts from the previous tutorials to create a robust scene detection program.&lt;/p&gt;
-
-&lt;p&gt;You can download the source code and test video from this tutorial via the Github repository (see the Releases page to download everything in a single zip/tar archive).&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;introduction-installation&#34;&gt;Introduction &amp;amp; Installation&lt;/h3&gt;
-
-&lt;p&gt;The OpenCV bindings for Python allow you to quickly experiment with images/videos. Specifically, the OpenCV library handles all the low-level interfacing to actually decode video data (using FFmpeg, and thus is compatible with many different video formats), and uniquely, the returned video frames – as well as other image objects for that matter – can be accessed as a &lt;a href=&#34;http://numpy.scipy.org/&#34;&gt;NumPy&lt;/a&gt; array. This allows you to perform MATLAB/Octave-like operations on the image data easily and concisely.&lt;/p&gt;
-
-&lt;p&gt;Firstly, this tutorial assumes that you have installed Python 2.7 (I believe at the time of writing this, the OpenCV bindings are only available for 2.7), as well as the OpenCV bindings themselves. If you are a Windows user, you might want to see &lt;a href=&#34;http://stackoverflow.com/questions/4709301/installing-opencv-on-windows-7-for-python-2-7&#34;&gt;this question on Stack Overflow&lt;/a&gt;; on Linux, I was able to install the bindings right from my package manager. To verify that everything is installed correctly, fire up a Python console, and type &lt;code&gt;import cv2&lt;/code&gt;. If there are no errors, everything should be set up correctly!&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;the-problem-at-hand&#34;&gt;The Problem at Hand&lt;/h3&gt;
-
-&lt;p&gt;The goals of this program (PySceneDetect) are to detect when a scene change in a video occurs. In this particular tutorial, we will focus on fades in from, or out to black. The following figure depicts the type of scene changes we will be detecting:&lt;/p&gt;
-
-&lt;div style=&#34;background:#334455;padding:0.75em;margin:1em 4em;&#34;&gt;&lt;center&gt;
-&lt;img src=&#34;https://www.bcastell.com/img/tutorials/scenedetect/fadetypes.png&#34; alt=&#34;Types of Scene Changes&#34;/&gt;
-&lt;/center&gt;&lt;/div&gt;
-
-&lt;p&gt;The output of PySceneDetect will be a text-file containing the timestamps of each event (either a fade-from or fade-to black). The idea is that these timecodes can then be used to split the source video into individual scenes with another program (mkvmerge, VideoDub, etc…). In this part of the tutorial, we will print the time and frame number for each fade event to the console.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;decoding-video-frames&#34;&gt;Decoding Video Frames&lt;/h3&gt;
-
-&lt;p&gt;Let’s begin by creating a &lt;a href=&#34;http://docs.opencv.org/modules/highgui/doc/reading_and_writing_images_and_video.html#videocapture&#34;&gt;VideoCapture object&lt;/a&gt;, which can be used to open either a camera stream or a video file, and retrieve individual frames. Let’s assume the name of the video is passed as the first argument to the script, and do some simple error checking and cleanup just to be safe:&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #0000ff&#34;&gt;import&lt;/span&gt; sys
-&lt;span style=&#34;color: #0000ff&#34;&gt;import&lt;/span&gt; cv2
- 
-&lt;span style=&#34;color: #0000ff&#34;&gt;def&lt;/span&gt; main():
-    &lt;span style=&#34;color: #0000ff&#34;&gt;if&lt;/span&gt; len(sys.argv) &amp;lt; 2:
-        &lt;span style=&#34;color: #0000ff&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #a31515&#34;&gt;&amp;quot;Error - file name must be specified as first argument.&amp;quot;&lt;/span&gt;
-        &lt;span style=&#34;color: #0000ff&#34;&gt;return&lt;/span&gt;
- 
-    cap = cv2.VideoCapture()
-    cap.open(sys.argv[1])
- 
-    &lt;span style=&#34;color: #0000ff&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #0000ff&#34;&gt;not&lt;/span&gt; cap.isOpened():
-        &lt;span style=&#34;color: #0000ff&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #a31515&#34;&gt;&amp;quot;Fatal error - could not open video %s.&amp;quot;&lt;/span&gt; % sys.argv[1]
-        &lt;span style=&#34;color: #0000ff&#34;&gt;return&lt;/span&gt;
-    &lt;span style=&#34;color: #0000ff&#34;&gt;else&lt;/span&gt;:
-        &lt;span style=&#34;color: #0000ff&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #a31515&#34;&gt;&amp;quot;Parsing video %s...&amp;quot;&lt;/span&gt; % sys.argv[1]
- 
-    &lt;span style=&#34;color: #008000&#34;&gt;# Do stuff with cap here.&lt;/span&gt;
- 
-    cap.release()
- 
- 
-&lt;span style=&#34;color: #0000ff&#34;&gt;if&lt;/span&gt; __name__ == &lt;span style=&#34;color: #a31515&#34;&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;:
-    main()
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Once we have a valid VideoCapture object (i.e. the isOpened() method returns true), we can use &lt;a href=&#34;http://docs.opencv.org/modules/highgui/doc/reading_and_writing_images_and_video.html#videocapture-read&#34;&gt;the &lt;code&gt;read()&lt;/code&gt; method&lt;/a&gt; to start grabbing frames. Note that read() returns a tuple in the form (retval, image), and when retval is returned as false, this denotes that there are no more frames in the object to grab (and thus we are at the end of the video). Let’s make a loop to scan through the video and retrieve each frame, as well as print some basic information about the video):&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;width  = cap.get(cv2.cv.CV_CAP_PROP_FRAME_WIDTH)
-height = cap.get(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT)
-&lt;span style=&#34;color: #0000ff&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #a31515&#34;&gt;&amp;quot;Video Resolution: %d x %d&amp;quot;&lt;/span&gt; % (width, height)
- 
-&lt;span style=&#34;color: #0000ff&#34;&gt;while&lt;/span&gt; True:
-    (rv, im) = cap.read()   &lt;span style=&#34;color: #008000&#34;&gt;# im is a valid image if and only if rv is true&lt;/span&gt;
-    &lt;span style=&#34;color: #0000ff&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #0000ff&#34;&gt;not&lt;/span&gt; rv:
-        &lt;span style=&#34;color: #0000ff&#34;&gt;break&lt;/span&gt;
-    &lt;span style=&#34;color: #008000&#34;&gt;# Do stuff with im here.&lt;/span&gt;
- 
-frame_count = cap.get(cv2.cv.CV_CAP_PROP_POS_FRAMES)  &lt;span style=&#34;color: #008000&#34;&gt;# current capture position&lt;/span&gt;
-&lt;span style=&#34;color: #0000ff&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #a31515&#34;&gt;&amp;quot;Read %d frames from video.&amp;quot;&lt;/span&gt; % frame_count
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Note that the returned image &lt;code&gt;im&lt;/code&gt; is a Mat type object, and can be accessed with the same methods as a NumPy array due to the compatibility in it’s implementation.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;working-with-images-detecting-scene-changes&#34;&gt;Working With Images &amp;amp; Detecting Scene Changes&lt;/h3&gt;
-
-&lt;p&gt;Now that we have the image, we need to analyze it to determine when a scene cut occurs. Since we want to know when we have faded in or out of black, we can compute the average intensity of the pixels in the image, and compare this with a set threshold denoting the black level. We need to compare the average to a threshold and not simply zero, since compression artifacts or encoders sometimes will not produce a fully black frame.&lt;/p&gt;
-
-&lt;p&gt;Since we have the ability to access &lt;code&gt;im&lt;/code&gt; as if it were a NumPy array, we can use &lt;a href=&#34;http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.mean.html#numpy.ndarray.mean&#34;&gt;the &lt;code&gt;mean()&lt;/code&gt; ndarray method&lt;/a&gt; on &lt;code&gt;im&lt;/code&gt; to compute the average intensity of the pixels in the frame. We can compare this value to our set threshold, as well as the average intensity of the past frame (to determine if we are fading in to or out from a scene) to determine where the scene cuts occur by modifying the above while-loop as follows:&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #008000&#34;&gt;# Allow the threshold to be passed as an optional second argument to the script.&lt;/span&gt;
-threshold = 15
-&lt;span style=&#34;color: #0000ff&#34;&gt;if&lt;/span&gt; len(sys.argv) &amp;gt; 2 &lt;span style=&#34;color: #0000ff&#34;&gt;and&lt;/span&gt; int(sys.argv[2]) &amp;gt; 0:
-    threshold = int(sys.argv[2])
-&lt;span style=&#34;color: #0000ff&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #a31515&#34;&gt;&amp;quot;Detecting scenes with threshold %d.&amp;quot;&lt;/span&gt; % threshold
- 
-last_mean = 0       &lt;span style=&#34;color: #008000&#34;&gt;# Mean pixel intensity of the *last* frame we processed.&lt;/span&gt;
- 
-&lt;span style=&#34;color: #0000ff&#34;&gt;while&lt;/span&gt; True:
-    (rv, im) = cap.read()   &lt;span style=&#34;color: #008000&#34;&gt;# im is a valid image if and only if rv is true&lt;/span&gt;
-    &lt;span style=&#34;color: #0000ff&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #0000ff&#34;&gt;not&lt;/span&gt; rv:
-        &lt;span style=&#34;color: #0000ff&#34;&gt;break&lt;/span&gt;
-    frame_mean = im.mean()
- 
-    &lt;span style=&#34;color: #008000&#34;&gt;# Detect fade in from black.&lt;/span&gt;
-    &lt;span style=&#34;color: #0000ff&#34;&gt;if&lt;/span&gt; frame_mean &amp;gt;= threshold &lt;span style=&#34;color: #0000ff&#34;&gt;and&lt;/span&gt; last_mean &amp;lt; threshold:
-        &lt;span style=&#34;color: #0000ff&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #a31515&#34;&gt;&amp;quot;Detected fade in at %dms (frame %d).&amp;quot;&lt;/span&gt; % (
-            cap.get(cv2.cv.CV_CAP_PROP_POS_MSEC),
-            cap.get(cv2.cv.CV_CAP_PROP_POS_FRAMES) )
- 
-    &lt;span style=&#34;color: #008000&#34;&gt;# Detect fade out to black.&lt;/span&gt;
-    &lt;span style=&#34;color: #0000ff&#34;&gt;elif&lt;/span&gt; frame_mean &amp;lt; threshold &lt;span style=&#34;color: #0000ff&#34;&gt;and&lt;/span&gt; last_mean &amp;gt;= threshold:
-        &lt;span style=&#34;color: #0000ff&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #a31515&#34;&gt;&amp;quot;Detected fade out at %dms (frame %d).&amp;quot;&lt;/span&gt; % (
-            cap.get(cv2.cv.CV_CAP_PROP_POS_MSEC),
-            cap.get(cv2.cv.CV_CAP_PROP_POS_FRAMES) )
- 
-    last_mean = frame_mean     &lt;span style=&#34;color: #008000&#34;&gt;# Store current mean to compare in next iteration.&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;And it’s that easy – you now know when a scene is fading in or out from your videos, based on the defined threshold! While the timecode is presented in milliseconds, a frame number is also shown, which should help if you just want to manually find scene changes in a video. In practice, I found the &lt;code&gt;mean()&lt;/code&gt; methods provided by OpenCV and NumPy to be fairly slower than computing the average from the sum and image size:&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span style=&#34;color: #008000&#34;&gt;# Compute mean intensity of pixels in frame.&lt;/span&gt;
-    &lt;span style=&#34;color: #008000&#34;&gt;# Previously: frame_mean = im.mean()&lt;/span&gt;
-    frame_mean = np.sum(im) / float(im.shape[0] * im.shape[1] * im.shape[2])
-    &lt;span style=&#34;color: #008000&#34;&gt;# Dividing the sum by the image size is 35-40% faster than using&lt;/span&gt;
-    &lt;span style=&#34;color: #008000&#34;&gt;# either im.mean() or np.mean(im).&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;This change brings the runtime down from 4.10 seconds to 2.86 seconds (for parsing the entire &lt;code&gt;testvideo.mp4&lt;/code&gt; file), with a resulting increase in processing speed from 176 FPS to 251 FPS.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;testing-conclusion&#34;&gt;Testing &amp;amp; Conclusion&lt;/h3&gt;
-
-&lt;p&gt;You can download the source code and test video from this tutorial via &lt;a href=&#34;https://github.com/Breakthrough/python-scene-detection-tutorial&#34;&gt;the Github repository&lt;/a&gt; (see &lt;a href=&#34;https://github.com/Breakthrough/python-scene-detection-tutorial/releases/&#34;&gt;the Releases page&lt;/a&gt; to download everything in a single zip/tar archive). The code from this part is in &lt;a href=&#34;https://github.com/Breakthrough/python-scene-detection-tutorial/blob/master/examples/part1-threshold.py&#34;&gt;the file &lt;code&gt;part1-threshold.py&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Invoking the Python program for this part using the included &lt;code&gt;testvideo.mp4&lt;/code&gt; file, you should obtain this output:&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; python ./part1-threshold.py testvideo.mp4
-Parsing video testvideo.mp4...
-Video Resolution: 1280 x 720
-Detecting scenes with threshold = 15.
- 
-Detected fade in at 1167ms (frame 35).
-Detected fade out at 6172ms (frame 185).
-Detected fade in at 7440ms (frame 223).
-Detected fade out at 11945ms (frame 358).
-Detected fade in at 13480ms (frame 404).
-Detected fade out at 23156ms (frame 694).
-Read 719 frames from video in 2.86 seconds (avg. 251.1 FPS).
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;If we change the threshold from 15 to 50, we see that it has the expected result for each type of cut. Hard cuts are unaffected, and the fade in/out times are shifted forwards/backwards in time, respectively:&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; python ./part1-threshold.py testvideo.mp4 50
-Parsing video testvideo.mp4...
-Video Resolution: 1280 x 720
-Detecting scenes with threshold = 50.
- 
-Detected fade in at 1167ms (frame 35).
-Detected fade out at 6172ms (frame 185).
-Detected fade in at 7974ms (frame 239).
-Detected fade out at 11411ms (frame 342).
-Detected fade in at 13913ms (frame 417).
-Detected fade out at 22722ms (frame 681).
-Read 719 frames from video in 2.96 seconds (avg. 242.9 FPS).
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Just as expected! And that’s all for the first part. You can use the program for this part as-is, for a quick method to determine the frame numbers where transitions to/from black occur in a video; see the header of the &lt;code&gt;part1-threshold.py&lt;/code&gt; file for usage details.&lt;/p&gt;
-
-&lt;p&gt;The next tutorial in the series is &lt;a href=&#34;https://www.bcastell.com/posts/scene-detection-tutorial-part-2/&#34;&gt;Part 2: Adaptive Threshold Detection&lt;/a&gt;, where we optimize the performance of the algorithm, and use the output to export a list of scenes/chapters (instead of fades).&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Post last updated September 15, 2014, and moved to new location on September 8, 2017.&lt;/p&gt;
-</description>
+      <description>Part 1: Threshold/Fade-to-Black Detection This tutorial is currently being migrated from the old location. In the meantime, you can view the cached version of the previous, complete version on The Wayback Machine by clicking here. Thank you for your patience during this time.
+In the first part of this three-part tutorial, we will write a Python program, using the OpenCV library, to perform threshold-based scene detection, to determine the exact frames where scene transitions (fade ins/outs to/from black in this case) occur.</description>
     </item>
     
     <item>
@@ -220,62 +36,7 @@ Read 719 frames from video in 2.96 seconds (avg. 242.9 FPS).
       <pubDate>Wed, 17 Oct 2012 00:00:00 +0000</pubDate>
       
       <guid>https://www.bcastell.com/posts/word-length-vs-performance/</guid>
-      <description>&lt;p&gt;About a year ago, I came across a question on Super User titled “How much faster is a 64-bit CPU than a 32-bit CPU?”, which was promptly closed and deleted since it’s a very open ended question. However, the author (a software developer) referred to benchmarks regarding system performance in 32-bit versus 64-bit. The purpose of this blog post is to investigate how the performance of a computer is affected, as a function of the word length.&lt;/p&gt;
-
-&lt;div style=&#34;padding:0.75em;margin:1em 4em;&#34;&gt;&lt;center&gt;
-&lt;img width=&#34;100%&#34; src=&#34;https://www.bcastell.com/img/wordlen2.jpg&#34; alt=&#34;Two Microcontrollers (8-bit Atmel), A Raspberry Pi (32-bit ARM), and my laptop (64-bit Intel)&#34;/&gt;
-&lt;/center&gt;&lt;/div&gt;
-
-&lt;p&gt;8-bit, 32-bit, and 64-bit all refer to the &lt;a href=&#34;http://en.wikipedia.org/wiki/Word_%28computer_architecture%29&#34;&gt;word length&lt;/a&gt; of the processor, which can be thought of as the “fundamental data type”. Often, this is the number of bits transferred to/from the RAM of the system, and the width of pointers (although nothing stops you from using software to access more RAM then what a single pointer can access). A word length can be any number of bits, but is usually a power of two.&lt;/p&gt;
-
-&lt;p&gt;Assuming a constant clock speed (as well as everything else in the architecture being constant), and assuming memory reads/writes are the same speed (we assume 1 clock cycle here, but this is far from the case in real life), there is no direct speed advantage from a 32-bit to a 64-bit processor, except when using higher-precision values, or lots of memory reads/writes are required. For example, if I need to add two 64-bit numbers, I can do it in a single clock cycle on a 64-bit machine (three if you count fetching the numbers from RAM):&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;     ADDA [NUM1], [NUM2]
-     STAA [RESULT]
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;However, on a 32-bit machine, I need to do this in many clock cycles, since I first need to add the lower 32-bits, and then compensate for overflow, then add the upper 64-bits:&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;     ADDA [NUM1_LOWER], [NUM2_LOWER]
-     STAA [RESULT_LOWER]
-     CLRA          &lt;span style=&#34;color: #008000&#34;&gt;; I&amp;#39;m assuming the condition flags are not modified by this.&lt;/span&gt;
-     BRNO CMPS     &lt;span style=&#34;color: #008000&#34;&gt;; Branch to CMPS if there was no overflow.&lt;/span&gt;
-     ADDA #1       &lt;span style=&#34;color: #008000&#34;&gt;; If there was overflow, compensate the value of A.&lt;/span&gt;
-CMPS ADDA [NUM1_UPPER], [NUM2_UPPER]
-     STAA [RESULT_UPPER]
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Going through my made-up assembly syntax, you can easily see how higher-precision operations can take an exponentially longer time on a lower word length machine. This is the real key to 64-bit and 128-bit processors: they allow us to handle larger numbers of bits in a single operation.&lt;/p&gt;
-
-&lt;p&gt;Likewise, if we had to make a copy of some data in memory, assuming everything else is constant, we could copy twice as many bits per cycle on a 64-bit versus 32-bit machine. This is why 64-bit versions of many image/video editing programs outperform their 32-bit counterparts.&lt;/p&gt;
-
-&lt;p&gt;Back to high-precision operations, even if you add the ability to a 32-bit processor to add two 64-bit numbers in a single clock cycle, &lt;em&gt;you still need more than one clock cycle&lt;/em&gt; to fetch those numbers from RAM, since the word length (again) is often the fundamental size of memory operations. So, let’s assume we have two 64-bit registers (A64 and B64), and have an operation called ADDAB64 which adds A and B, and stores it in A:&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;     LDDA64 [NUM1]   &lt;span style=&#34;color: #008000&#34;&gt;; Takes 2 clock cycles, since this number is fetched 32-bits at a time&lt;/span&gt;
-     LDAB64 [NUM2]   &lt;span style=&#34;color: #008000&#34;&gt;; Again, two more clock cycles.&lt;/span&gt;
-     ADDAB64         &lt;span style=&#34;color: #008000&#34;&gt;; This only takes 1.&lt;/span&gt;
-     STAA64 [RESULT] &lt;span style=&#34;color: #008000&#34;&gt;; However, this takes two again, since we need to store a 64-bit result 32-bits at a time.&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;As you can see, even a hardware implementation of a 64-bit addition under a 32-bit processor still takes 7 clock cycles at minimum (and this assumes all memory reads/writes take a single clock cycle). Where I’m going with this has performance implications specifically with pointers.&lt;/p&gt;
-
-&lt;p&gt;On a 32-bit machine, pointers can address ~4GB of RAM, where they can address over 16.7 million TB on a 64-bit machine. If you needed to address past 4GB on 32-bit, you would need to compensate for that kind of like how we added a 64-bit number on our 32-bit machine above. You would have many extra clock cycles dedicated to fetching and parsing those wider numbers, whereas those operations go much quicker on a processor that can handle it all in one word.&lt;/p&gt;
-
-&lt;p&gt;Also, while increasing the number of bits in an &lt;a href=&#34;http://en.wikipedia.org/wiki/Arithmetic_logic_unit&#34;&gt;arithmetic and logic unit (ALU)&lt;/a&gt; will increase propagation delays for most operations, this delay is very manageable in today’s processors (or else we couldn’t keep the same clock speeds as our 32-bit processor variants), and is not much use when discussing digital synchronous circuits (since everything is clocked together, if the propagation delay was too long, the processor would just crash – which is also why there are limits to overclocking).&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;The bottom line&lt;/strong&gt;: larger word lengths means we can process more data faster in the processor, which is greatly needed as we advance computing technology. This is why so many instruction set extensions (MMX, SSE, etc…) have been created: to process larger amounts of data in less amount of time.&lt;/p&gt;
-
-&lt;p&gt;A larger word length in a processor does not directly increase the performance of the system, but when dealing with larger (or higher precision) values is required, exponential performance gains can be realized. While the average consumer may not notice these increases, they are greatly appreciated in the fields of numeric computing, scientific analysis, video encoding, and encryption/compression.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Post moved to new location on September 28, 2017.&lt;/p&gt;
-</description>
+      <description>About a year ago, I came across a question on Super User titled “How much faster is a 64-bit CPU than a 32-bit CPU?”, which was promptly closed and deleted since it’s a very open ended question. However, the author (a software developer) referred to benchmarks regarding system performance in 32-bit versus 64-bit. The purpose of this blog post is to investigate how the performance of a computer is affected, as a function of the word length.</description>
     </item>
     
     <item>
@@ -284,18 +45,8 @@ CMPS ADDA [NUM1_UPPER], [NUM2_UPPER]
       <pubDate>Mon, 10 Sep 2012 00:00:00 +0000</pubDate>
       
       <guid>https://www.bcastell.com/posts/fixing-xanalogtv/</guid>
-      <description>&lt;p&gt;A few days ago, I discovered the awesome XAnalogTV screensaver included with XScreenSaver. I was very impressed with the visuals, which include a very accurate simulation of a conventional “tube” television implementing the analog NTSC TV standard. There was just one problem – I couldn’t get XAnalogTV to fill my screen:&lt;/p&gt;
-
-&lt;div style=&#34;background:#eee;padding:1em;margin:1em 10%;border:1px solid #ccc;&#34;&gt;&lt;center&gt;
-&lt;img src=&#34;https://www.bcastell.com/img/xanalogtv_cutoff.jpg&#34; alt=&#34;XAnalogTV with Incorrect Scaling&#34; width=&#34;70%&#34;/&gt;
-&lt;div class=&#34;text-small&#34; style=&#34;padding-top:1em;&#34;&gt;
-In the source code, the virtual &#34;display&#34; is forced to be within 15% of a standard 4:3 display. Any screen which is outside of this 15% range is just clipped, as shown in this image.
-&lt;/div&gt;&lt;/center&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Post last updated January 15, 2013, and moved to new location on September 28, 2017.&lt;/p&gt;
-</description>
+      <description>A few days ago, I discovered the awesome XAnalogTV screensaver included with XScreenSaver. I was very impressed with the visuals, which include a very accurate simulation of a conventional “tube” television implementing the analog NTSC TV standard. There was just one problem – I couldn’t get XAnalogTV to fill my screen:
+ In the source code, the virtual &#34;display&#34; is forced to be within 15% of a standard 4:3 display. Any screen which is outside of this 15% range is just clipped, as shown in this image.</description>
     </item>
     
   </channel>

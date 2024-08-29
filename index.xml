@@ -2,36 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Brandon Castellano</title>
-    <link>https://www.bcastell.com/index.xml</link>
+    <link>https://www.bcastell.com/</link>
     <description>Recent content on Brandon Castellano</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright &amp;copy; 2017 Brandon Castellano.  All rights reserved.</copyright>
     <lastBuildDate>Thu, 28 Sep 2017 12:57:00 -0500</lastBuildDate>
-    <atom:link href="https://www.bcastell.com/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://www.bcastell.com/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Triclysm</title>
-      <link>https://www.bcastell.com/projects/Triclysm/</link>
+      <link>https://www.bcastell.com/projects/triclysm/</link>
       <pubDate>Thu, 28 Sep 2017 12:57:00 -0500</pubDate>
       
-      <guid>https://www.bcastell.com/projects/Triclysm/</guid>
-      <description>
-
-&lt;h2 id=&#34;triclysm&#34;&gt;Triclysm&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;project-overview&#34;&gt;Project Overview&lt;/h3&gt;
-
-&lt;p&gt;See the Triclysm project on Github at the following URL: &lt;a href=&#34;https://github.com/Triclysm&#34;&gt;https://github.com/Triclysm&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;triclysm-previewer&#34;&gt;Triclysm Previewer&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/Triclysm/Previewer-Legacy&#34;&gt;Triclysm Previewer (link)&lt;/a&gt; is a cross-platform application for developing, previewing, and streaming (via Ethernet or Wi-Fi) to a physical LED cube/voxel-based display.  Cross-platform, written in C++, using SDL/OpenGL as a back-end, with Lua as the primary scripting language for animations.&lt;/p&gt;
-
-&lt;p&gt;In the future, a rewrite is planned, utilizing Python for a majority of the code, and allowing it to be used for animation development as well.  However, the existing code-base has been successfully tested on an 8x8x8 monochrome LED cube (giving 1024 total levels of brightness at the maximum refresh rate), as well as a 4x4x4 RGB LED cube, with a total of 4096 individual colour combinations.&lt;/p&gt;
-</description>
+      <guid>https://www.bcastell.com/projects/triclysm/</guid>
+      <description>Triclysm Project Overview See the Triclysm project on Github at the following URL: https://github.com/Triclysm
+Triclysm Previewer Triclysm Previewer (link) is a cross-platform application for developing, previewing, and streaming (via Ethernet or Wi-Fi) to a physical LED cube/voxel-based display. Cross-platform, written in C++, using SDL/OpenGL as a back-end, with Lua as the primary scripting language for animations.
+In the future, a rewrite is planned, utilizing Python for a majority of the code, and allowing it to be used for animation development as well.</description>
     </item>
     
     <item>
@@ -40,68 +28,27 @@
       <pubDate>Wed, 06 Sep 2017 01:14:08 +0200</pubDate>
       
       <guid>https://www.bcastell.com/posts/scene-detection-tutorial-part-2/</guid>
-      <description>
-
-&lt;h1 id=&#34;part-2-adaptive-threshold-detection&#34;&gt;Part 2: Adaptive Threshold Detection&lt;/h1&gt;
-
-&lt;p&gt;This tutorial is currently being migrated from the old location.  In the meantime, you can view the cached version of the previous, complete version on The Wayback Machine &lt;a href=&#34;https://web.archive.org/web/20160316124732/http://www.bcastell.com/tech-articles/pyscenedetect-tutorial-part-2/&#34;&gt;by clicking here&lt;/a&gt;.  Thank you for your patience during this time.&lt;/p&gt;
-</description>
+      <description>Part 2: Adaptive Threshold Detection This tutorial is currently being migrated from the old location. In the meantime, you can view the cached version of the previous, complete version on The Wayback Machine by clicking here. Thank you for your patience during this time.</description>
     </item>
     
     <item>
       <title>DVR-Scan</title>
-      <link>https://www.bcastell.com/projects/DVR-Scan/</link>
+      <link>https://www.bcastell.com/projects/dvr-scan/</link>
       <pubDate>Wed, 11 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://www.bcastell.com/projects/DVR-Scan/</guid>
-      <description>
-
-&lt;h2 id=&#34;dvr-scan-img-src-img-projects-dvr-scan-logo-full-png-alt-dvr-scan-logo-width-20&#34;&gt;DVR-Scan &lt;img src=&#34;https://www.bcastell.com/img/projects/dvr-scan/logo_full.png&#34; alt=&#34;DVR-Scan Logo&#34; width=20%/&gt;&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;overview&#34;&gt;Overview&lt;/h3&gt;
-
-&lt;p&gt;DVR-Scan is a command-line application for detecting areas in a video that contain motion, automatically extracting each motion segment as a separate file for further viewing or processing.  This makes managing a large amount of footage from, for example, security cameras/DVRs, a much more manageable task, as only the areas of interest need to be reviewed after processing with DVR-Scan.&lt;/p&gt;
-
-&lt;p&gt;See &lt;a href=&#34;http://dvr-scan.readthedocs.io/en/latest/&#34;&gt;DVR-Scan on Readthedocs&lt;/a&gt; for more information.&lt;/p&gt;
-
-&lt;h3 id=&#34;download&#34;&gt;Download&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://dvr-scan.readthedocs.io/en/latest/download/&#34;&gt;Click here&lt;/a&gt; to download the latest release of DVR-Scan.  Note that DVR-Scan is cross-platform, and is supported for Windows, Linux, and OSX, with a binary installer included for Windows users (installation instructions for Linux/OSX users can be found &lt;a href=&#34;http://dvr-scan.readthedocs.io/en/latest/guide/installing/&#34;&gt;in the documentation&lt;/a&gt;).&lt;/p&gt;
-
-&lt;h3 id=&#34;documentation&#34;&gt;Documentation&lt;/h3&gt;
-
-&lt;p&gt;There is extensive documentation available for DVR-Scan on Read the Docs at &lt;a href=&#34;http://dvr-scan.readthedocs.io/en/latest/&#34;&gt;dvr-scan.readthedocs.io&lt;/a&gt;.  This includes a &lt;a href=&#34;http://pyscenedetect.readthedocs.io/en/latest/examples/usage/&#34;&gt;getting started guide&lt;/a&gt;, which includes some examples to help you get started with DVR-Scan.&lt;/p&gt;
-</description>
+      <guid>https://www.bcastell.com/projects/dvr-scan/</guid>
+      <description>DVR-Scan  Overview DVR-Scan is a command-line application for detecting areas in a video that contain motion, automatically extracting each motion segment as a separate file for further viewing or processing. This makes managing a large amount of footage from, for example, security cameras/DVRs, a much more manageable task, as only the areas of interest need to be reviewed after processing with DVR-Scan.
+See DVR-Scan on Readthedocs for more information.</description>
     </item>
     
     <item>
       <title>PySceneDetect</title>
-      <link>https://www.bcastell.com/projects/PySceneDetect/</link>
+      <link>https://www.bcastell.com/projects/pyscenedetect/</link>
       <pubDate>Sun, 08 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://www.bcastell.com/projects/PySceneDetect/</guid>
-      <description>
-
-&lt;h2 id=&#34;pyscenedetect&#34;&gt;PySceneDetect&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;overview&#34;&gt;Overview&lt;/h3&gt;
-
-&lt;p&gt;PySceneDetect is a command-line application and a Python library for detecting scene changes in videos, automatically splitting the video into separate clips. Not only is it free and open-source software (FOSS), but there are several detection methods available (see Features), from simple threshold-based fade in/out detection, to advanced content aware fast-cut detection.&lt;/p&gt;
-
-&lt;h3 id=&#34;download&#34;&gt;Download&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://pyscenedetect.readthedocs.io/en/latest/download/&#34;&gt;Click here&lt;/a&gt; to download the latest release of PySceneDetect.  Note that PySceneDetect is cross-platform, and is supported for Windows, Linux, and OSX.&lt;/p&gt;
-
-&lt;p&gt;The latest development version can be found at &lt;a href=&#34;https://github.com/Breakthrough/PySceneDetect/&#34;&gt;the PySceneDetect project page at Github&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;documentation&#34;&gt;Documentation&lt;/h3&gt;
-
-&lt;p&gt;There is extensive documentation available for PySceneDetect on Read the Docs at &lt;a href=&#34;http://pyscenedetect.readthedocs.io/en/latest/&#34;&gt;pyscenedetect.readthedocs.io&lt;/a&gt;.  This includes a &lt;a href=&#34;http://pyscenedetect.readthedocs.io/en/latest/examples/usage/&#34;&gt;getting started guide&lt;/a&gt;, examples, and an overview of the Python API.  Note that while the Python API is still unstable, and subject to change in subsequent releases (this does not affect the main command-line program).&lt;/p&gt;
-</description>
+      <guid>https://www.bcastell.com/projects/pyscenedetect/</guid>
+      <description>PySceneDetect Overview PySceneDetect is a command-line application and a Python library for detecting scene changes in videos, automatically splitting the video into separate clips. Not only is it free and open-source software (FOSS), but there are several detection methods available (see Features), from simple threshold-based fade in/out detection, to advanced content aware fast-cut detection.
+Download Click here to download the latest release of PySceneDetect. Note that PySceneDetect is cross-platform, and is supported for Windows, Linux, and OSX.</description>
     </item>
     
     <item>
@@ -110,188 +57,8 @@
       <pubDate>Sat, 19 Oct 2013 00:00:00 +0000</pubDate>
       
       <guid>https://www.bcastell.com/posts/scene-detection-tutorial-part-1/</guid>
-      <description>
-
-&lt;h2 id=&#34;part-1-threshold-fade-to-black-detection&#34;&gt;Part 1: Threshold/Fade-to-Black Detection&lt;/h2&gt;
-
-&lt;p&gt;This tutorial is currently being migrated from the old location.  In the meantime, you can view the cached version of the previous, complete version on The Wayback Machine &lt;a href=&#34;https://web.archive.org/web/20160316225649/http://www.bcastell.com/tech-articles/pyscenedetect-tutorial-part-1/&#34;&gt;by clicking here&lt;/a&gt;.  Thank you for your patience during this time.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;In the first part of this three-part tutorial, we will write a Python program, using the OpenCV library, to perform threshold-based scene detection, to determine the exact frames where scene transitions (fade ins/outs to/from black in this case) occur. In the following tutorials, we will optimize our scene detection algorithm, and use the output to create a scene list with proper timecodes (&lt;a href=&#34;https://www.bcastell.com/posts/scene-detection-tutorial-part-2/&#34;&gt;Part 2&lt;/a&gt;) so a video can be split automatically into scenes. Lastly, we will cover how to detect content-based scene changes (in a future Part 3, coming soon), and combine this with the concepts from the previous tutorials to create a robust scene detection program.&lt;/p&gt;
-
-&lt;p&gt;You can download the source code and test video from this tutorial via the Github repository (see the Releases page to download everything in a single zip/tar archive).&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;introduction-installation&#34;&gt;Introduction &amp;amp; Installation&lt;/h3&gt;
-
-&lt;p&gt;The OpenCV bindings for Python allow you to quickly experiment with images/videos. Specifically, the OpenCV library handles all the low-level interfacing to actually decode video data (using FFmpeg, and thus is compatible with many different video formats), and uniquely, the returned video frames – as well as other image objects for that matter – can be accessed as a &lt;a href=&#34;http://numpy.scipy.org/&#34;&gt;NumPy&lt;/a&gt; array. This allows you to perform MATLAB/Octave-like operations on the image data easily and concisely.&lt;/p&gt;
-
-&lt;p&gt;Firstly, this tutorial assumes that you have installed Python 2.7 (I believe at the time of writing this, the OpenCV bindings are only available for 2.7), as well as the OpenCV bindings themselves. If you are a Windows user, you might want to see &lt;a href=&#34;http://stackoverflow.com/questions/4709301/installing-opencv-on-windows-7-for-python-2-7&#34;&gt;this question on Stack Overflow&lt;/a&gt;; on Linux, I was able to install the bindings right from my package manager. To verify that everything is installed correctly, fire up a Python console, and type &lt;code&gt;import cv2&lt;/code&gt;. If there are no errors, everything should be set up correctly!&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;the-problem-at-hand&#34;&gt;The Problem at Hand&lt;/h3&gt;
-
-&lt;p&gt;The goals of this program (PySceneDetect) are to detect when a scene change in a video occurs. In this particular tutorial, we will focus on fades in from, or out to black. The following figure depicts the type of scene changes we will be detecting:&lt;/p&gt;
-
-&lt;div style=&#34;background:#334455;padding:0.75em;margin:1em 4em;&#34;&gt;&lt;center&gt;
-&lt;img src=&#34;https://www.bcastell.com/img/tutorials/scenedetect/fadetypes.png&#34; alt=&#34;Types of Scene Changes&#34;/&gt;
-&lt;/center&gt;&lt;/div&gt;
-
-&lt;p&gt;The output of PySceneDetect will be a text-file containing the timestamps of each event (either a fade-from or fade-to black). The idea is that these timecodes can then be used to split the source video into individual scenes with another program (mkvmerge, VideoDub, etc…). In this part of the tutorial, we will print the time and frame number for each fade event to the console.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;decoding-video-frames&#34;&gt;Decoding Video Frames&lt;/h3&gt;
-
-&lt;p&gt;Let’s begin by creating a &lt;a href=&#34;http://docs.opencv.org/modules/highgui/doc/reading_and_writing_images_and_video.html#videocapture&#34;&gt;VideoCapture object&lt;/a&gt;, which can be used to open either a camera stream or a video file, and retrieve individual frames. Let’s assume the name of the video is passed as the first argument to the script, and do some simple error checking and cleanup just to be safe:&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #0000ff&#34;&gt;import&lt;/span&gt; sys
-&lt;span style=&#34;color: #0000ff&#34;&gt;import&lt;/span&gt; cv2
- 
-&lt;span style=&#34;color: #0000ff&#34;&gt;def&lt;/span&gt; main():
-    &lt;span style=&#34;color: #0000ff&#34;&gt;if&lt;/span&gt; len(sys.argv) &amp;lt; 2:
-        &lt;span style=&#34;color: #0000ff&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #a31515&#34;&gt;&amp;quot;Error - file name must be specified as first argument.&amp;quot;&lt;/span&gt;
-        &lt;span style=&#34;color: #0000ff&#34;&gt;return&lt;/span&gt;
- 
-    cap = cv2.VideoCapture()
-    cap.open(sys.argv[1])
- 
-    &lt;span style=&#34;color: #0000ff&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #0000ff&#34;&gt;not&lt;/span&gt; cap.isOpened():
-        &lt;span style=&#34;color: #0000ff&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #a31515&#34;&gt;&amp;quot;Fatal error - could not open video %s.&amp;quot;&lt;/span&gt; % sys.argv[1]
-        &lt;span style=&#34;color: #0000ff&#34;&gt;return&lt;/span&gt;
-    &lt;span style=&#34;color: #0000ff&#34;&gt;else&lt;/span&gt;:
-        &lt;span style=&#34;color: #0000ff&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #a31515&#34;&gt;&amp;quot;Parsing video %s...&amp;quot;&lt;/span&gt; % sys.argv[1]
- 
-    &lt;span style=&#34;color: #008000&#34;&gt;# Do stuff with cap here.&lt;/span&gt;
- 
-    cap.release()
- 
- 
-&lt;span style=&#34;color: #0000ff&#34;&gt;if&lt;/span&gt; __name__ == &lt;span style=&#34;color: #a31515&#34;&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;:
-    main()
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Once we have a valid VideoCapture object (i.e. the isOpened() method returns true), we can use &lt;a href=&#34;http://docs.opencv.org/modules/highgui/doc/reading_and_writing_images_and_video.html#videocapture-read&#34;&gt;the &lt;code&gt;read()&lt;/code&gt; method&lt;/a&gt; to start grabbing frames. Note that read() returns a tuple in the form (retval, image), and when retval is returned as false, this denotes that there are no more frames in the object to grab (and thus we are at the end of the video). Let’s make a loop to scan through the video and retrieve each frame, as well as print some basic information about the video):&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;width  = cap.get(cv2.cv.CV_CAP_PROP_FRAME_WIDTH)
-height = cap.get(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT)
-&lt;span style=&#34;color: #0000ff&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #a31515&#34;&gt;&amp;quot;Video Resolution: %d x %d&amp;quot;&lt;/span&gt; % (width, height)
- 
-&lt;span style=&#34;color: #0000ff&#34;&gt;while&lt;/span&gt; True:
-    (rv, im) = cap.read()   &lt;span style=&#34;color: #008000&#34;&gt;# im is a valid image if and only if rv is true&lt;/span&gt;
-    &lt;span style=&#34;color: #0000ff&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #0000ff&#34;&gt;not&lt;/span&gt; rv:
-        &lt;span style=&#34;color: #0000ff&#34;&gt;break&lt;/span&gt;
-    &lt;span style=&#34;color: #008000&#34;&gt;# Do stuff with im here.&lt;/span&gt;
- 
-frame_count = cap.get(cv2.cv.CV_CAP_PROP_POS_FRAMES)  &lt;span style=&#34;color: #008000&#34;&gt;# current capture position&lt;/span&gt;
-&lt;span style=&#34;color: #0000ff&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #a31515&#34;&gt;&amp;quot;Read %d frames from video.&amp;quot;&lt;/span&gt; % frame_count
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Note that the returned image &lt;code&gt;im&lt;/code&gt; is a Mat type object, and can be accessed with the same methods as a NumPy array due to the compatibility in it’s implementation.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;working-with-images-detecting-scene-changes&#34;&gt;Working With Images &amp;amp; Detecting Scene Changes&lt;/h3&gt;
-
-&lt;p&gt;Now that we have the image, we need to analyze it to determine when a scene cut occurs. Since we want to know when we have faded in or out of black, we can compute the average intensity of the pixels in the image, and compare this with a set threshold denoting the black level. We need to compare the average to a threshold and not simply zero, since compression artifacts or encoders sometimes will not produce a fully black frame.&lt;/p&gt;
-
-&lt;p&gt;Since we have the ability to access &lt;code&gt;im&lt;/code&gt; as if it were a NumPy array, we can use &lt;a href=&#34;http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.mean.html#numpy.ndarray.mean&#34;&gt;the &lt;code&gt;mean()&lt;/code&gt; ndarray method&lt;/a&gt; on &lt;code&gt;im&lt;/code&gt; to compute the average intensity of the pixels in the frame. We can compare this value to our set threshold, as well as the average intensity of the past frame (to determine if we are fading in to or out from a scene) to determine where the scene cuts occur by modifying the above while-loop as follows:&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #008000&#34;&gt;# Allow the threshold to be passed as an optional second argument to the script.&lt;/span&gt;
-threshold = 15
-&lt;span style=&#34;color: #0000ff&#34;&gt;if&lt;/span&gt; len(sys.argv) &amp;gt; 2 &lt;span style=&#34;color: #0000ff&#34;&gt;and&lt;/span&gt; int(sys.argv[2]) &amp;gt; 0:
-    threshold = int(sys.argv[2])
-&lt;span style=&#34;color: #0000ff&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #a31515&#34;&gt;&amp;quot;Detecting scenes with threshold %d.&amp;quot;&lt;/span&gt; % threshold
- 
-last_mean = 0       &lt;span style=&#34;color: #008000&#34;&gt;# Mean pixel intensity of the *last* frame we processed.&lt;/span&gt;
- 
-&lt;span style=&#34;color: #0000ff&#34;&gt;while&lt;/span&gt; True:
-    (rv, im) = cap.read()   &lt;span style=&#34;color: #008000&#34;&gt;# im is a valid image if and only if rv is true&lt;/span&gt;
-    &lt;span style=&#34;color: #0000ff&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #0000ff&#34;&gt;not&lt;/span&gt; rv:
-        &lt;span style=&#34;color: #0000ff&#34;&gt;break&lt;/span&gt;
-    frame_mean = im.mean()
- 
-    &lt;span style=&#34;color: #008000&#34;&gt;# Detect fade in from black.&lt;/span&gt;
-    &lt;span style=&#34;color: #0000ff&#34;&gt;if&lt;/span&gt; frame_mean &amp;gt;= threshold &lt;span style=&#34;color: #0000ff&#34;&gt;and&lt;/span&gt; last_mean &amp;lt; threshold:
-        &lt;span style=&#34;color: #0000ff&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #a31515&#34;&gt;&amp;quot;Detected fade in at %dms (frame %d).&amp;quot;&lt;/span&gt; % (
-            cap.get(cv2.cv.CV_CAP_PROP_POS_MSEC),
-            cap.get(cv2.cv.CV_CAP_PROP_POS_FRAMES) )
- 
-    &lt;span style=&#34;color: #008000&#34;&gt;# Detect fade out to black.&lt;/span&gt;
-    &lt;span style=&#34;color: #0000ff&#34;&gt;elif&lt;/span&gt; frame_mean &amp;lt; threshold &lt;span style=&#34;color: #0000ff&#34;&gt;and&lt;/span&gt; last_mean &amp;gt;= threshold:
-        &lt;span style=&#34;color: #0000ff&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #a31515&#34;&gt;&amp;quot;Detected fade out at %dms (frame %d).&amp;quot;&lt;/span&gt; % (
-            cap.get(cv2.cv.CV_CAP_PROP_POS_MSEC),
-            cap.get(cv2.cv.CV_CAP_PROP_POS_FRAMES) )
- 
-    last_mean = frame_mean     &lt;span style=&#34;color: #008000&#34;&gt;# Store current mean to compare in next iteration.&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;And it’s that easy – you now know when a scene is fading in or out from your videos, based on the defined threshold! While the timecode is presented in milliseconds, a frame number is also shown, which should help if you just want to manually find scene changes in a video. In practice, I found the &lt;code&gt;mean()&lt;/code&gt; methods provided by OpenCV and NumPy to be fairly slower than computing the average from the sum and image size:&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span style=&#34;color: #008000&#34;&gt;# Compute mean intensity of pixels in frame.&lt;/span&gt;
-    &lt;span style=&#34;color: #008000&#34;&gt;# Previously: frame_mean = im.mean()&lt;/span&gt;
-    frame_mean = np.sum(im) / float(im.shape[0] * im.shape[1] * im.shape[2])
-    &lt;span style=&#34;color: #008000&#34;&gt;# Dividing the sum by the image size is 35-40% faster than using&lt;/span&gt;
-    &lt;span style=&#34;color: #008000&#34;&gt;# either im.mean() or np.mean(im).&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;This change brings the runtime down from 4.10 seconds to 2.86 seconds (for parsing the entire &lt;code&gt;testvideo.mp4&lt;/code&gt; file), with a resulting increase in processing speed from 176 FPS to 251 FPS.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;testing-conclusion&#34;&gt;Testing &amp;amp; Conclusion&lt;/h3&gt;
-
-&lt;p&gt;You can download the source code and test video from this tutorial via &lt;a href=&#34;https://github.com/Breakthrough/python-scene-detection-tutorial&#34;&gt;the Github repository&lt;/a&gt; (see &lt;a href=&#34;https://github.com/Breakthrough/python-scene-detection-tutorial/releases/&#34;&gt;the Releases page&lt;/a&gt; to download everything in a single zip/tar archive). The code from this part is in &lt;a href=&#34;https://github.com/Breakthrough/python-scene-detection-tutorial/blob/master/examples/part1-threshold.py&#34;&gt;the file &lt;code&gt;part1-threshold.py&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Invoking the Python program for this part using the included &lt;code&gt;testvideo.mp4&lt;/code&gt; file, you should obtain this output:&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; python ./part1-threshold.py testvideo.mp4
-Parsing video testvideo.mp4...
-Video Resolution: 1280 x 720
-Detecting scenes with threshold = 15.
- 
-Detected fade in at 1167ms (frame 35).
-Detected fade out at 6172ms (frame 185).
-Detected fade in at 7440ms (frame 223).
-Detected fade out at 11945ms (frame 358).
-Detected fade in at 13480ms (frame 404).
-Detected fade out at 23156ms (frame 694).
-Read 719 frames from video in 2.86 seconds (avg. 251.1 FPS).
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;If we change the threshold from 15 to 50, we see that it has the expected result for each type of cut. Hard cuts are unaffected, and the fade in/out times are shifted forwards/backwards in time, respectively:&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; python ./part1-threshold.py testvideo.mp4 50
-Parsing video testvideo.mp4...
-Video Resolution: 1280 x 720
-Detecting scenes with threshold = 50.
- 
-Detected fade in at 1167ms (frame 35).
-Detected fade out at 6172ms (frame 185).
-Detected fade in at 7974ms (frame 239).
-Detected fade out at 11411ms (frame 342).
-Detected fade in at 13913ms (frame 417).
-Detected fade out at 22722ms (frame 681).
-Read 719 frames from video in 2.96 seconds (avg. 242.9 FPS).
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Just as expected! And that’s all for the first part. You can use the program for this part as-is, for a quick method to determine the frame numbers where transitions to/from black occur in a video; see the header of the &lt;code&gt;part1-threshold.py&lt;/code&gt; file for usage details.&lt;/p&gt;
-
-&lt;p&gt;The next tutorial in the series is &lt;a href=&#34;https://www.bcastell.com/posts/scene-detection-tutorial-part-2/&#34;&gt;Part 2: Adaptive Threshold Detection&lt;/a&gt;, where we optimize the performance of the algorithm, and use the output to export a list of scenes/chapters (instead of fades).&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Post last updated September 15, 2014, and moved to new location on September 8, 2017.&lt;/p&gt;
-</description>
+      <description>Part 1: Threshold/Fade-to-Black Detection This tutorial is currently being migrated from the old location. In the meantime, you can view the cached version of the previous, complete version on The Wayback Machine by clicking here. Thank you for your patience during this time.
+In the first part of this three-part tutorial, we will write a Python program, using the OpenCV library, to perform threshold-based scene detection, to determine the exact frames where scene transitions (fade ins/outs to/from black in this case) occur.</description>
     </item>
     
     <item>
@@ -300,62 +67,7 @@ Read 719 frames from video in 2.96 seconds (avg. 242.9 FPS).
       <pubDate>Wed, 17 Oct 2012 00:00:00 +0000</pubDate>
       
       <guid>https://www.bcastell.com/posts/word-length-vs-performance/</guid>
-      <description>&lt;p&gt;About a year ago, I came across a question on Super User titled “How much faster is a 64-bit CPU than a 32-bit CPU?”, which was promptly closed and deleted since it’s a very open ended question. However, the author (a software developer) referred to benchmarks regarding system performance in 32-bit versus 64-bit. The purpose of this blog post is to investigate how the performance of a computer is affected, as a function of the word length.&lt;/p&gt;
-
-&lt;div style=&#34;padding:0.75em;margin:1em 4em;&#34;&gt;&lt;center&gt;
-&lt;img width=&#34;100%&#34; src=&#34;https://www.bcastell.com/img/wordlen2.jpg&#34; alt=&#34;Two Microcontrollers (8-bit Atmel), A Raspberry Pi (32-bit ARM), and my laptop (64-bit Intel)&#34;/&gt;
-&lt;/center&gt;&lt;/div&gt;
-
-&lt;p&gt;8-bit, 32-bit, and 64-bit all refer to the &lt;a href=&#34;http://en.wikipedia.org/wiki/Word_%28computer_architecture%29&#34;&gt;word length&lt;/a&gt; of the processor, which can be thought of as the “fundamental data type”. Often, this is the number of bits transferred to/from the RAM of the system, and the width of pointers (although nothing stops you from using software to access more RAM then what a single pointer can access). A word length can be any number of bits, but is usually a power of two.&lt;/p&gt;
-
-&lt;p&gt;Assuming a constant clock speed (as well as everything else in the architecture being constant), and assuming memory reads/writes are the same speed (we assume 1 clock cycle here, but this is far from the case in real life), there is no direct speed advantage from a 32-bit to a 64-bit processor, except when using higher-precision values, or lots of memory reads/writes are required. For example, if I need to add two 64-bit numbers, I can do it in a single clock cycle on a 64-bit machine (three if you count fetching the numbers from RAM):&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;     ADDA [NUM1], [NUM2]
-     STAA [RESULT]
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;However, on a 32-bit machine, I need to do this in many clock cycles, since I first need to add the lower 32-bits, and then compensate for overflow, then add the upper 64-bits:&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;     ADDA [NUM1_LOWER], [NUM2_LOWER]
-     STAA [RESULT_LOWER]
-     CLRA          &lt;span style=&#34;color: #008000&#34;&gt;; I&amp;#39;m assuming the condition flags are not modified by this.&lt;/span&gt;
-     BRNO CMPS     &lt;span style=&#34;color: #008000&#34;&gt;; Branch to CMPS if there was no overflow.&lt;/span&gt;
-     ADDA #1       &lt;span style=&#34;color: #008000&#34;&gt;; If there was overflow, compensate the value of A.&lt;/span&gt;
-CMPS ADDA [NUM1_UPPER], [NUM2_UPPER]
-     STAA [RESULT_UPPER]
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Going through my made-up assembly syntax, you can easily see how higher-precision operations can take an exponentially longer time on a lower word length machine. This is the real key to 64-bit and 128-bit processors: they allow us to handle larger numbers of bits in a single operation.&lt;/p&gt;
-
-&lt;p&gt;Likewise, if we had to make a copy of some data in memory, assuming everything else is constant, we could copy twice as many bits per cycle on a 64-bit versus 32-bit machine. This is why 64-bit versions of many image/video editing programs outperform their 32-bit counterparts.&lt;/p&gt;
-
-&lt;p&gt;Back to high-precision operations, even if you add the ability to a 32-bit processor to add two 64-bit numbers in a single clock cycle, &lt;em&gt;you still need more than one clock cycle&lt;/em&gt; to fetch those numbers from RAM, since the word length (again) is often the fundamental size of memory operations. So, let’s assume we have two 64-bit registers (A64 and B64), and have an operation called ADDAB64 which adds A and B, and stores it in A:&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;     LDDA64 [NUM1]   &lt;span style=&#34;color: #008000&#34;&gt;; Takes 2 clock cycles, since this number is fetched 32-bits at a time&lt;/span&gt;
-     LDAB64 [NUM2]   &lt;span style=&#34;color: #008000&#34;&gt;; Again, two more clock cycles.&lt;/span&gt;
-     ADDAB64         &lt;span style=&#34;color: #008000&#34;&gt;; This only takes 1.&lt;/span&gt;
-     STAA64 [RESULT] &lt;span style=&#34;color: #008000&#34;&gt;; However, this takes two again, since we need to store a 64-bit result 32-bits at a time.&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;As you can see, even a hardware implementation of a 64-bit addition under a 32-bit processor still takes 7 clock cycles at minimum (and this assumes all memory reads/writes take a single clock cycle). Where I’m going with this has performance implications specifically with pointers.&lt;/p&gt;
-
-&lt;p&gt;On a 32-bit machine, pointers can address ~4GB of RAM, where they can address over 16.7 million TB on a 64-bit machine. If you needed to address past 4GB on 32-bit, you would need to compensate for that kind of like how we added a 64-bit number on our 32-bit machine above. You would have many extra clock cycles dedicated to fetching and parsing those wider numbers, whereas those operations go much quicker on a processor that can handle it all in one word.&lt;/p&gt;
-
-&lt;p&gt;Also, while increasing the number of bits in an &lt;a href=&#34;http://en.wikipedia.org/wiki/Arithmetic_logic_unit&#34;&gt;arithmetic and logic unit (ALU)&lt;/a&gt; will increase propagation delays for most operations, this delay is very manageable in today’s processors (or else we couldn’t keep the same clock speeds as our 32-bit processor variants), and is not much use when discussing digital synchronous circuits (since everything is clocked together, if the propagation delay was too long, the processor would just crash – which is also why there are limits to overclocking).&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;The bottom line&lt;/strong&gt;: larger word lengths means we can process more data faster in the processor, which is greatly needed as we advance computing technology. This is why so many instruction set extensions (MMX, SSE, etc…) have been created: to process larger amounts of data in less amount of time.&lt;/p&gt;
-
-&lt;p&gt;A larger word length in a processor does not directly increase the performance of the system, but when dealing with larger (or higher precision) values is required, exponential performance gains can be realized. While the average consumer may not notice these increases, they are greatly appreciated in the fields of numeric computing, scientific analysis, video encoding, and encryption/compression.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Post moved to new location on September 28, 2017.&lt;/p&gt;
-</description>
+      <description>About a year ago, I came across a question on Super User titled “How much faster is a 64-bit CPU than a 32-bit CPU?”, which was promptly closed and deleted since it’s a very open ended question. However, the author (a software developer) referred to benchmarks regarding system performance in 32-bit versus 64-bit. The purpose of this blog post is to investigate how the performance of a computer is affected, as a function of the word length.</description>
     </item>
     
     <item>
@@ -364,79 +76,17 @@ CMPS ADDA [NUM1_UPPER], [NUM2_UPPER]
       <pubDate>Mon, 10 Sep 2012 00:00:00 +0000</pubDate>
       
       <guid>https://www.bcastell.com/posts/fixing-xanalogtv/</guid>
-      <description>&lt;p&gt;A few days ago, I discovered the awesome XAnalogTV screensaver included with XScreenSaver. I was very impressed with the visuals, which include a very accurate simulation of a conventional “tube” television implementing the analog NTSC TV standard. There was just one problem – I couldn’t get XAnalogTV to fill my screen:&lt;/p&gt;
-
-&lt;div style=&#34;background:#eee;padding:1em;margin:1em 10%;border:1px solid #ccc;&#34;&gt;&lt;center&gt;
-&lt;img src=&#34;https://www.bcastell.com/img/xanalogtv_cutoff.jpg&#34; alt=&#34;XAnalogTV with Incorrect Scaling&#34; width=&#34;70%&#34;/&gt;
-&lt;div class=&#34;text-small&#34; style=&#34;padding-top:1em;&#34;&gt;
-In the source code, the virtual &#34;display&#34; is forced to be within 15% of a standard 4:3 display. Any screen which is outside of this 15% range is just clipped, as shown in this image.
-&lt;/div&gt;&lt;/center&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Post last updated January 15, 2013, and moved to new location on September 28, 2017.&lt;/p&gt;
-</description>
+      <description>A few days ago, I discovered the awesome XAnalogTV screensaver included with XScreenSaver. I was very impressed with the visuals, which include a very accurate simulation of a conventional “tube” television implementing the analog NTSC TV standard. There was just one problem – I couldn’t get XAnalogTV to fill my screen:
+ In the source code, the virtual &#34;display&#34; is forced to be within 15% of a standard 4:3 display. Any screen which is outside of this 15% range is just clipped, as shown in this image.</description>
     </item>
     
     <item>
       <title>Biopsy Bot</title>
-      <link>https://www.bcastell.com/projects/BiopsyBot/</link>
+      <link>https://www.bcastell.com/projects/biopsybot/</link>
       <pubDate>Mon, 05 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://www.bcastell.com/projects/BiopsyBot/</guid>
-      <description>
-
-&lt;p&gt;&lt;img src=&#34;https://www.bcastell.com/img/projects/biopsybot/header.jpg&#34; alt=&#34;Biopsy Bot in Action&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;general-overview&#34;&gt;General Overview&lt;/h2&gt;
-
-&lt;p&gt;A remote-control robot capable of gathering a biological sample in unknown areas, Biopsy Bot was developed as a final project for the 4th year Mechatronic System Design course offered at UWO. The purpose of the project was to develop a robot capable of remotely navigating (with the aid of an on-board wireless camera) an area of unknown, rocky terrain, in order to gather and return a biological sample from a mysterious blob (made of Jello). Furthermore, the robot is required to overcome several obstacles, while having a limited size.&lt;/p&gt;
-
-&lt;p&gt;Below is a short video showing off some of the construction, and the results from the final competition (the first run starts at 0:45 in):&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;&lt;br /&gt;
-&lt;iframe src=&#34;https://www.youtube.com/embed/8z4u3RBaM9Q&#34; width=&#34;610&#34; height=&#34;343&#34; frameborder=&#34;0&#34;&gt;
-&lt;/iframe&gt;
-&lt;/center&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;technical-specifications&#34;&gt;Technical Specifications&lt;/h2&gt;
-
-&lt;h3 id=&#34;body-and-drivetrain&#34;&gt;Body and Drivetrain&lt;/h3&gt;
-
-&lt;p&gt;The majority of Biopsy Bot is constructed from plexi-glass, with an aluminum-based body extension at the front. This was done to extend the length of the tracks while providing an adjustable angle for Biopsy Bot to approach the tallest obstacle with. The aluminum body extension also holds the sample gathering arm and associated motors.&lt;/p&gt;
-
-&lt;p&gt;There are four drive motors in total on Biopsy Bot (two per tread), and all are geared DC motors. The maximum current draw is 1.24A at 12V, again over the tallest obstacle. The treads were made using a VEX Robotics’ Tank Tread Kit, with some all-purpose silicone to improve the tread grip. There is a separate 9V power supply dedicated to the communications &amp;amp; control equipment, to avoid feedback and voltage sags from the motors’ power rail.&lt;/p&gt;
-
-&lt;h3 id=&#34;communications-and-control&#34;&gt;Communications and Control&lt;/h3&gt;
-
-&lt;p&gt;In order to use Wi-Fi as the wireless communication method, a Roving Networks RN-XV was attached to a (required) PIC24HJ64GP502 via UART. The RN-XV’s job is to forward any received TCP/UDP packets as ASCII characters to the PIC microcontroller. For this reason, a token-based communication method was used, where the microcontroller parsed the incoming data like a finite state machine, applying the appropriate signals to the relevant motors/lights on Biopsy Bot. In a loss-of-communication event, the robot is designed to stop moving within 200 milliseconds.&lt;/p&gt;
-
-&lt;p&gt;On the computer side, I wrote a fairly simple UDP application using the &lt;a href=&#34;http://www.libsdl.org/&#34;&gt;SDL&lt;/a&gt; and &lt;a href=&#34;http://www.libsdl.org/projects/SDL_net/&#34;&gt;SDL_net&lt;/a&gt; libraries. SDL was used to obtain the input from a generic joystick device (a PS3 controller, in this case), parse the relevant analog/digital inputs into control signals, and forward the appropriate control signals to Biopsy Bot.&lt;/p&gt;
-
-&lt;h3 id=&#34;biological-sample-collector-mechanism-design&#34;&gt;Biological Sample Collector Mechanism Design&lt;/h3&gt;
-
-&lt;p&gt;In order to collect a sample of the mysterious blob (Jello), a syringe was attached to the motors in an old scanner head, creating the sample collection mechanism. Using a geared motor and the respective track, one side of the syringe plunger was ground down, and the track was fixed to it. A custom mounting bracket was then created out of plexi-glass, allowing the geared motor to press and retract the syringe.&lt;/p&gt;
-
-&lt;p&gt;Once complete, the entire mechanism was attached to a motor, so it could be raised/lowered by the robot. Part of the project requirements was to automate the sample collection process, so the automatic functionality was integrated into the control software, and could be activated by simply holding a button on the controller for a few seconds:&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;&lt;br /&gt;
-&lt;iframe src=&#34;https://www.youtube.com/embed/u5LrPZ8Q6iQ&#34; width=&#34;610&#34; height=&#34;343&#34; frameborder=&#34;0&#34;&gt;
-&lt;/iframe&gt;
-&lt;/center&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;the-team&#34;&gt;The Team&lt;/h2&gt;
-
-&lt;p&gt;This was a group project, with the team involving me (Brandon Castellano), Daren Michener, Ryan Mantha, and Brock Turner. Here’s a picture of us hard at work on the software, in a lab room we probably spent far too much time in together (from left-to-right is Brock, Ryan, and Daren):&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;https://www.bcastell.com/img/projects/biopsybot/team.jpg&#34; alt=&#34;Biopsy Bot in Action&#34; width=&#34;90%&#34; /&gt;&lt;/center&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Overall the project was very successful, achieving all of the requirements set by the task, and was one of the highest ranking competetors in field testing.  Although challenging at times, it was a very fun project to work on, and I had a great time working with the team.  Lastly, thanks again to Darren, Brock, and Ryan, for all their ingenuity, hard work, and dedication in helping make Biopsy Bot.&lt;/p&gt;
-</description>
+      <guid>https://www.bcastell.com/projects/biopsybot/</guid>
+      <description>General Overview A remote-control robot capable of gathering a biological sample in unknown areas, Biopsy Bot was developed as a final project for the 4th year Mechatronic System Design course offered at UWO. The purpose of the project was to develop a robot capable of remotely navigating (with the aid of an on-board wireless camera) an area of unknown, rocky terrain, in order to gather and return a biological sample from a mysterious blob (made of Jello).</description>
     </item>
     
     <item>
@@ -445,146 +95,7 @@ In the source code, the virtual &#34;display&#34; is forced to be within 15% of 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.bcastell.com/about/</guid>
-      <description>
-
-&lt;div class=&#34;bg-status&#34; style=&#34;padding:2em 0;&#34;&gt;
-    &lt;div class=&#34;container&#34;&gt;
-        &lt;div class=&#34;col-md-12&#34;&gt;
-            &lt;div class=&#34;row&#34;&gt;
-                &lt;div class=&#34;col-md-8&#34;&gt;
-Hi there!  This is the personal website of Brandon Castellano (sometimes known as Breakthrough).  Here, you can find my blog, technical articles, and various projects (software &amp; hardware) I’m working on.
-&lt;br /&gt;&lt;br /&gt;
-As for my background, I hold a B.E.Sc in Electrical Engineering, with the majority of my professional experience in the areas of robotics and real-time control systems.  I’m “fluent” in a wide variety of programming languages, my favourites being C++, Python, and C# (although I’ve worked with Assembly, C, PHP, and Go).  For the curious, I’m both a Windows and Linux user (with Xubuntu being my desktop distribution of choice at the moment, and Debian-based for embedded ARM systems).
-&lt;br /&gt;&lt;br /&gt;
-Below you can find a list of my professional/academic experience, some of my accounts across the web, and methods to contact me.
-&lt;br /&gt;&lt;br /&gt;
-                &lt;/div&gt;
-                &lt;div class=&#34;col-md-4 text-center&#34;&gt;&lt;img src=&#34;https://www.bcastell.com/img/bc00sq.jpg&#34; alt=&#34;Portrait of Me&#34; width=&#34;100%&#34;&gt;&lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;my-background-experience&#34;&gt;My Background &amp;amp; Experience&lt;/h2&gt;
-
-&lt;h3 id=&#34;education&#34;&gt;Education&lt;/h3&gt;
-
-&lt;p&gt;I hold a &lt;strong&gt;B.E.Sc in Electrical Engineering&lt;/strong&gt; from the &lt;a href=&#34;http://uwo.ca/&#34;&gt;&lt;em&gt;University of Western Ontario&lt;/em&gt;&lt;/a&gt;.  The focus of my studies was real-time and embedded control systems, with significant overlap in the areas of computer engineering and computer science.  I also have experience taking post-graduate courses in parallel processing and GPGPU optimization, having applied these skills to real-world robotic systems, mainly focused on using image processing for object and pose recognition.&lt;/p&gt;
-
-&lt;h3 id=&#34;employers-and-start-ups&#34;&gt;Employers and Start-ups&lt;/h3&gt;
-
-&lt;p&gt;The following is a list of companies I have worked for in the past, or have been on professional terms with, in no particular order:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://eaglevisionsystems.com/&#34;&gt;&lt;strong&gt;Eagle Vision Systems&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Engineering Manager&lt;/em&gt;, Product Development
-
-&lt;ul&gt;
-&lt;li&gt;Design and implementation of a system to allow automated waste/recycling collection for vehicles with external hydraulic arms&lt;/li&gt;
-&lt;li&gt;Assigned/authored patent (see below) for overall process, with real-world testing being performed currently&lt;/li&gt;
-&lt;li&gt;Technologies used include C++, Python, OpenCV, SDL/OpenGL, CAN/Serial interfaces to sensor and hydraulic controllers, USB CMOS cameras, a Linux-based operating system, and the Nvidia Jetson platform for future GPGPU acceleration, along with a physical touchscreen display for operator feedback and system monitoring&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://uwo.ca/&#34;&gt;&lt;strong&gt;University of Western Ontario&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Research Assistant&lt;/em&gt;, Robotic Mushroom Farming
-
-&lt;ul&gt;
-&lt;li&gt;Tasked with development of the stereoscopic/3D camera hardware required for generating a depth map of mushrooms farm&lt;/li&gt;
-&lt;li&gt;Depth map used to resolve/estimate location, size, and pose of individual mushrooms, to be harvested by a robotic manipulator&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Teaching Assistant&lt;/em&gt;, Software Engineering SE2250: Software Construction
-
-&lt;ul&gt;
-&lt;li&gt;Helped students during lab hours with course fundamentals, and graded projects, tests, and exams&lt;/li&gt;
-&lt;li&gt;Involved teaching of Git, C++, and Qt, and other utilities to demonstrate Linux-based development using command-line tools&lt;/li&gt;
-&lt;li&gt;Final project involved building an interactive Puzzle Bobble-like game utilizing path planning and collision detection&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.opg.com/&#34;&gt;&lt;strong&gt;Ontario Power Generation&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Market Operations&lt;/em&gt;, Portfolio Management
-
-&lt;ul&gt;
-&lt;li&gt;Tasked with creating an extensive reporting tool to determine the costs incurred when using generators to provide voltage support, as well as optimize the operation of the generator facilities for a significant saving in costs&lt;/li&gt;
-&lt;li&gt;Performed weekly audit of hydroelectric generating station water usage, and implemented various optimizations and enhancements to the existing auditing system&lt;/li&gt;
-&lt;li&gt;Performed daily data scraping and reporting of fuel cost inputs, for analysis and forecasting models to estimate electricity pricing and costs&lt;/li&gt;
-&lt;li&gt;Much of the technologies involved include Microsoft Excel, Microsoft Access, VBA, SQL, and some Java tools&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.torontohydro.com&#34;&gt;&lt;strong&gt;Toronto Hydro Corporation&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Capacity Planning&lt;/em&gt;, Records Management
-
-&lt;ul&gt;
-&lt;li&gt;Created internal tools to assist with parsing large amounts of data used by the asset management/tracking and geographical information systems (GIS)&lt;/li&gt;
-&lt;li&gt;Assisted in the creation of a power systems training course (related to substation design) for employees focused or with backgrounds in related engineering roles&lt;/li&gt;
-&lt;li&gt;Wrote various data analysis and reporting applications using C# and the .NET Framework, including the Microsoft Office interop assemblies&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;patents&#34;&gt;Patents&lt;/h3&gt;
-
-&lt;p&gt;The following is a list of patents I have authored/co-authored:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://patents.google.com/patent/US9403278B1&#34;&gt;&lt;strong&gt;US9403278B1: Systems and methods for detecting and picking up a waste receptacle&lt;/strong&gt; (link)&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Patent covers the use of sensors and/or computer vision to allow automated control of a hydraulic arm on waste collection vehicles, allowing for a much faster pickup cycle, reduction in driver workload and training requirements, and improved overall safety via greater spatial awareness&lt;/li&gt;
-&lt;li&gt;Co-authored patent as part of my work for Eagle Vision Systems, where a successful implementation of the system was developed&lt;/li&gt;
-&lt;li&gt;The initial development implementation was successful, with real-world testing currently ongoing&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;literature&#34;&gt;Literature&lt;/h3&gt;
-
-&lt;p&gt;Based on my experience with image processing, especially in the areas of Python and OpenCV, I have participated in the development of the following published books:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.packtpub.com/application-development/learning-opencv-3-computer-vision-python-second-edition&#34;&gt;&lt;strong&gt;Learning OpenCV 3 Computer Vision with Python&lt;/strong&gt; - Second Edition (link)&lt;/a&gt;, Packt Publishing
-
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Role&lt;/em&gt;: selected as final reviewer, tasked with verifying and/or rewriting code samples for the new edition to comply with the latest version of OpenCV&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Authors&lt;/em&gt;: Joe Minichino, Joseph Howse&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Publish Date&lt;/em&gt;: September 2015&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;across-the-web&#34;&gt;Across the Web&lt;/h2&gt;
-
-&lt;p&gt;You can find me at the following websites:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://superuser.com/users/6887/breakthrough&#34;&gt;Super User (Breakthrough)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/users/159447/breakthrough&#34;&gt;Stack Overflow (Breakthrough)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/Breakthrough&#34;&gt;Github (Breakthrough)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/User:Bcastell&#34;&gt;Wikipedia (bcastell)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Note that the usernames listed above are not unique.  Only the accounts in the list above are truly me.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;contact-me&#34;&gt;Contact Me&lt;/h2&gt;
-
-&lt;p&gt;To contact me, visit the &lt;a href=&#34;https://www.bcastell.com/contact/&#34;&gt;Contact page (link)&lt;/a&gt; for details.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-</description>
+      <description>Hi there! This is the personal website of Brandon Castellano (sometimes known as Breakthrough). Here, you can find my blog, technical articles, and various projects (software &amp; hardware) I’m working on. As for my background, I hold a B.E.Sc in Electrical Engineering, with the majority of my professional experience in the areas of robotics and real-time control systems. I’m most experienced in C/C++, Rust, and Python. I&#39;m also proficient with Go, Dart, and C#.</description>
     </item>
     
     <item>
@@ -593,20 +104,9 @@ Below you can find a list of my professional/academic experience, some of my acc
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.bcastell.com/contact/</guid>
-      <description>
-
-&lt;h2 id=&#34;location-contact-information&#34;&gt;Location &amp;amp; Contact Information&lt;/h2&gt;
-
-&lt;p&gt;For serious/professional inquiries, feel free to use the contact form below, and I will get back to you as soon as possible.&lt;/p&gt;
-
-&lt;p&gt;If you need to get in touch with me about a particular post/project, feel free to leave a comment on that particular &lt;a href=&#34;https://www.bcastell.com/posts&#34;&gt;post&lt;/a&gt;/&lt;a href=&#34;https://www.bcastell.com/projects&#34;&gt;project&lt;/a&gt; page.  Lastly, you can also contact me through any of my other official accounts/services listed on &lt;a href=&#34;https://www.bcastell.com/about/&#34;&gt;the About page&lt;/a&gt; (under the &amp;ldquo;Across The Web&amp;rdquo; section).&lt;/p&gt;
-
-&lt;p&gt;This is especially preferred in regards to any bug reports or feature requests, which should be submitted as an issue on the relevant project&amp;rsquo;s Github Issues page.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Note that I am currently in the Greater Toronto Area.  The map below is at a location near-by, but not exactly, where I reside.  In the past, I have also lived in London and Guelph, both for academic, and professional/work-relatd purposes.  For potential employers/contracts, I am flexible in terms of location, remote work, and if necessary, relocation.&lt;/p&gt;
-</description>
+      <description>Social  Github: Breakthrough  Super User: Breakthrough  Stack Overflow: Breakthrough  Wikipedia: bcastell
+  Direct For professional inquiries, use the contact form below. You can also contact me through any of my other official accounts/services listed on the About page.
+This is especially preferred in regards to any bug reports or feature requests, which should be submitted as an issue on the relevant project&amp;rsquo;s Github Issues page.</description>
     </item>
     
     <item>
@@ -615,72 +115,9 @@ Below you can find a list of my professional/academic experience, some of my acc
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.bcastell.com/projects/</guid>
-      <description>
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.bcastell.com/projects/PySceneDetect/&#34;&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;pyscenedetect-x1f3a5&#34;&gt;PySceneDetect &amp;#x1f3a5;&lt;/h3&gt;
-
-&lt;p&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;PySceneDetect is a command-line application and a Python library for detecting scene changes in videos, automatically splitting the video into separate clips. Not only is it free and open-source software (FOSS), but there are several detection methods available (see Features), from simple threshold-based fade in/out detection, to advanced content aware fast-cut detection.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.bcastell.com/projects/PySceneDetect/&#34;&gt;
-Click here to view the main PySceneDetect project page.
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.bcastell.com/projects/DVR-Scan/&#34;&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;dvr-scan-img-src-img-projects-dvr-scan-logo-small-png-alt-dvr-scan-logo&#34;&gt;DVR-Scan &lt;img src=&#34;https://www.bcastell.com/img/projects/dvr-scan/logo_small.png&#34; alt=&#34;DVR-Scan Logo&#34;/&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;DVR-Scan is a cross-platform command-line (CLI) application that automatically detects motion events in video files (e.g. security camera footage). In addition to locating both the time and duration of each motion event, DVR-Scan will save the footage of each motion event to a new, separate video clip. Not only is DVR-Scan free and open-source software (you can find DVR-Scan on Github), it&amp;rsquo;s written in Python, based on Numpy and OpenCV, and was built to be extendable and hackable.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.bcastell.com/projects/DVR-Scan/&#34;&gt;
-Click here to view the DVR-Scan project page.
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.bcastell.com/projects/BiopsyBot/&#34;&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;biopsy-bot-x1f52c&#34;&gt;Biopsy Bot &amp;#x1f52c;&lt;/h3&gt;
-
-&lt;p&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;A remote-control robot capable of gathering a biological sample in unknown areas, Biopsy Bot was developed as a final project for the Mechatronic System Design course offered at &lt;a href=&#34;http://www.uwo.ca&#34;&gt;UWO&lt;/a&gt;. The purpose of the project was to develop a robot capable of remotely navigating (with the aid of an on-board wireless camera) an area of unknown obstacles and rocky terrain, in order to gather and return a biological sample from a mysterious blob (made of Jello).&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.bcastell.com/projects/BiopsyBot/&#34;&gt;
-Click here to view the Biopsy Bot project page.
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.bcastell.com/projects/Triclysm/&#34;&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;triclysm-img-src-img-triclysm-screenshot-00-png-alt-triclysm-screenshot-width-64&#34;&gt;Triclysm &lt;img src=&#34;https://www.bcastell.com/img/triclysm-screenshot-00.png&#34; alt=&#34;Triclysm SCreenshot&#34; width=&#34;64&#34;/&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;A 3D LED display project, including hardware (electrical schematics, components, and microcontroller firmware) and software to develop and wirelessly transmit 3D videos/animations to the display.  The design is extendable, with the default configuration supporting a greyscale 8x8x8/512 voxel or 4096-colour RGB 4x4x4/64 voxel display.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.bcastell.com/projects/Triclysm/&#34;&gt;
-Click here to view the Triclysm project page.
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;other-open-source-projects&#34;&gt;Other Open-Source Projects&lt;/h2&gt;
-
-&lt;p&gt;For a full list of projects on this website, see &lt;a href=&#34;https://www.bcastell.com/categories/projects/&#34;&gt;the &lt;b&gt;Projects&lt;/b&gt; category&lt;/a&gt;.  For a full list of open-source software projects I&amp;rsquo;ve created, maintained, or otherwise contributed to, you can check out &lt;a href=&#34;https://github.com/Breakthrough&#34;&gt;my profile page on Github&lt;/a&gt; (username Breakthrough).&lt;/p&gt;
-
-&lt;hr /&gt;
-</description>
+      <description>PySceneDetect &amp;#x1f3a5;  PySceneDetect is a scene/shot detection tool and Python library. It is free and open source software, used in both industry and academia. Example applications include preprocessing video data for training AI models, developing plugins for non-linear video editors, and research analysis of film. PySceneDetect was built to be extensible, and easily integrates into most workflows.
+DVR-Scan  
+DVR-Scan (www.dvr-scan.com) is a tool that automatically detects motion events in video files (e.</description>
     </item>
     
   </channel>

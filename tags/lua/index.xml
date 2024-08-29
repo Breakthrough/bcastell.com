@@ -2,35 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lua on Brandon Castellano</title>
-    <link>https://www.bcastell.com/tags/lua/index.xml</link>
+    <link>https://www.bcastell.com/tags/lua/</link>
     <description>Recent content in Lua on Brandon Castellano</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright &amp;copy; 2017 Brandon Castellano.  All rights reserved.</copyright>
-    <atom:link href="https://www.bcastell.com/tags/lua/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Sep 2017 12:57:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://www.bcastell.com/tags/lua/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Triclysm</title>
-      <link>https://www.bcastell.com/projects/Triclysm/</link>
+      <link>https://www.bcastell.com/projects/triclysm/</link>
       <pubDate>Thu, 28 Sep 2017 12:57:00 -0500</pubDate>
       
-      <guid>https://www.bcastell.com/projects/Triclysm/</guid>
-      <description>
-
-&lt;h2 id=&#34;triclysm&#34;&gt;Triclysm&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;project-overview&#34;&gt;Project Overview&lt;/h3&gt;
-
-&lt;p&gt;See the Triclysm project on Github at the following URL: &lt;a href=&#34;https://github.com/Triclysm&#34;&gt;https://github.com/Triclysm&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;triclysm-previewer&#34;&gt;Triclysm Previewer&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/Triclysm/Previewer-Legacy&#34;&gt;Triclysm Previewer (link)&lt;/a&gt; is a cross-platform application for developing, previewing, and streaming (via Ethernet or Wi-Fi) to a physical LED cube/voxel-based display.  Cross-platform, written in C++, using SDL/OpenGL as a back-end, with Lua as the primary scripting language for animations.&lt;/p&gt;
-
-&lt;p&gt;In the future, a rewrite is planned, utilizing Python for a majority of the code, and allowing it to be used for animation development as well.  However, the existing code-base has been successfully tested on an 8x8x8 monochrome LED cube (giving 1024 total levels of brightness at the maximum refresh rate), as well as a 4x4x4 RGB LED cube, with a total of 4096 individual colour combinations.&lt;/p&gt;
-</description>
+      <guid>https://www.bcastell.com/projects/triclysm/</guid>
+      <description>Triclysm Project Overview See the Triclysm project on Github at the following URL: https://github.com/Triclysm
+Triclysm Previewer Triclysm Previewer (link) is a cross-platform application for developing, previewing, and streaming (via Ethernet or Wi-Fi) to a physical LED cube/voxel-based display. Cross-platform, written in C++, using SDL/OpenGL as a back-end, with Lua as the primary scripting language for animations.
+In the future, a rewrite is planned, utilizing Python for a majority of the code, and allowing it to be used for animation development as well.</description>
     </item>
     
   </channel>
