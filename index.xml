@@ -75,7 +75,7 @@ In the first part of this three-part tutorial, we will write a Python program, u
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.bcastell.com/about/</guid>
-      <description>Hi there! This is the personal website of Brandon Castellano (sometimes known as Breakthrough). Here, you can find my blog, technical articles, and various projects (software &amp; hardware) I’m working on. As for my background, I hold a B.E.Sc in Electrical Engineering, with the majority of my professional experience in the areas of robotics and real-time control systems. I’m most experienced in C/C++, Rust, and Python. I&#39;m also proficient with Go, Dart, and C#.</description>
+      <description>Hi there! This is the personal website of Brandon Castellano (sometimes known as Breakthrough). Here, you can find my blog, technical articles, and various projects (software &amp; hardware) I’m working on. I&#39;m a software engineer with experience developing for real-time and embedded systems. The languages I have the most experience with are C/C++, Rust, and Python, but I&#39;m also proficient in many others. This includes Go, Dart, and C#, and I&#39;m always interested in learning new languages (Zig).</description>
     </item>
     
     <item>
@@ -84,7 +84,10 @@ In the first part of this three-part tutorial, we will write a Python program, u
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.bcastell.com/contact/</guid>
-      <description>Social  Github: Breakthrough  Super User: Breakthrough  Stack Overflow: Breakthrough  Wikipedia: bcastell
+      <description>Social  Github: Breakthrough 
+ Super User: Breakthrough 
+ Stack Overflow: Breakthrough 
+ Wikipedia: bcastell
   Direct For professional inquiries, use the contact form below. You can also contact me through any of my other official accounts/services listed on the About page.
 This is especially preferred in regards to any bug reports or feature requests, which should be submitted as an issue on the relevant project&amp;rsquo;s Github Issues page.</description>
     </item>
