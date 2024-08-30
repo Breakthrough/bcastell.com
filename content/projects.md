@@ -1,7 +1,6 @@
 +++
 title = "Projects"
 +++
---------
 
 <a href="https://www.scenedetect.com">
 ### PySceneDetect &#x1f3a5;
@@ -46,9 +45,8 @@ A remote-control robot capable of gathering a biological sample in unknown areas
 
 -------------------------------------------------------------------------------
 
-## Other Open-Source Projects
+### Others
 
-For a full list of projects on this website, see <a href="/categories/projects/">the <b>Projects</b> category</a>.  For a full list of open-source software projects I've created, maintained, or otherwise contributed to, you can check out <a href="https://github.com/Breakthrough">my profile page on Github</a> (username Breakthrough).
-
--------------------------------------------------------------------------------
-
+You can find some of my other work on <a href="https://github.com/Breakthrough">github.com/Breakthrough
+<img alt="GitHub followers" src="https://img.shields.io/github/followers/Breakthrough?style=flat"></a>
+<br /><br />

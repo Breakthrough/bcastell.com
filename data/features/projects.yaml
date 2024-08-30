@@ -2,5 +2,7 @@ weight: 3
 name: "Projects, Tutorials, Articles, and Photography"
 icon: "fa fa-print"
 description: >
-  <p>I also take an interest in improving academics, having edited/updated the book Learning OpenCV 3 Computer Vision with Python for the second edition release.  In addition to some open-source projects I've created or contributed to, this site is also home to various tutorials and technical articles I've written, as well as supplementary material.  These cover a wide variety of categories, including both hardware and projects.</p>
-  <p>From time to time, I also do some graphic design (especially logos for open source projects), and am an avid photographer.  Although there is no official gallery setup yet, the majority of the images on this website were photographed or created by me.</p>
+  I maintain several open source <a href="https://github.com/Breakthrough">projects on Github</a>, and am always searching for new ideas and projects to share with the world. <a href="/projects">Some of my popular projects</a> include:<br/><br/>
+
+  PySceneDetect (<a href="https://www.scenedetect.com">scenedetect.com</a>)<br/><br/>
+  DVR-Scan (<a href="https://www.dvr-scan.com">DVR-Scan.com</a>)

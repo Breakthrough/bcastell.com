@@ -6,10 +6,10 @@ title = "About"
     <div class="container">
         <div class="col-md-12">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-5">
 Hi there!  This is the personal website of Brandon Castellano (sometimes known as Breakthrough).  Here, you can find my blog, technical articles, and various projects (software & hardware) I’m working on.
 <br /><br />
-As for my background, I hold a B.E.Sc in Electrical Engineering, with the majority of my professional experience in the areas of robotics and real-time control systems.  I’m most experienced in C/C++, Rust, and Python. I'm also proficient with Go, Dart, and C#. I'm comfortable most with Windows/Linux systems, but have a lot of experience developing for specialized targets and other architectures.
+I'm a software engineer with experience developing for real-time and embedded systems.  The languages I have the most experience with are C/C++, Rust, and Python, but I'm also proficient in many others. This includes Go, Dart, and C#, and I'm always interested in learning new languages (Zig). I'm comfortable with Windows/Linux/OSX, as well as developing on specialized hardware and new platforms.
 <br /><br />
                 </div>
                 <div class="col-md-4 text-center"><img src="/img/bc00sq.jpg" alt="Portrait of Me" width="100%"></div>
@@ -40,25 +40,22 @@ As for my background, I hold a B.E.Sc in Electrical Engineering, with the majori
 
 ### Education
 
-I hold a **B.E.Sc in Electrical Engineering** from the [*University of Western Ontario*](http://uwo.ca/).  The focus of my studies was real-time and embedded control systems, with significant overlap in the areas of computer engineering and computer science.  I also have experience taking post-graduate courses in parallel processing and GPGPU optimization, having applied these skills to real-world robotic systems, mainly focused on using image processing for object and pose recognition.
-
-
+ - [ **B.E.Sc in Electrical Engineering**](https://www.google.com/) from [*Western University*](http://uwo.ca/)
+ - Studies included real-time and embedded control systems, computer science, and parallel processing (including GPGPU optimization)
+ - Contributed to research project involving creation of a machine to harvest mushrooms in collaboration with a local farm
 
 ### Patents
 
-The following is a list of patents I have authored/co-authored:
-
  - [**US9403278B1: Systems and methods for detecting and picking up a waste receptacle** (link)](https://patents.google.com/patent/US9403278B1)
-   - Patent covers the use of sensors and/or computer vision to allow automated control of a hydraulic arm on waste collection vehicles, allowing for a much faster pickup cycle, reduction in driver workload and training requirements, and improved overall safety via greater spatial awareness
+   - Patent covers the use of computer vision to allow automated control of hydraulic arm on waste collection vehicles
+   - Speeds up cycle time between pickups, reduces driver workload, reduces training requirements, and improves safety
    - Co-authored patent as part of my work for Eagle Vision Systems, where a successful implementation of the system was developed
    - The initial development implementation was successful, with real-world testing currently ongoing
 
 ### Literature
 
-Based on my experience with image processing, especially in the areas of Python and OpenCV, I have participated in the development of the following published books:
-
  - [**Learning OpenCV 3 Computer Vision with Python** - Second Edition (link)](https://www.packtpub.com/application-development/learning-opencv-3-computer-vision-python-second-edition), Packt Publishing
-   - *Role*: selected as final reviewer, tasked with verifying and/or rewriting code samples for the new edition to comply with the latest version of OpenCV
+   - *Role*: Reviewer, tasked with reviewing and updating code samples for the second edition after a large OpenCV version update
    - *Authors*: Joe Minichino, Joseph Howse
    - *Publish Date*: September 2015
 
