@@ -15,6 +15,8 @@ id = "contact"
  - <a href="https://stackoverflow.com/users/159447/breakthrough">Stack Overflow: Breakthrough
  <img alt="Stack Exchange reputation" src="https://img.shields.io/stackexchange/stackoverflow/r/159447?style=flat"></a>
 
+ - [Youtube: breakthrough248](https://www.youtube.com/@breakthrough248)
+
  - [Wikipedia: bcastell](https://en.wikipedia.org/wiki/User:Bcastell)
 
 ## Direct

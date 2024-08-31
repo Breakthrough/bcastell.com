@@ -1,6 +1,6 @@
 weight: 1
-title: "The Home of Brandon Castellano"
+title: "Home"
 description: >
-  <p style="font-size: 110%;">Welcome to my website, which hosts a wide variety of content, including both personal and professional.</p>
-  <p style="font-size: 110%;">Information and updates regarding my open source work, including PySceneDetect and DVR-Scan, can be found on the <a href="/projects/" class="btn btn-default">Projects</a> page.</p>
+  <p style="font-size: 110%;">Welcome to my website, where you can find a variety of content, including both personal and professional.</p>
+  <p style="font-size: 110%;">My open source projects, including PySceneDetect and DVR-Scan, can be found on the <a href="/projects/" class="btn btn-default">Projects</a> page.</p>
 image: "img/carousel/bc02.jpg"

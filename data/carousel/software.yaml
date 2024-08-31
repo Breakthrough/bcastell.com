@@ -1,7 +1,7 @@
 weight: 2
-title: "Software Projects"
+title: "Software"
 description: >
   <p style="font-size: 110%;">Free & open source software:</p>
-  <p style="font-size: 110%;"><a href="/projects/DVR-Scan/" class="btn btn-default">DVR-Scan</a> - Free software that processes security camera footage, extracting the video clips containing motion events.</p>
-  <p style="font-size: 110%;"><a href="/projects/PySceneDetect/" class="btn btn-default">PySceneDetect</a> - Open source software and Python library, for detection of scene changes in videos, and automatic clip extraction.</p>
+  <p style="font-size: 110%;"><a href="/projects/" class="btn btn-default">PySceneDetect</a> - Open source software and Python library, for detection of scene changes in videos, and automatic clip extraction.</p>
+  <p style="font-size: 110%;"><a href="/projects/" class="btn btn-default">DVR-Scan</a> - Free software that processes security camera footage, extracting the video clips containing motion events.</p>
 image: "img/projects/dvr-scan/logo_full.png"

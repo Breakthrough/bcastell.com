@@ -9,5 +9,4 @@ banner = "img/scenedetect-pycv-2.png"
 
 # Part 2: Adaptive Threshold Detection
 
-This tutorial is currently being migrated from the old location.  In the meantime, you can view the cached version of the previous, complete version on The Wayback Machine [by clicking here](https://web.archive.org/web/20160316124732/http://www.bcastell.com/tech-articles/pyscenedetect-tutorial-part-2/).  Thank you for your patience during this time.
-
+This post is currently being migrated from the old location, [click here to view the old one on The Wayback Machine](https://web.archive.org/web/20160316124732/http://www.bcastell.com/tech-articles/pyscenedetect-tutorial-part-2/).

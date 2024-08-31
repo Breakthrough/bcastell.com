@@ -59,7 +59,3 @@ Also, while increasing the number of bits in an [arithmetic and logic unit (ALU)
 **The bottom line**: larger word lengths means we can process more data faster in the processor, which is greatly needed as we advance computing technology. This is why so many instruction set extensions (MMX, SSE, etc…) have been created: to process larger amounts of data in less amount of time.
 
 A larger word length in a processor does not directly increase the performance of the system, but when dealing with larger (or higher precision) values is required, exponential performance gains can be realized. While the average consumer may not notice these increases, they are greatly appreciated in the fields of numeric computing, scientific analysis, video encoding, and encryption/compression.
-
---------
-
-Post moved to new location on September 28, 2017.

@@ -77,6 +77,8 @@ You can find me at the following websites:
  - [Stack Overflow: Breakthrough](https://stackoverflow.com/users/159447/breakthrough)
  <img alt="Stack Exchange reputation" src="https://img.shields.io/stackexchange/stackoverflow/r/159447?style=flat">
 
+ - [Youtube: breakthrough248](https://www.youtube.com/@breakthrough248)
+
  - [Wikipedia: bcastell](https://en.wikipedia.org/wiki/User:Bcastell)
 
 
