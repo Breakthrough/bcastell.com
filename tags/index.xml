@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Brandon Castellano</title>
+    <link>https://www.bcastell.com/tags/</link>
+    <description>Recent content in Tags on Brandon Castellano</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 28 Sep 2017 12:57:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://www.bcastell.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>https://www.bcastell.com/tags/c&#43;&#43;/</link>
+      <pubDate>Thu, 28 Sep 2017 12:57:00 -0500</pubDate>
+      
+      <guid>https://www.bcastell.com/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>computer vision</title>
+      <link>https://www.bcastell.com/tags/computer-vision/</link>
+      <pubDate>Thu, 28 Sep 2017 12:57:00 -0500</pubDate>
+      
+      <guid>https://www.bcastell.com/tags/computer-vision/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cross platform</title>
+      <link>https://www.bcastell.com/tags/cross-platform/</link>
+      <pubDate>Thu, 28 Sep 2017 12:57:00 -0500</pubDate>
+      
+      <guid>https://www.bcastell.com/tags/cross-platform/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lua</title>
+      <link>https://www.bcastell.com/tags/lua/</link>
+      <pubDate>Thu, 28 Sep 2017 12:57:00 -0500</pubDate>
+      
+      <guid>https://www.bcastell.com/tags/lua/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>open source</title>
+      <link>https://www.bcastell.com/tags/open-source/</link>
+      <pubDate>Thu, 28 Sep 2017 12:57:00 -0500</pubDate>
+      
+      <guid>https://www.bcastell.com/tags/open-source/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OpenCV</title>
+      <link>https://www.bcastell.com/tags/opencv/</link>
+      <pubDate>Thu, 28 Sep 2017 12:57:00 -0500</pubDate>
+      
+      <guid>https://www.bcastell.com/tags/opencv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>video processing</title>
+      <link>https://www.bcastell.com/tags/video-processing/</link>
+      <pubDate>Thu, 28 Sep 2017 12:57:00 -0500</pubDate>
+      
+      <guid>https://www.bcastell.com/tags/video-processing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://www.bcastell.com/tags/python/</link>
+      <pubDate>Wed, 06 Sep 2017 01:14:08 +0200</pubDate>
+      
+      <guid>https://www.bcastell.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>technical article</title>
+      <link>https://www.bcastell.com/tags/technical-article/</link>
+      <pubDate>Wed, 06 Sep 2017 01:14:08 +0200</pubDate>
+      
+      <guid>https://www.bcastell.com/tags/technical-article/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tutorial</title>
+      <link>https://www.bcastell.com/tags/tutorial/</link>
+      <pubDate>Wed, 06 Sep 2017 01:14:08 +0200</pubDate>
+      
+      <guid>https://www.bcastell.com/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hardware</title>
+      <link>https://www.bcastell.com/tags/hardware/</link>
+      <pubDate>Wed, 17 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bcastell.com/tags/hardware/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C</title>
+      <link>https://www.bcastell.com/tags/c/</link>
+      <pubDate>Mon, 10 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bcastell.com/tags/c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>robotics</title>
+      <link>https://www.bcastell.com/tags/robotics/</link>
+      <pubDate>Mon, 05 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bcastell.com/tags/robotics/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -28,7 +28,7 @@ In the future, a rewrite is planned, utilizing Python for a majority of the code
       <pubDate>Wed, 06 Sep 2017 01:14:08 +0200</pubDate>
       
       <guid>https://www.bcastell.com/posts/scene-detection-tutorial-part-2/</guid>
-      <description>Part 2: Adaptive Threshold Detection This tutorial is currently being migrated from the old location. In the meantime, you can view the cached version of the previous, complete version on The Wayback Machine by clicking here. Thank you for your patience during this time.</description>
+      <description>Part 2: Adaptive Threshold Detection This post is currently being migrated from the old location, click here to view the old one on The Wayback Machine.</description>
     </item>
     
     <item>
@@ -56,8 +56,7 @@ In the first part of this three-part tutorial, we will write a Python program, u
       <pubDate>Mon, 10 Sep 2012 00:00:00 +0000</pubDate>
       
       <guid>https://www.bcastell.com/posts/fixing-xanalogtv/</guid>
-      <description>A few days ago, I discovered the awesome XAnalogTV screensaver included with XScreenSaver. I was very impressed with the visuals, which include a very accurate simulation of a conventional “tube” television implementing the analog NTSC TV standard. There was just one problem – I couldn’t get XAnalogTV to fill my screen:
- In the source code, the virtual &#34;display&#34; is forced to be within 15% of a standard 4:3 display. Any screen which is outside of this 15% range is just clipped, as shown in this image.</description>
+      <description>This post is currently being migrated from the old location, click here to view the old one on The Wayback Machine.</description>
     </item>
     
     <item>
@@ -87,6 +86,7 @@ In the first part of this three-part tutorial, we will write a Python program, u
       <description>Social  Github: Breakthrough 
  Super User: Breakthrough 
  Stack Overflow: Breakthrough 
+ Youtube: breakthrough248
  Wikipedia: bcastell
   Direct For professional inquiries, use the contact form below. You can also contact me through any of my other official accounts/services listed on the About page.
 This is especially preferred in regards to any bug reports or feature requests, which should be submitted as an issue on the relevant project&amp;rsquo;s Github Issues page.</description>
@@ -98,9 +98,10 @@ This is especially preferred in regards to any bug reports or feature requests, 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.bcastell.com/projects/</guid>
-      <description>PySceneDetect &amp;#x1f3a5;  PySceneDetect is a scene/shot detection tool and Python library. It is free and open source software, used in both industry and academia. Example applications include preprocessing video data for training AI models, developing plugins for non-linear video editors, and research analysis of film. PySceneDetect was built to be extensible, and easily integrates into most workflows.
-DVR-Scan  
-DVR-Scan (www.dvr-scan.com) is a tool that automatically detects motion events in video files (e.</description>
+      <description>Software  PySceneDetect (www.scenedetect.com) is a scene/shot detection tool and Python library. It is free and open source software, used in both industry and academia. Example applications include preprocessing video data for training AI models, developing plugins for non-linear video editors, and research analysis of film. PySceneDetect was built to be extensible, and easily integrates into most workflows.
+  
+
+ DVR-Scan (www.dvr-scan.com) is a tool that automatically detects motion events in video files (e.</description>
     </item>
     
   </channel>

@@ -195,26 +195,26 @@
 
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#00f">import</span> sys
 <span style="color:#00f">import</span> cv2
- 
+
 <span style="color:#00f">def</span> main():
     <span style="color:#00f">if</span> len(sys.argv) &lt; 2:
         <span style="color:#00f">print</span> <span style="color:#a31515">&#34;Error - file name must be specified as first argument.&#34;</span>
         <span style="color:#00f">return</span>
- 
+
     cap = cv2.VideoCapture()
     cap.open(sys.argv[1])
- 
+
     <span style="color:#00f">if</span> <span style="color:#00f">not</span> cap.isOpened():
         <span style="color:#00f">print</span> <span style="color:#a31515">&#34;Fatal error - could not open video </span><span style="color:#a31515">%s</span><span style="color:#a31515">.&#34;</span> % sys.argv[1]
         <span style="color:#00f">return</span>
     <span style="color:#00f">else</span>:
         <span style="color:#00f">print</span> <span style="color:#a31515">&#34;Parsing video </span><span style="color:#a31515">%s</span><span style="color:#a31515">...&#34;</span> % sys.argv[1]
- 
+
     <span style="color:#008000"># Do stuff with cap here.</span>
- 
+
     cap.release()
- 
- 
+
+
 <span style="color:#00f">if</span> __name__ == <span style="color:#a31515">&#34;__main__&#34;</span>:
     main()</code></pre></div>
 
@@ -223,13 +223,13 @@
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">width  = cap.get(cv2.cv.CV_CAP_PROP_FRAME_WIDTH)
 height = cap.get(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT)
 <span style="color:#00f">print</span> <span style="color:#a31515">&#34;Video Resolution: </span><span style="color:#a31515">%d</span><span style="color:#a31515"> x </span><span style="color:#a31515">%d</span><span style="color:#a31515">&#34;</span> % (width, height)
- 
+
 <span style="color:#00f">while</span> True:
     (rv, im) = cap.read()   <span style="color:#008000"># im is a valid image if and only if rv is true</span>
     <span style="color:#00f">if</span> <span style="color:#00f">not</span> rv:
         <span style="color:#00f">break</span>
     <span style="color:#008000"># Do stuff with im here.</span>
- 
+
 frame_count = cap.get(cv2.cv.CV_CAP_PROP_POS_FRAMES)  <span style="color:#008000"># current capture position</span>
 <span style="color:#00f">print</span> <span style="color:#a31515">&#34;Read </span><span style="color:#a31515">%d</span><span style="color:#a31515"> frames from video.&#34;</span> % frame_count</code></pre></div>
 
@@ -248,27 +248,27 @@ threshold = 15
 <span style="color:#00f">if</span> len(sys.argv) &gt; 2 <span style="color:#00f">and</span> int(sys.argv[2]) &gt; 0:
     threshold = int(sys.argv[2])
 <span style="color:#00f">print</span> <span style="color:#a31515">&#34;Detecting scenes with threshold </span><span style="color:#a31515">%d</span><span style="color:#a31515">.&#34;</span> % threshold
- 
+
 last_mean = 0       <span style="color:#008000"># Mean pixel intensity of the *last* frame we processed.</span>
- 
+
 <span style="color:#00f">while</span> True:
     (rv, im) = cap.read()   <span style="color:#008000"># im is a valid image if and only if rv is true</span>
     <span style="color:#00f">if</span> <span style="color:#00f">not</span> rv:
         <span style="color:#00f">break</span>
     frame_mean = im.mean()
- 
+
     <span style="color:#008000"># Detect fade in from black.</span>
     <span style="color:#00f">if</span> frame_mean &gt;= threshold <span style="color:#00f">and</span> last_mean &lt; threshold:
         <span style="color:#00f">print</span> <span style="color:#a31515">&#34;Detected fade in at </span><span style="color:#a31515">%d</span><span style="color:#a31515">ms (frame </span><span style="color:#a31515">%d</span><span style="color:#a31515">).&#34;</span> % (
             cap.get(cv2.cv.CV_CAP_PROP_POS_MSEC),
             cap.get(cv2.cv.CV_CAP_PROP_POS_FRAMES) )
- 
+
     <span style="color:#008000"># Detect fade out to black.</span>
     <span style="color:#00f">elif</span> frame_mean &lt; threshold <span style="color:#00f">and</span> last_mean &gt;= threshold:
         <span style="color:#00f">print</span> <span style="color:#a31515">&#34;Detected fade out at </span><span style="color:#a31515">%d</span><span style="color:#a31515">ms (frame </span><span style="color:#a31515">%d</span><span style="color:#a31515">).&#34;</span> % (
             cap.get(cv2.cv.CV_CAP_PROP_POS_MSEC),
             cap.get(cv2.cv.CV_CAP_PROP_POS_FRAMES) )
- 
+
     last_mean = frame_mean     <span style="color:#008000"># Store current mean to compare in next iteration.</span></code></pre></div>
 
 <p>And it’s that easy – you now know when a scene is fading in or out from your videos, based on the defined threshold! While the timecode is presented in milliseconds, a frame number is also shown, which should help if you just want to manually find scene changes in a video. In practice, I found the <code>mean()</code> methods provided by OpenCV and NumPy to be fairly slower than computing the average from the sum and image size:</p>
@@ -293,7 +293,7 @@ last_mean = 0       <span style="color:#008000"># Mean pixel intensity of the *l
 Parsing video testvideo.mp4...
 Video Resolution: 1280 x 720
 Detecting scenes with threshold = 15.
- 
+
 Detected fade in at 1167ms (frame 35).
 Detected fade out at 6172ms (frame 185).
 Detected fade in at 7440ms (frame 223).
@@ -308,7 +308,7 @@ Read 719 frames from video in 2.86 seconds (avg. 251.1 FPS).</code></pre></div>
 Parsing video testvideo.mp4...
 Video Resolution: 1280 x 720
 Detecting scenes with threshold = 50.
- 
+
 Detected fade in at 1167ms (frame 35).
 Detected fade out at 6172ms (frame 185).
 Detected fade in at 7974ms (frame 239).
@@ -500,7 +500,7 @@ Read 719 frames from video in 2.96 seconds (avg. 242.9 FPS).</code></pre></div>
         <div class="col-md-4 col-sm-6">
             <h4>About This Website</h4>
 
-            <p>Welcome to the personal website of Brandon "Breakthrough"  Castellano.  Here you'll find my blog posts, technical articles, and programming tutorials, as well as the various projects I'm working on.</p><p>Feel free to leave feedback, either in general or in regards to any projects and posts.  Note that the contents of this website may not be redistributed without explicit permission.</p>
+            <p>Welcome to the internet home of Brandon Castellano.  Here you'll find my projects, articles and tutorials, and blog posts was well as the various projects I'm working on.</p><p>Feel free to leave feedback, either in general or in regards to any projects and posts.  The contents of this website may not be redistributed without explicit permission.</p>
 
             <hr class="hidden-md hidden-lg hidden-sm">
 
