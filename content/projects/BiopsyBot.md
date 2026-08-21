@@ -1,11 +1,12 @@
 +++
 title = "Biopsy Bot"
-id = "biopsybot-projectpage"
+aliases = ["/projects/BiopsyBot/"]
 categories = ["Projects"]
 type = "posts"
 date = "2011-12-05"
 tags = ["hardware", "robotics"]
-banner = "img/projects/biopsybot/thumbnail.jpg"
+[cover]
+image = "/img/projects/biopsybot/thumbnail.jpg"
 +++
 
 <img src="/img/projects/biopsybot/header.jpg" alt="Biopsy Bot in Action" width="100%" />
@@ -29,11 +30,11 @@ Below is a short video showing off some of the construction, and the results fro
 
 The majority of Biopsy Bot is constructed from plexi-glass, with an aluminum-based body extension at the front. This was done to extend the length of the tracks while providing an adjustable angle for Biopsy Bot to approach the tallest obstacle with. The aluminum body extension also holds the sample gathering arm and associated motors.
 
-There are four drive motors in total on Biopsy Bot (two per tread), and all are geared DC motors. The maximum current draw is 1.24A at 12V, again over the tallest obstacle. The treads were made using a VEX Robotics’ Tank Tread Kit, with some all-purpose silicone to improve the tread grip. There is a separate 9V power supply dedicated to the communications & control equipment, to avoid feedback and voltage sags from the motors’ power rail.
+There are four drive motors in total on Biopsy Bot (two per tread), and all are geared DC motors. The maximum current draw is 1.24A at 12V, again over the tallest obstacle. The treads were made using a VEX Robotics' Tank Tread Kit, with some all-purpose silicone to improve the tread grip. There is a separate 9V power supply dedicated to the communications & control equipment, to avoid feedback and voltage sags from the motors' power rail.
 
 ### Communications and Control
 
-In order to use Wi-Fi as the wireless communication method, a Roving Networks RN-XV was attached to a (required) PIC24HJ64GP502 via UART. The RN-XV’s job is to forward any received TCP/UDP packets as ASCII characters to the PIC microcontroller. For this reason, a token-based communication method was used, where the microcontroller parsed the incoming data like a finite state machine, applying the appropriate signals to the relevant motors/lights on Biopsy Bot. In a loss-of-communication event, the robot is designed to stop moving within 200 milliseconds.
+In order to use Wi-Fi as the wireless communication method, a Roving Networks RN-XV was attached to a (required) PIC24HJ64GP502 via UART. The RN-XV's job is to forward any received TCP/UDP packets as ASCII characters to the PIC microcontroller. For this reason, a token-based communication method was used, where the microcontroller parsed the incoming data like a finite state machine, applying the appropriate signals to the relevant motors/lights on Biopsy Bot. In a loss-of-communication event, the robot is designed to stop moving within 200 milliseconds.
 
 On the computer side, I wrote a fairly simple UDP application using the [SDL](http://www.libsdl.org/) and [SDL_net](http://www.libsdl.org/projects/SDL_net/) libraries. SDL was used to obtain the input from a generic joystick device (a PS3 controller, in this case), parse the relevant analog/digital inputs into control signals, and forward the appropriate control signals to Biopsy Bot.
 
@@ -52,7 +53,7 @@ Once complete, the entire mechanism was attached to a motor, so it could be rais
 
 ## The Team
 
-This was a group project, with the team involving me (Brandon Castellano), Daren Michener, Ryan Mantha, and Brock Turner. Here’s a picture of us hard at work on the software, in a lab room we probably spent far too much time in together (from left-to-right is Brock, Ryan, and Daren):
+This was a group project, with the team involving me (Brandon Castellano), Daren Michener, Ryan Mantha, and Brock Turner. Here's a picture of us hard at work on the software, in a lab room we probably spent far too much time in together (from left-to-right is Brock, Ryan, and Daren):
 
 <center><img src="/img/projects/biopsybot/team.jpg" alt="Biopsy Bot in Action" width="90%" /></center>
 <br />

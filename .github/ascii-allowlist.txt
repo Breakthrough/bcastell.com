@@ -1,0 +1,6 @@
+# Files where non-ASCII is intentional. Keep this list short and justified.
+# Format: one path or glob per line (matched against git-tracked paths with
+# fnmatch). '#' starts a comment. Used by scripts/check_ascii.py.
+#
+# (Currently empty: the site copyright uses the ASCII entity '&copy;', and all
+# content has been converted to ASCII equivalents.)

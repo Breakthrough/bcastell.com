@@ -1,0 +1,18 @@
+{{ define "main" }}
+<section class="home-intro">
+    {{ .Content }}
+</section>
+
+<section>
+    <h2>Latest Posts</h2>
+    <ul class="post-list">
+        {{- range first 10 (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+        <li>
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </li>
+        {{- end }}
+    </ul>
+    <p><a href="/posts/">All posts &rarr;</a></p>
+</section>
+{{ end }}

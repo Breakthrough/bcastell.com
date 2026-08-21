@@ -2,40 +2,29 @@
 title = "About"
 +++
 
-<div class="bg-status" style="padding:2em 0;">
-    <div class="container">
-        <div class="col-md-12">
-            <div class="row">
-                <div class="col-md-5">
-Hi there!  This is the personal website of Brandon Castellano (sometimes known as Breakthrough).  Here, you can find my blog, technical articles, and various projects (software & hardware) I’m working on.
-<br /><br />
+<div class="card">
+
+Hi there!  This is the personal website of Brandon Castellano (sometimes known as Breakthrough).  Here, you can find my blog, technical articles, and various projects (software & hardware) I'm working on.
+
 I'm a software engineer with experience developing for real-time and embedded systems.  The languages I have the most experience with are C/C++, Rust, and Python, but I'm also proficient in many others. This includes Go, Dart, and C#, and I'm always interested in learning new languages (Zig). I'm comfortable with Windows/Linux/OSX, as well as developing on specialized hardware and new platforms.
-<br /><br />
-                </div>
-                <div class="col-md-4 text-center"><img src="/img/bc00sq.jpg" alt="Portrait of Me" width="100%"></div>
-            </div>
-        </div>
-    </div>
+
+<div style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: stretch;">
+    <img src="/img/bc03sq.jpg" alt="Portrait of Me" style="flex: 1 1 12rem; min-width: 0; object-fit: cover;">
+    <img src="/img/bc00sq.jpg" alt="Me in Montreal" style="flex: 1 1 12rem; min-width: 0; object-fit: cover;">
+    <img src="/img/carousel/bc02.jpg" alt="Me at the ice rink" style="flex: 1 1 12rem; min-width: 0; object-fit: cover;">
 </div>
 
-
-----------------
+</div>
 
 ## Background
-
 
 ### Past Experience
 
  - [**Google**](https://www.google.com/)
-
  - [**General Motors**](https://www.gm.com/)
-
  - [**Eagle Vision Systems**](http://eaglevisionsystems.com/)
-
  - [**Ontario Power Generation**](http://www.opg.com/)
-
  - [**Toronto Hydro Corporation**](http://www.torontohydro.com)
-
  - [**University of Western Ontario**](http://uwo.ca/)
 
 ### Education
@@ -59,34 +48,20 @@ I'm a software engineer with experience developing for real-time and embedded sy
    - *Authors*: Joe Minichino, Joseph Howse
    - *Publish Date*: September 2015
 
-
-
 ----------------
-
 
 ## Across the Web (Social)
 
 You can find me at the following websites:
 
- - [Github: Breakthrough](https://github.com/Breakthrough)
-<img alt="GitHub followers" src="https://img.shields.io/github/followers/Breakthrough?style=flat">
-
- - [Super User: Breakthrough](https://superuser.com/users/6887/breakthrough)
-<img alt="Stack Exchange reputation" src="https://img.shields.io/stackexchange/superuser/r/6887?style=flat">
-
- - [Stack Overflow: Breakthrough](https://stackoverflow.com/users/159447/breakthrough)
- <img alt="Stack Exchange reputation" src="https://img.shields.io/stackexchange/stackoverflow/r/159447?style=flat">
-
+ - [Github: Breakthrough](https://github.com/Breakthrough) <img alt="GitHub followers" src="https://img.shields.io/github/followers/Breakthrough?style=flat">
+ - [Super User: Breakthrough](https://superuser.com/users/6887/breakthrough) <img alt="Stack Exchange reputation" src="https://img.shields.io/stackexchange/superuser/r/6887?style=flat">
+ - [Stack Overflow: Breakthrough](https://stackoverflow.com/users/159447/breakthrough) <img alt="Stack Exchange reputation" src="https://img.shields.io/stackexchange/stackoverflow/r/159447?style=flat">
  - [Youtube: breakthrough248](https://www.youtube.com/@breakthrough248)
-
  - [Wikipedia: bcastell](https://en.wikipedia.org/wiki/User:Bcastell)
 
-
 ----------------
-
 
 ## Contact Me
 
 To contact me, visit the <a href="{{< relref "contact.md" >}}">Contact page (link)</a> for details.
-
-<br />

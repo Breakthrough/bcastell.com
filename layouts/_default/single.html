@@ -1,0 +1,30 @@
+{{ define "main" }}
+<article>
+    <h1>{{ .Title }}</h1>
+    {{- if eq .Type "posts" }}
+    <p class="meta">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+        {{- with .Params.categories }} &middot;
+            {{- range . }} <a href="{{ (printf "/categories/%s/" (urlize .)) | relURL }}">{{ . }}</a>{{ end }}
+        {{- end }}
+    </p>
+    {{- with .Params.cover }}{{ with .image }}
+    <img class="cover" src="{{ . }}" alt="">
+    {{- end }}{{ end }}
+    {{- end }}
+
+    {{ .Content }}
+
+    {{- if and (eq .Type "posts") .Params.tags }}
+    <p class="tags">
+        {{- range .Params.tags }}
+        <a href="{{ (printf "/tags/%s/" (urlize .)) | relURL }}">#{{ . }}</a>
+        {{- end }}
+    </p>
+    {{- end }}
+
+    {{- if eq .Type "posts" }}
+    {{ partial "comments.html" . }}
+    {{- end }}
+</article>
+{{ end }}

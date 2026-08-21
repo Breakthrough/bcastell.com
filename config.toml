@@ -1,107 +1,60 @@
 #
-# Build using Hugo 0.57.2
+# Build using the Hugo version pinned in .github/workflows/deploy.yml.
+# No theme: layouts/ and static/css/style.css are the whole frontend.
 #
 baseurl = "https://www.bcastell.com/"
 title = "Brandon Castellano"
-theme = "hugo-universal-theme"
-languageCode = "en-us"
-# Enable comments by entering your Disqus shortname
-disqusShortname = "bcastell"
-# Enable Google Analytics by entering your tracking code
-googleAnalytics = ""
+locale = "en-us"
+defaultContentLanguage = "en"
 
-# Define the number of posts per page
-paginate = 10
+pluralizelisttitles = false
 
-pygmentsuseclasses = false
-pygmentsStyle = "vs"
+[services]
+    [services.disqus]
+        shortname = "bcastell"
+
+[pagination]
+    pagerSize = 10
+
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            # Content bodies contain raw HTML (badges, embeds, contact form).
+            unsafe = true
+    [markup.highlight]
+        # Class-based highlighting; palettes live at the end of style.css.
+        noClasses = false
 
 [taxonomies]
-  category = "categories"
-  tag = "tags"
+    category = "categories"
+    tag = "tags"
 
-[params]
-    viewMorePostLink = "/posts/"
-    author = "Breakthrough"
+[permalinks]
+    posts = "/posts/:contentbasename/"
 
-    # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
-    style = "blue"
-    # Email used for contact page
-    email = "f/meqbnvre"
-
-    about_us = "<p>Welcome to the internet home of Brandon Castellano.  Here you'll find my projects, articles and tutorials, and blog posts was well as the various projects I'm working on.</p><p>Feel free to leave feedback, either in general or in regards to any projects and posts.  The contents of this website may not be redistributed without explicit permission.</p>"
-    copyright = "Copyright &copy; 2024 Brandon Castellano.  All rights reserved."
-    date_format = "2024-08-29"
-    logo = "img/logo.png"
-    address = """<br /><img src="/img/carousel/bc02.jpg" width="80%" /><br /><br />
-      """
-
-[Permalinks]
-    #blog = "/blog/:filename/"
-    posts = "/posts/:filename/"
-
-[[params.menu]]
-    name = "Projects"
-    url  = "/projects/"
+[menu]
+[[menu.main]]
+    name   = "Projects"
+    url    = "/projects/"
     weight = 1
 
-[[params.menu]]
-    name = "Posts"
-    url  = "/posts/"
+[[menu.main]]
+    name   = "Posts"
+    url    = "/posts/"
     weight = 2
 
-[[params.menu]]
-    name = "About"
-    url  = "/about/"
+[[menu.main]]
+    name   = "About"
+    url    = "/about/"
     weight = 3
 
-[[params.menu]]
-    name = "Contact"
-    url  = "/contact/"
+[[menu.main]]
+    name   = "Contact"
+    url    = "/contact/"
     weight = 4
 
-# Enable and disable widgets for the right sidebar
-[params.widgets]
-    categories = true
-    tags = true
-    search = true
-
-[params.carousel]
-    enable = true
-    # All carousel items are defined in their own files. You can find example items
-    # at 'exampleSite/data/carousel'.
-    # For more informtion take a look at the README.
-
-[params.features]
-    enable = true
-    # All features are defined in their own files. You can find example items
-    # at 'exampleSite/data/features'.
-    # For more informtion take a look at the README.
-
-[params.testimonials]
-    enable = false
-    # All testimonials are defined in their own files. You can find example items
-    # at 'exampleSite/data/testimonials'.
-    # For more informtion take a look at the README.
-    title = "Testimonials"
-    subtitle = "We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us."
-
-[params.see_more]
-    enable = true
-    icon = "fa fa-file-code-o"
-    title = "Want more information?"
-    subtitle = "For more information about me, my professional activities, or the website itself, visit the About page for more details.  For the latest project updates, posts, tutorials, or articles, keep scrolling down, or visit the Posts page."
-    link_url = "/about/"
-    link_text = "View The About Page"
-
-[params.clients]
-    enable = false
-    # All clients are defined in their own files. You can find example items
-    # at 'exampleSite/data/clients'.
-    # For more informtion take a look at the README.
-    title = "Clients, Companies, and Employers"
-    subtitle = "I've worked with or have been employed by the following companies."
-[params.recent_posts]
-    enable = true
-    title = "Latest Articles, Blogs, and Posts"
-    subtitle = "A collection of the most recent updates to the Brandon Catellano website, including any new technical articles, blog posts, and other posts related to project or software updates."
+[params]
+    author = "Brandon Castellano"
+    description = "The internet home of Brandon Castellano"
+    mainSections = ["posts"]
+    copyright = "Copyright &copy; 2026 Brandon Castellano.  All rights reserved."

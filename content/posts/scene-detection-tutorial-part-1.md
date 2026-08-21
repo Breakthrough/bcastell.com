@@ -1,10 +1,11 @@
 +++
 title = "Scene Detection with Python and OpenCV, Part 1"
 date = "2013-10-19"
-aliases = ["tech-articles/pyscenedetect-tutorial-part-1"]
+aliases = ["/tech-articles/pyscenedetect-tutorial-part-1", "/posts/tech-articles/pyscenedetect-tutorial-part-1"]
 tags = ["python", "technical article", "tutorial"]
 categories = ["Tutorials", "Programming"]
-banner = "img/scenedetect-pycv.png"
+[cover]
+image = "/img/scenedetect-pycv.png"
 +++
 
 ## Part 1: Threshold/Fade-to-Black Detection
@@ -21,7 +22,7 @@ You can download the source code and test video from this tutorial via the Githu
 
 ### Introduction & Installation
 
-The OpenCV bindings for Python allow you to quickly experiment with images/videos. Specifically, the OpenCV library handles all the low-level interfacing to actually decode video data (using FFmpeg, and thus is compatible with many different video formats), and uniquely, the returned video frames – as well as other image objects for that matter – can be accessed as a [NumPy](http://numpy.scipy.org/) array. This allows you to perform MATLAB/Octave-like operations on the image data easily and concisely.
+The OpenCV bindings for Python allow you to quickly experiment with images/videos. Specifically, the OpenCV library handles all the low-level interfacing to actually decode video data (using FFmpeg, and thus is compatible with many different video formats), and uniquely, the returned video frames - as well as other image objects for that matter - can be accessed as a [NumPy](http://numpy.scipy.org/) array. This allows you to perform MATLAB/Octave-like operations on the image data easily and concisely.
 
 Firstly, this tutorial assumes that you have installed Python 2.7 (I believe at the time of writing this, the OpenCV bindings are only available for 2.7), as well as the OpenCV bindings themselves. If you are a Windows user, you might want to see [this question on Stack Overflow](http://stackoverflow.com/questions/4709301/installing-opencv-on-windows-7-for-python-2-7); on Linux, I was able to install the bindings right from my package manager. To verify that everything is installed correctly, fire up a Python console, and type `import cv2`. If there are no errors, everything should be set up correctly!
 
@@ -36,13 +37,13 @@ The goals of this program (PySceneDetect) are to detect when a scene change in a
 <img src="/img/tutorials/scenedetect/fadetypes.png" alt="Types of Scene Changes"/>
 </center></div>
 
-The output of PySceneDetect will be a text-file containing the timestamps of each event (either a fade-from or fade-to black). The idea is that these timecodes can then be used to split the source video into individual scenes with another program (mkvmerge, VideoDub, etc…). In this part of the tutorial, we will print the time and frame number for each fade event to the console.
+The output of PySceneDetect will be a text-file containing the timestamps of each event (either a fade-from or fade-to black). The idea is that these timecodes can then be used to split the source video into individual scenes with another program (mkvmerge, VideoDub, etc...). In this part of the tutorial, we will print the time and frame number for each fade event to the console.
 
 --------
 
 ### Decoding Video Frames
 
-Let’s begin by creating a [VideoCapture object](http://docs.opencv.org/modules/highgui/doc/reading_and_writing_images_and_video.html#videocapture), which can be used to open either a camera stream or a video file, and retrieve individual frames. Let’s assume the name of the video is passed as the first argument to the script, and do some simple error checking and cleanup just to be safe:
+Let's begin by creating a [VideoCapture object](http://docs.opencv.org/modules/highgui/doc/reading_and_writing_images_and_video.html#videocapture), which can be used to open either a camera stream or a video file, and retrieve individual frames. Let's assume the name of the video is passed as the first argument to the script, and do some simple error checking and cleanup just to be safe:
 
 {{< highlight python >}}
 
@@ -73,7 +74,7 @@ if __name__ == "__main__":
 
 {{< /highlight >}}
 
-Once we have a valid VideoCapture object (i.e. the isOpened() method returns true), we can use [the `read()` method](http://docs.opencv.org/modules/highgui/doc/reading_and_writing_images_and_video.html#videocapture-read) to start grabbing frames. Note that read() returns a tuple in the form (retval, image), and when retval is returned as false, this denotes that there are no more frames in the object to grab (and thus we are at the end of the video). Let’s make a loop to scan through the video and retrieve each frame, as well as print some basic information about the video):
+Once we have a valid VideoCapture object (i.e. the isOpened() method returns true), we can use [the `read()` method](http://docs.opencv.org/modules/highgui/doc/reading_and_writing_images_and_video.html#videocapture-read) to start grabbing frames. Note that read() returns a tuple in the form (retval, image), and when retval is returned as false, this denotes that there are no more frames in the object to grab (and thus we are at the end of the video). Let's make a loop to scan through the video and retrieve each frame, as well as print some basic information about the video):
 
 
 {{< highlight python >}}
@@ -93,7 +94,7 @@ print "Read %d frames from video." % frame_count
 
 {{< /highlight >}}
 
-Note that the returned image `im` is a Mat type object, and can be accessed with the same methods as a NumPy array due to the compatibility in it’s implementation.
+Note that the returned image `im` is a Mat type object, and can be accessed with the same methods as a NumPy array due to the compatibility in it's implementation.
 
 --------
 
@@ -134,7 +135,7 @@ while True:
     last_mean = frame_mean     # Store current mean to compare in next iteration.
 {{< /highlight >}}
 
-And it’s that easy – you now know when a scene is fading in or out from your videos, based on the defined threshold! While the timecode is presented in milliseconds, a frame number is also shown, which should help if you just want to manually find scene changes in a video. In practice, I found the `mean()` methods provided by OpenCV and NumPy to be fairly slower than computing the average from the sum and image size:
+And it's that easy - you now know when a scene is fading in or out from your videos, based on the defined threshold! While the timecode is presented in milliseconds, a frame number is also shown, which should help if you just want to manually find scene changes in a video. In practice, I found the `mean()` methods provided by OpenCV and NumPy to be fairly slower than computing the average from the sum and image size:
 
 {{< highlight python >}}
     # Compute mean intensity of pixels in frame.
@@ -186,7 +187,7 @@ Detected fade out at 22722ms (frame 681).
 Read 719 frames from video in 2.96 seconds (avg. 242.9 FPS).
 {{< /highlight >}}
 
-Just as expected! And that’s all for the first part. You can use the program for this part as-is, for a quick method to determine the frame numbers where transitions to/from black occur in a video; see the header of the `part1-threshold.py` file for usage details.
+Just as expected! And that's all for the first part. You can use the program for this part as-is, for a quick method to determine the frame numbers where transitions to/from black occur in a video; see the header of the `part1-threshold.py` file for usage details.
 
 The next tutorial in the series is <a href="{{< relref "posts/scene-detection-tutorial-part-2.md" >}}">Part 2: Adaptive Threshold Detection</a>, where we optimize the performance of the algorithm, and use the output to export a list of scenes/chapters (instead of fades).
 

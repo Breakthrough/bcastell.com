@@ -1,8 +1,0 @@
-weight: 3
-name: "Projects, Tutorials, Articles, and Photography"
-icon: "fa fa-print"
-description: >
-  I maintain several open source <a href="https://github.com/Breakthrough">projects on Github</a>, and am always searching for new ideas and projects to share with the world. <a href="/projects">Some of my popular projects</a> include:<br/><br/>
-
-  PySceneDetect (<a href="https://www.scenedetect.com">scenedetect.com</a>)<br/><br/>
-  DVR-Scan (<a href="https://www.dvr-scan.com">DVR-Scan.com</a>)

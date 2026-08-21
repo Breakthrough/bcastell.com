@@ -1,22 +1,13 @@
 +++
 title = "Contact"
-id = "contact"
 +++
-
 
 ## Social
 
- - <a href="https://github.com/Breakthrough">Github: Breakthrough
-<img alt="GitHub followers" src="https://img.shields.io/github/followers/Breakthrough?style=flat"></a>
-
- - <a href="https://superuser.com/users/6887/breakthrough">Super User: Breakthrough
-<img alt="Stack Exchange reputation" src="https://img.shields.io/stackexchange/superuser/r/6887?style=flat"></a>
-
- - <a href="https://stackoverflow.com/users/159447/breakthrough">Stack Overflow: Breakthrough
- <img alt="Stack Exchange reputation" src="https://img.shields.io/stackexchange/stackoverflow/r/159447?style=flat"></a>
-
+ - [Github: Breakthrough](https://github.com/Breakthrough) <img alt="GitHub followers" src="https://img.shields.io/github/followers/Breakthrough?style=flat">
+ - [Super User: Breakthrough](https://superuser.com/users/6887/breakthrough) <img alt="Stack Exchange reputation" src="https://img.shields.io/stackexchange/superuser/r/6887?style=flat">
+ - [Stack Overflow: Breakthrough](https://stackoverflow.com/users/159447/breakthrough) <img alt="Stack Exchange reputation" src="https://img.shields.io/stackexchange/stackoverflow/r/159447?style=flat">
  - [Youtube: breakthrough248](https://www.youtube.com/@breakthrough248)
-
  - [Wikipedia: bcastell](https://en.wikipedia.org/wiki/User:Bcastell)
 
 ## Direct
@@ -24,3 +15,16 @@ id = "contact"
 For professional inquiries, use the contact form below. You can also contact me through any of my other official accounts/services listed on <a href="{{< relref "about.md#across-the-web-social" >}}">the About page</a>.
 
 This is especially preferred in regards to any bug reports or feature requests, which should be submitted as an issue on the relevant project's Github Issues page.
+
+<form class="card" action="https://formspree.io/f/meqbnvre" method="POST" style="max-width: 32rem; display: grid; gap: 0.75rem;">
+    <label>Name<br>
+        <input type="text" name="name" required style="width: 100%; padding: 0.5rem;">
+    </label>
+    <label>Email<br>
+        <input type="email" name="_replyto" required style="width: 100%; padding: 0.5rem;">
+    </label>
+    <label>Message<br>
+        <textarea name="message" rows="8" required style="width: 100%; padding: 0.5rem;"></textarea>
+    </label>
+    <button type="submit" style="padding: 0.5rem 1.5rem; cursor: pointer;">Send</button>
+</form>

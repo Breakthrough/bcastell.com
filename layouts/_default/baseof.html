@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ if not .IsHome }}{{ .Title }} &middot; {{ end }}{{ site.Title }}</title>
+    <meta name="description" content="{{ .Description | default site.Params.description }}">
+    <meta name="author" content="{{ site.Params.author }}">
+    <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="icon" href="/img/favicon.ico">
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+    <link rel="stylesheet" href="/css/style.css">
+    {{ with .OutputFormats.Get "rss" -}}
+    <link rel="alternate" type="application/rss+xml" title="{{ site.Title }}" href="{{ .Permalink }}">
+    {{- end }}
+    <meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+    {{ with .Params.cover }}{{ with .image }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}{{ end }}
+    {{ hugo.Generator }}
+</head>
+<body>
+    <header class="site-header">
+        <a class="site-title" href="/">{{ site.Title }}</a>
+        <nav>
+            {{- range site.Menus.main }}
+            <a href="{{ .URL }}">{{ .Name }}</a>
+            {{- end }}
+        </nav>
+    </header>
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+    <footer class="site-footer">
+        <p>{{ site.Params.copyright | safeHTML }} &middot; <a href="/index.xml">RSS</a></p>
+    </footer>
+</body>
+</html>
