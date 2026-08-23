@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 550"><rect x="80" y="230" width="330" height="120" rx="60" fill="#474d57"/>
+<circle cx="145" cy="290" r="36" fill="#363c45"/>
+<circle cx="145" cy="290" r="14" fill="#87a0a0"/>
+<circle cx="245" cy="290" r="36" fill="#363c45"/>
+<circle cx="245" cy="290" r="14" fill="#87a0a0"/>
+<circle cx="345" cy="290" r="36" fill="#363c45"/>
+<circle cx="345" cy="290" r="14" fill="#87a0a0"/>
+<rect x="95" y="160" width="290" height="70" rx="10" fill="#59606d"/>
+<polygon points="385,165 470,215 470,260 385,230" fill="#87a0a0"/>
+<rect x="148" y="80" width="14" height="80" fill="#59606d"/>
+<rect x="112" y="40" width="90" height="52" rx="10" fill="#474d57"/>
+<circle cx="184" cy="66" r="14" fill="#c6f1e7"/>
+<circle cx="184" cy="66" r="6" fill="#363c45"/>
+<rect x="120" y="14" width="6" height="26" rx="3" fill="#87a0a0"/>
+<circle cx="123" cy="12" r="7" fill="#c6f1e7"/>
+<rect x="446" y="218" width="42" height="24" rx="7" fill="#474d57"/>
+<path d="M 455 240 L 441 264 L 449 290" stroke="#474d57" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 479 240 L 493 264 L 485 290" stroke="#474d57" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 430 330 q 12 -48 41 -48 q 29 0 41 48 q -41 14 -82 0 z" fill="#c6f1e7" opacity="0.85"/>
+<text x="45" y="520" font-family="Roboto Slab" font-weight="700" font-size="120" fill="#474d57">Biopsy Bot</text></svg>
