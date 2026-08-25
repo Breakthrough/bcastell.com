@@ -1,3 +1,10 @@
+# Hugo generated files
 public/
+resources/_gen/
+.hugo_build.lock
+hugo_stats.json
+assets/jsconfig.json
+
+# Local working files
 CLAUDE.md
 TASKS.md
