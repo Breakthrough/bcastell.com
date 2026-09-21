@@ -67,6 +67,13 @@ def wordmark(text: str, fill: str, size: int = 120, x: int = 45, y: int = 520) -
 # Triclysm: flat isometric LED cube, some voxels lit mint.
 # ---------------------------------------------------------------------------
 
+def _tri_colors(dark: bool):
+    """(top, left, right) face fills and matching unlit-LED fills."""
+    if dark:
+        return ("#7a8496", "#636b7a", "#525a68"), ("#6d7686", "#575e6c", "#484f5c")
+    return (SLATE_MID, SLATE, "#3b414b"), ("#4f5663", "#3f454f", "#333944")
+
+
 def triclysm_svg(dark: bool) -> str:
     # Isometric cube: top vertex N, side vertices E/W, front vertex S.
     cx, a, b = 250, 155, 78  # center x, half-width, half-height of top rhombus
@@ -80,14 +87,8 @@ def triclysm_svg(dark: bool) -> str:
     w2 = (w[0], w[1] + depth)
     s2 = (s[0], s[1] + depth)
 
-    if dark:
-        face_top, face_left, face_right = "#7a8496", "#636b7a", "#525a68"
-        unlit_top, unlit_left, unlit_right = "#6d7686", "#575e6c", "#484f5c"
-        text = DARK_TEXT
-    else:
-        face_top, face_left, face_right = SLATE_MID, SLATE, "#3b414b"
-        unlit_top, unlit_left, unlit_right = "#4f5663", "#3f454f", "#333944"
-        text = SLATE
+    (face_top, face_left, face_right), (unlit_top, unlit_left, unlit_right) = _tri_colors(dark)
+    text = DARK_TEXT if dark else SLATE
 
     def poly(pts, fill):
         d = " ".join(f"{x},{y}" for x, y in pts)
@@ -101,9 +102,12 @@ def triclysm_svg(dark: bool) -> str:
 
     grid = [(i + 0.5) / 4 for i in range(4)]
     # (face origin, u-corner, v-corner, unlit fill, lit cells)
-    lit_top = {(0, 2), (2, 1), (3, 3)}
-    lit_left = {(1, 1), (3, 2), (0, 3)}
-    lit_right = {(2, 0), (1, 2), (3, 3)}
+    # One lit voxel per face, matching the relative positions used by the
+    # 16/24/32 icon variants below (top ~(.25,.25), left ~(.75,.25),
+    # right ~(.25,.75) in face-local units).
+    lit_top = {(1, 1)}
+    lit_left = {(2, 1)}
+    lit_right = {(1, 2)}
     faces = [
         (n, e, w, unlit_top, lit_top),
         (w, s, w2, unlit_left, lit_left),
@@ -199,6 +203,170 @@ def biopsybot_svg(dark: bool) -> str:
 
 
 # ---------------------------------------------------------------------------
+# Small icon variants (16 / 24 / 32 px).
+#
+# Like the hand-tuned pyscenedetect-24/-32 icons, each size is reconstructed
+# on the device pixel grid rather than scaled down: vertices sit on integer
+# (or deliberate half-pixel) coordinates so edges land on pixel boundaries,
+# and detail is dropped as sizes shrink (fewer LEDs, no claw/antenna at 16px).
+# The isometric cube keeps an exact 2:1 slope so diagonals rasterize with a
+# consistent stair pattern.
+# ---------------------------------------------------------------------------
+
+ICON_SIZES = (16, 24, 32)
+
+
+def _icon(size: int, body: str) -> str:
+    return (
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{size}" height="{size}" '
+        f'viewBox="0 0 {size} {size}">{body}</svg>'
+    )
+
+
+def _c(x, y, r, fill, extra: str = "") -> str:
+    return f'<circle cx="{x}" cy="{y}" r="{r}" fill="{fill}"{extra}/>'
+
+
+# Per-size cube geometry: rhombus vertices (N/E/S/W of the top face), the
+# vertical depth of the side faces, LED dot radii, and explicit device-space
+# LED centers per face ((x, y, lit); centers rounded to the nearest half px).
+TRI_ICON = {
+    32: dict(
+        n=(16, 2), e=(30, 9), s=(16, 16), w=(2, 9), depth=14,
+        r_unlit=1.4, r_lit=1.8, r_hi=0.7,
+        dots=dict(
+            top=[(16, 5.5, True), (16, 12.5, False)],
+            left=[(12.5, 18, True), (12.5, 25, False)],
+            right=[(19.5, 18, False), (19.5, 25, True)],
+        ),
+    ),
+    24: dict(
+        n=(12, 2), e=(22, 7), s=(12, 12), w=(2, 7), depth=10,
+        r_unlit=1.1, r_lit=1.4, r_hi=None,
+        dots=dict(
+            top=[(12, 4.5, True), (12, 9.5, False)],
+            left=[(9.5, 13.5, True), (9.5, 18.5, False)],
+            right=[(14.5, 13.5, False), (14.5, 18.5, True)],
+        ),
+    ),
+    16: dict(
+        n=(8, 1), e=(15, 4.5), s=(8, 8), w=(1, 4.5), depth=7,
+        r_unlit=None, r_lit=1.1, r_hi=None,
+        dots=dict(
+            top=[(8, 4.5, True)],
+            left=[(4.5, 10, True)],
+            right=[(11.5, 10, True)],
+        ),
+    ),
+}
+
+
+def triclysm_icon_svg(size: int, dark: bool) -> str:
+    faces, unlits = _tri_colors(dark)
+    g = TRI_ICON[size]
+    n, e, s, w, d = g["n"], g["e"], g["s"], g["w"], g["depth"]
+    e2, s2, w2 = (e[0], e[1] + d), (s[0], s[1] + d), (w[0], w[1] + d)
+
+    def poly(pts, fill):
+        pd = " ".join(f"{x},{y}" for x, y in pts)
+        return f'<polygon points="{pd}" fill="{fill}"/>'
+
+    parts = [
+        poly([n, e, s, w], faces[0]),
+        poly([w, s, s2, w2], faces[1]),
+        poly([s, e, e2, s2], faces[2]),
+    ]
+    for fi, key in enumerate(("top", "left", "right")):
+        for x, y, lit in g["dots"][key]:
+            if lit:
+                parts.append(_c(x, y, g["r_lit"], MINT))
+                if g["r_hi"]:
+                    parts.append(_c(x, y, g["r_hi"], "#f4fdfa"))
+            else:
+                parts.append(_c(x, y, g["r_unlit"], unlits[fi]))
+    return _icon(size, "".join(parts))
+
+
+def biopsybot_icon_svg(size: int, dark: bool) -> str:
+    if dark:
+        tread, body, hub = "#59606d", "#6d7686", "#494f5a"
+    else:
+        tread, body, hub = SLATE, SLATE_MID, "#363c45"
+    metal = TEAL_LIGHT
+
+    def rect(x, y, w, h, rx, fill):
+        return f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{rx}" fill="{fill}"/>'
+
+    p = []
+    if size == 32:
+        p.append(rect(1, 22, 22, 8, 4, tread))  # tread
+        for wx in (6, 12, 18):  # road wheels
+            p.append(_c(wx, 26, 2.5, hub))
+            p.append(_c(wx, 26, 1, metal))
+        p.append(rect(2, 17, 22, 5, 1, body))  # deck
+        p.append(f'<polygon points="24,17.5 30,21.5 30,24 24,22" fill="{metal}"/>')  # arm
+        for d in ("M 27 24 L 26 26.5 L 26.5 28.5", "M 30 24 L 31 26.5 L 30.5 28.5"):  # claw
+            p.append(
+                f'<path d="{d}" stroke="{tread}" stroke-width="1.2" fill="none" '
+                f'stroke-linecap="round" stroke-linejoin="round"/>'
+            )
+        p.append(  # specimen blob under the claw
+            f'<path d="M 24.5 30 Q 26 25.5 28 25.5 Q 30 25.5 31.5 30 Z" '
+            f'fill="{MINT}" opacity="0.85"/>'
+        )
+        p.append(rect(7, 9, 2, 8, 0, body))  # mast
+        p.append(rect(3, 3, 12, 7, 1.5, tread))  # head
+        p.append(_c(12.5, 6.5, 2.5, MINT))  # eye
+        p.append(_c(12.5, 6.5, 1, hub))
+        p.append(rect(4, 1.5, 1, 1.5, 0.5, metal))  # antenna
+        p.append(_c(4.5, 1.5, 1.5, MINT))
+    elif size == 24:
+        p.append(rect(1, 16, 17, 6, 3, tread))  # tread
+        for wx in (4.5, 9.5, 14.5):  # road wheels
+            p.append(_c(wx, 19, 2, hub))
+            p.append(_c(wx, 19, 0.75, metal))
+        p.append(rect(2, 12, 18, 4, 1, body))  # deck
+        p.append(f'<polygon points="19.5,12.5 22.5,16 22.5,18.5 19.5,15.5" fill="{metal}"/>')  # arm
+        p.append(  # specimen blob
+            f'<path d="M 18.5 22 Q 19.75 18.5 21 18.5 Q 22.25 18.5 23.5 22 Z" '
+            f'fill="{MINT}" opacity="0.85"/>'
+        )
+        p.append(rect(6, 7, 1, 5, 0, body))  # mast
+        p.append(rect(2, 2, 10, 6, 1, tread))  # head
+        p.append(_c(10, 5, 2, MINT))  # eye
+        p.append(_c(10, 5, 0.75, hub))
+        p.append(_c(3.5, 1.25, 1.25, MINT))  # antenna light
+    else:  # 16
+        p.append(rect(1, 11, 13, 4, 2, tread))  # tread
+        for wx in (4.5, 10.5):  # road wheels
+            p.append(_c(wx, 13, 1.5, hub))
+        p.append(rect(2, 8, 13, 3, 1, body))  # deck
+        p.append(rect(4, 7, 1, 1, 0, body))  # mast
+        p.append(rect(1, 1, 9, 6, 1, tread))  # head
+        p.append(_c(7.5, 4, 1.75, MINT))  # eye
+    return _icon(size, "".join(p))
+
+
+def write_ico(name: str, icon_out: str) -> None:
+    """Bundle the rendered light-variant PNGs into a multi-size favicon.
+
+    Each size is passed as its own plane via append_images so the hand-tuned
+    16/24/32 pixels are preserved exactly (Pillow only resamples for sizes it
+    was not given an image for).
+    """
+    ims = {s: Image.open(os.path.join(icon_out, f"{name}-{s}.png")) for s in ICON_SIZES}
+    largest = max(ICON_SIZES)
+    path = os.path.join(icon_out, f"{name}.ico")
+    ims[largest].save(
+        path,
+        format="ICO",
+        sizes=[(s, s) for s in ICON_SIZES],
+        append_images=[ims[s] for s in ICON_SIZES if s != largest],
+    )
+    print("wrote", path)
+
+
+# ---------------------------------------------------------------------------
 # PySceneDetect / DVR-Scan: render from sibling repos onto the same canvas.
 # ---------------------------------------------------------------------------
 
@@ -255,6 +423,19 @@ def main() -> None:
             with open(os.path.join(HERE, f"{name}{suffix}.svg"), "w", encoding="utf-8") as f:
                 f.write(svg)
             render(svg, os.path.join(OUT, f"{name}{suffix}.png"))
+    icon_out = os.path.join(OUT, "icons")
+    os.makedirs(icon_out, exist_ok=True)
+    for name, fn in [("triclysm", triclysm_icon_svg), ("biopsybot", biopsybot_icon_svg)]:
+        for size in ICON_SIZES:
+            for dark in (False, True):
+                suffix = "-dark" if dark else ""
+                svg = fn(size, dark)
+                with open(
+                    os.path.join(HERE, f"{name}-{size}{suffix}.svg"), "w", encoding="utf-8"
+                ) as f:
+                    f.write(svg)
+                render(svg, os.path.join(icon_out, f"{name}-{size}{suffix}.png"), size, size)
+        write_ico(name, icon_out)
     render_external()
 
 

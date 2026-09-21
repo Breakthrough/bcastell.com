@@ -5,6 +5,7 @@ categories = ["Projects"]
 type = "posts"
 date = "2011-12-05"
 tags = ["hardware", "robotics"]
+favicon = "/img/projects/icons/biopsybot.ico"
 [cover]
 image = "/img/projects/biopsybot/thumbnail.jpg"
 +++
