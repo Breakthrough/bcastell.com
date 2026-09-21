@@ -1,12 +1,23 @@
-{{- /* Disqus comments; preserves pre-existing threads keyed by page URL. */ -}}
+{{- /* Disqus comments; loaded only on click or direct link so no third-party requests happen by default when browsing the site. */ -}}
 {{- if and .Site.Config.Services.Disqus.Shortname (not hugo.IsServer) -}}
-<div id="disqus_thread"></div>
+<div id="disqus_thread">
+    <button type="button" id="load-comments">Show comments</button>
+    <p class="meta">Comments are powered by Disqus.</p>
+</div>
 <script>
     (function () {
-        var d = document, s = d.createElement('script');
-        s.src = 'https://{{ .Site.Config.Services.Disqus.Shortname }}.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
+        var d = document, btn = d.getElementById('load-comments');
+        function load() {
+            btn.disabled = true;
+            btn.textContent = 'Loading comments...';
+            var s = d.createElement('script');
+            s.src = 'https://{{ .Site.Config.Services.Disqus.Shortname }}.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        }
+        btn.addEventListener('click', load);
+        // Direct links to a comment should still work.
+        if (/^#(comment-|disqus_thread)/.test(location.hash)) load();
     })();
 </script>
 <noscript>Please enable JavaScript to view comments.</noscript>
