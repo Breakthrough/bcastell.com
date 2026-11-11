@@ -15,14 +15,6 @@
 
     {{ .Content }}
 
-    {{- if and (eq .Type "posts") .Params.tags }}
-    <p class="tags">
-        {{- range .Params.tags }}
-        <a href="{{ (printf "/tags/%s/" (urlize .)) | relURL }}">#{{ . }}</a>
-        {{- end }}
-    </p>
-    {{- end }}
-
     {{- if eq .Type "posts" }}
     {{ partial "comments.html" . }}
     {{- end }}

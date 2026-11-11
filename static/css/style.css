@@ -194,25 +194,21 @@ pre code {
 
 /* Post metadata and lists */
 
-.meta, .tags {
+.meta {
     color: var(--text-muted);
     font-size: 0.9375rem;
 }
 
-/* Separate the end-of-post block (tags, comments) from the body text. */
-.tags, #disqus_thread {
+/* Separate the comments block from the body text. */
+#disqus_thread {
     margin-top: 2.5rem;
 }
 
-.tags + #disqus_thread {
-    margin-top: 0;
-}
-
-.meta a, .tags a {
+.meta a {
     color: var(--text-muted);
 }
 
-.meta a:hover, .tags a:hover {
+.meta a:hover {
     color: var(--accent);
 }
 
