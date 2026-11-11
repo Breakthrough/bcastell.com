@@ -3,7 +3,7 @@ title = "Fixing the XAnalogTV Screensaver"
 date = "2012-09-10"
 aliases = ["/tech-articles/fixing-the-xanalogtv-screensaver", "/posts/tech-articles/fixing-the-xanalogtv-screensaver"]
 tags = ["C", "technical article"]
-categories = ["Technical Articles"]
+categories = ["Articles"]
 [cover]
 image = "/img/xanalogtv_cutoff.jpg"
 +++

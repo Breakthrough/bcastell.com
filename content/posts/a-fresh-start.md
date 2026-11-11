@@ -2,7 +2,7 @@
 title = "A fresh start: GUIs, a new design, and plans for the site"
 date = "2026-09-20"
 tags = ["site news"]
-categories = ["Updates"]
+categories = ["Articles"]
 [cover]
 image = "/img/a-fresh-start.jpg"
 +++

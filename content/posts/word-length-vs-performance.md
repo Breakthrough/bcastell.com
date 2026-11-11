@@ -3,7 +3,7 @@ title = "How does word length affect the performance and operation of a CPU?"
 date = "2012-10-17"
 aliases = ["/tech-articles/how-does-word-length-affect-the-performance-and-operation-of-a-cpu", "/posts/tech-articles/how-does-word-length-affect-the-performance-and-operation-of-a-cpu"]
 tags = ["technical article", "hardware"]
-categories = ["Technical Articles"]
+categories = ["Articles"]
 [cover]
 image = "/img/wordlen2.jpg"
 +++

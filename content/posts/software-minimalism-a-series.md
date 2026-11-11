@@ -1,19 +1,21 @@
 +++
-title = "software minimalism: a series"
+title = "Software Minimalism"
 date = "2026-11-10"
 tags = ["minimalism", "dvr-scan", "pyscenedetect"]
-categories = ["Updates"]
+categories = ["Articles"]
 [cover]
 image = "/img/software-minimalism.jpg"
 +++
 
-Shipping software is easier if you're your own customer, or you care about a single platform. It gets much harder when you have to meet "the bar" for *other people* on arbitrary machines and operating systems. For my long-lived open source projects, I really do strive for:
+For my long-lived open source projects, I really do strive for:
 
  - minimal dependencies
  - simple interface
  - things should work cross platform (at minimum Linux, Windows, and macOS)
  - batteries should always be included
  - no unnecessary size bloat
+
+Shipping software is easier if you're your own customer, or you care about a single platform. It gets much harder when you have to meet "the bar" for *other people* on arbitrary machines and operating systems.
 
 [DVR-Scan](https://www.dvr-scan.com) has been out for over a *decade* now, and in that time it's grown quite a lot of features. I'm grateful to all the folks who provided feedback and submitted bug reports/feature requests, but over time a growing feature list often creates friction with the above five principles. Each of these is worth talking about on its own, since managing them over the past few years comes with unique challenges.
 
