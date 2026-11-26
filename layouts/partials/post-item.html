@@ -1,0 +1,8 @@
+{{- /* One row of a .post-list: cover thumbnail, title link, month. */ -}}
+<li>
+    {{- with .Param "cover.image" }}
+    <img class="thumb" src="{{ . }}" alt="" loading="lazy">
+    {{- end }}
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01" }}</time>
+</li>

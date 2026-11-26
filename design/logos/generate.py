@@ -14,6 +14,7 @@ Fonts: design/logos/fonts/ holds static instances of Roboto Slab (OFL).
 """
 
 import io
+import math
 import os
 import re
 
@@ -414,8 +415,227 @@ def render_external() -> None:
     render(dark, os.path.join(OUT, "dvr-scan-dark.png"))
 
 
+# ---------------------------------------------------------------------------
+# bcastell.com site mark & favicons (Option D floating SVG + Option A card).
+#
+# Floating mark (bcastell.svg -> static/img/favicon.svg) uses CSS
+# prefers-color-scheme so tabs adapt cleanly to light/dark browser chrome.
+# Dark card (bcastell-badge.svg -> favicon.ico & apple-touch-icon.png) keeps
+# guaranteed contrast on iOS home screens, Firefox New Tab tiles, and legacy
+# .ico consumers.
+# ---------------------------------------------------------------------------
+
+SITE_BG_TOP = "#1e252e"
+SITE_BG_BOT = "#12161c"
+SITE_BORDER = "#333c47"
+SITE_BLUE_DARK = "#58a6ff"
+SITE_GREY_DARK = "#dce3ec"
+SITE_BLUE_LIGHT = "#0b6bcb"
+SITE_GREY_LIGHT = "#2b333d"
+
+SITE_ICO_SIZES = (16, 24, 32, 48, 64, 128, 256)
+
+
+def _circle_intersect_right(cx1, cy1, r1, cx2, cy2, r2):
+    """Return the rightmost intersection point of two circles."""
+    dx = cx2 - cx1
+    dy = cy2 - cy1
+    d = math.hypot(dx, dy)
+    a = (r1 * r1 - r2 * r2 + d * d) / (2 * d)
+    h = math.sqrt(max(0.0, r1 * r1 - a * a))
+    mx = cx1 + a * dx / d
+    my = cy1 + a * dy / d
+    p1 = (mx + h * dy / d, my - h * dx / d)
+    p2 = (mx - h * dy / d, my + h * dx / d)
+    return p1 if p1[0] >= p2[0] else p2
+
+
+def _bc_b_path(x0, y0, w, h, stem=15.0, bar=12.5, corner_r=3.0) -> str:
+    """Geometric sans-serif 'B' path (evenodd) with optically balanced bowls."""
+    r1 = h * 0.245
+    r2 = h * 0.285
+    w_top = w * 0.92
+    w_bot = w
+
+    cx1 = x0 + w_top - r1
+    cy1 = y0 + r1
+    cx2 = x0 + w_bot - r2
+    cy2 = y0 + h - r2
+    ix, iy = _circle_intersect_right(cx1, cy1, r1, cx2, cy2, r2)
+
+    outer = (
+        f"M {x0:.2f} {y0 + corner_r:.2f} "
+        f"Q {x0:.2f} {y0:.2f} {x0 + corner_r:.2f} {y0:.2f} "
+        f"L {cx1:.2f} {y0:.2f} "
+        f"A {r1:.2f} {r1:.2f} 0 0 1 {ix:.2f} {iy:.2f} "
+        f"A {r2:.2f} {r2:.2f} 0 0 1 {cx2:.2f} {y0 + h:.2f} "
+        f"L {x0 + corner_r:.2f} {y0 + h:.2f} "
+        f"Q {x0:.2f} {y0 + h:.2f} {x0:.2f} {y0 + h - corner_r:.2f} Z"
+    )
+
+    mid_y = iy
+    t_top = y0 + bar
+    t_bot = mid_y - bar * 0.48
+    tr = (t_bot - t_top) / 2.0
+    t_cx = x0 + w_top - stem * 0.94 - tr
+    in_top = (
+        f"M {x0 + stem:.2f} {t_top:.2f} "
+        f"L {t_cx:.2f} {t_top:.2f} "
+        f"A {tr:.2f} {tr:.2f} 0 0 1 {t_cx:.2f} {t_bot:.2f} "
+        f"L {x0 + stem:.2f} {t_bot:.2f} Z"
+    )
+
+    b_top = mid_y + bar * 0.50
+    b_bot = y0 + h - bar
+    br = (b_bot - b_top) / 2.0
+    b_cx = x0 + w_bot - stem * 0.94 - br
+    in_bot = (
+        f"M {x0 + stem:.2f} {b_top:.2f} "
+        f"L {b_cx:.2f} {b_top:.2f} "
+        f"A {br:.2f} {br:.2f} 0 0 1 {b_cx:.2f} {b_bot:.2f} "
+        f"L {x0 + stem:.2f} {b_bot:.2f} Z"
+    )
+    return f"{outer} {in_top} {in_bot}"
+
+
+def _bc_c_path(x0, y0, w, h, stroke_x=14.8, stroke_y=12.8) -> str:
+    """Geometric stadium 'C' path with balanced vertical/horizontal weight."""
+    r = w * 0.50
+    cx = x0 + r
+    cy_top = y0 + r
+    cy_bot = y0 + h - r
+    ang = math.radians(15)
+
+    ox1 = cx + r * math.cos(-ang)
+    oy1 = cy_top + r * math.sin(-ang)
+    ox2 = cx + r * math.cos(ang)
+    oy2 = cy_bot + r * math.sin(ang)
+
+    rxi = r - stroke_x
+    ryi = r - stroke_y
+    ix1 = cx + rxi * math.cos(-ang)
+    iy1 = cy_top + ryi * math.sin(-ang)
+    ix2 = cx + rxi * math.cos(ang)
+    iy2 = cy_bot + ryi * math.sin(ang)
+
+    return (
+        f"M {ox1:.2f} {oy1:.2f} "
+        f"A {r:.2f} {r:.2f} 0 0 0 {x0:.2f} {cy_top:.2f} "
+        f"L {x0:.2f} {cy_bot:.2f} "
+        f"A {r:.2f} {r:.2f} 0 0 0 {ox2:.2f} {oy2:.2f} "
+        f"L {ix2:.2f} {iy2:.2f} "
+        f"A {rxi:.2f} {ryi:.2f} 0 0 1 {x0 + stroke_x:.2f} {cy_bot:.2f} "
+        f"L {x0 + stroke_x:.2f} {cy_top:.2f} "
+        f"A {rxi:.2f} {ryi:.2f} 0 0 1 {ix1:.2f} {iy1:.2f} Z"
+    )
+
+
+def bcastell_floating_svg() -> str:
+    """Floating BC favicon SVG with prefers-color-scheme light/dark colors."""
+    b_d = _bc_b_path(10, 20, 50, 88, stem=15.0, bar=12.5, corner_r=3.0)
+    c_d = _bc_c_path(68, 19.5, 50, 89, stroke_x=14.8, stroke_y=12.8)
+    return (
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">\n'
+        "  <style>\n"
+        f"    .b {{ fill: {SITE_BLUE_LIGHT}; }}\n"
+        f"    .c {{ fill: {SITE_GREY_LIGHT}; }}\n"
+        "    @media (prefers-color-scheme: dark) {\n"
+        f"      .b {{ fill: {SITE_BLUE_DARK}; }}\n"
+        f"      .c {{ fill: {SITE_GREY_DARK}; }}\n"
+        "    }\n"
+        "  </style>\n"
+        f'  <path class="b" fill="{SITE_BLUE_LIGHT}" fill-rule="evenodd" d="{b_d}"/>\n'
+        f'  <path class="c" fill="{SITE_GREY_LIGHT}" d="{c_d}"/>\n'
+        "</svg>\n"
+    )
+
+
+def bcastell_badge_svg(full_bleed: bool = False, compact: bool = False) -> str:
+    """Dark site-palette card containing the BC mark.
+
+    - Default: rounded card with subtle border (used for 32-256px .ico planes).
+    - compact=True: tighter padding and larger letters for crisp 16/24px tabs.
+    - full_bleed=True: opaque square with no rounded corners or border, sized
+      for apple-touch-icon.png so iOS and Firefox New Tab apply their own mask
+      cleanly without corner artifacts.
+    """
+    if compact:
+        b_d = _bc_b_path(12, 20, 48, 88, stem=14.5, bar=12.0, corner_r=2.5)
+        c_d = _bc_c_path(68, 19.5, 48, 89, stroke_x=14.2, stroke_y=12.2)
+        rect = '<rect x="0" y="0" width="128" height="128" rx="22" fill="url(#bg)"/>'
+    elif full_bleed:
+        b_d = _bc_b_path(19, 27, 43, 74, stem=12.5, bar=10.5, corner_r=2.5)
+        c_d = _bc_c_path(68, 26.5, 42, 75, stroke_x=12.2, stroke_y=10.8)
+        rect = '<rect x="0" y="0" width="128" height="128" fill="url(#bg)"/>'
+    else:
+        b_d = _bc_b_path(19, 27, 43, 74, stem=12.5, bar=10.5, corner_r=2.5)
+        c_d = _bc_c_path(68, 26.5, 42, 75, stroke_x=12.2, stroke_y=10.8)
+        rect = (
+            f'<rect x="4" y="4" width="120" height="120" rx="26" '
+            f'fill="url(#bg)" stroke="{SITE_BORDER}" stroke-width="2.5"/>'
+        )
+    return (
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">\n'
+        "  <defs>\n"
+        '    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">\n'
+        f'      <stop offset="0%" stop-color="{SITE_BG_TOP}"/>\n'
+        f'      <stop offset="100%" stop-color="{SITE_BG_BOT}"/>\n'
+        "    </linearGradient>\n"
+        "  </defs>\n"
+        f"  {rect}\n"
+        f'  <path fill="{SITE_BLUE_DARK}" fill-rule="evenodd" d="{b_d}"/>\n'
+        f'  <path fill="{SITE_GREY_DARK}" d="{c_d}"/>\n'
+        "</svg>\n"
+    )
+
+
+def render_site_icons() -> None:
+    """Write bcastell.com master SVGs and export favicon.svg, .ico, and touch icon."""
+    img_dir = os.path.join(REPO, "static", "img")
+    static_dir = os.path.join(REPO, "static")
+
+    floating = bcastell_floating_svg()
+    badge = bcastell_badge_svg()
+    badge_compact = bcastell_badge_svg(compact=True)
+    touch_svg = bcastell_badge_svg(full_bleed=True)
+
+    for path, content in [
+        (os.path.join(HERE, "bcastell.svg"), floating),
+        (os.path.join(HERE, "bcastell-badge.svg"), badge),
+        (os.path.join(img_dir, "favicon.svg"), floating),
+    ]:
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(content)
+        print("wrote", path)
+
+    # 180x180 opaque apple-touch-icon.png (iOS home screen + Firefox New Tab tile).
+    render(touch_svg, os.path.join(img_dir, "apple-touch-icon.png"), 180, 180)
+
+    # Multi-size favicon.ico (16-256px) at /img/favicon.ico and root /favicon.ico.
+    planes = {}
+    for s in SITE_ICO_SIZES:
+        src = badge_compact if s <= 24 else badge
+        png = resvg_py.svg_to_bytes(svg_string=src, width=s, height=s, skip_system_fonts=True)
+        planes[s] = Image.open(io.BytesIO(bytes(png))).convert("RGBA")
+
+    largest = max(SITE_ICO_SIZES)
+    append_imgs = [planes[s] for s in SITE_ICO_SIZES if s != largest]
+    for ico_path in (
+        os.path.join(img_dir, "favicon.ico"),
+        os.path.join(static_dir, "favicon.ico"),
+    ):
+        planes[largest].save(
+            ico_path,
+            format="ICO",
+            sizes=[(s, s) for s in SITE_ICO_SIZES],
+            append_images=append_imgs,
+        )
+        print("wrote", ico_path)
+
+
 def main() -> None:
     os.makedirs(OUT, exist_ok=True)
+    render_site_icons()
     for name, fn in [("triclysm", triclysm_svg), ("biopsybot", biopsybot_svg)]:
         for dark in (False, True):
             suffix = "-dark" if dark else ""

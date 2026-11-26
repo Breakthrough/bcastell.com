@@ -66,7 +66,7 @@ body {
 .site-header {
     display: flex;
     flex-wrap: wrap;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
     gap: 0.5rem 1.5rem;
     padding: 1.5rem 0 1rem;
@@ -74,10 +74,19 @@ body {
 }
 
 .site-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
     font-size: 1.25rem;
     font-weight: 700;
     color: var(--text);
     text-decoration: none;
+}
+
+.site-mark {
+    height: 1.05em;
+    width: auto;
+    flex: none;
 }
 
 .site-header nav {
@@ -180,9 +189,21 @@ pre code {
 /* Cards: bordered content blocks, used for list entries and content
    sections (raw <div class="card"> in Markdown works via goldmark unsafe). */
 
-.card {
+.card, .post-list li, .post-nav-link {
     border: 1px solid var(--border);
     border-radius: 8px;
+}
+
+/* The linked ones highlight on hover. */
+.post-list li, .post-nav-link {
+    transition: border-color 0.15s;
+}
+
+.post-list li:hover, .post-nav-link:hover {
+    border-color: var(--accent);
+}
+
+.card {
     padding: 1.25rem 1.5rem;
     margin: 1.25rem 0;
 }
@@ -202,6 +223,60 @@ pre code {
 /* Separate the comments block from the body text. */
 #disqus_thread {
     margin-top: 2.5rem;
+}
+
+/* Previous/next post links at the end of a post. */
+.post-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+
+.post-nav-link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.75rem 1rem;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.post-nav-link.next {
+    grid-column: 2;
+    text-align: right;
+}
+
+.post-nav-link img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+}
+
+.post-nav-label {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+.post-nav-title {
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.post-nav-link:hover .post-nav-title {
+    color: var(--accent);
+}
+
+@media (max-width: 34rem) {
+    .post-nav {
+        grid-template-columns: 1fr;
+    }
+
+    .post-nav-link.next {
+        grid-column: auto;
+    }
 }
 
 .meta a {
@@ -228,13 +303,6 @@ pre code {
     gap: 1.35rem;
     padding: 0.75rem 1rem;
     margin: 0.6rem 0;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    transition: border-color 0.15s;
-}
-
-.post-list li:hover {
-    border-color: var(--accent);
 }
 
 .post-list .thumb {

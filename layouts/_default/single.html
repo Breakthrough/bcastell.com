@@ -4,19 +4,20 @@
     {{- if eq .Type "posts" }}
     <p class="meta">
         <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
-        {{- with .Params.categories }} &middot;
-            {{- range . }} <a href="{{ (printf "/categories/%s/" (urlize .)) | relURL }}">{{ . }}</a>{{ end }}
+        {{- with .GetTerms "categories" }} &middot;
+            {{- range . }} <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}
         {{- end }}
     </p>
-    {{- with .Params.cover }}{{ with .image }}
+    {{- with .Param "cover.image" }}
     <img class="cover" src="{{ . }}" alt="">
-    {{- end }}{{ end }}
+    {{- end }}
     {{- end }}
 
     {{ .Content }}
 
     {{- if eq .Type "posts" }}
     {{ partial "comments.html" . }}
+    {{ partial "post-nav.html" . }}
     {{- end }}
 </article>
 {{ end }}

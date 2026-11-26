@@ -1,0 +1,28 @@
+{{- /* Older/newer post links with cover thumbnails, shown at the end of a post.
+       Selected by date explicitly so the direction never depends on Hugo's
+       Prev/Next sort conventions. */ -}}
+{{- $posts := where site.RegularPages "Type" "posts" -}}
+{{- $older := first 1 (where $posts "Date" "lt" .Date).ByDate.Reverse -}}
+{{- $newer := first 1 (where $posts "Date" "gt" .Date).ByDate -}}
+{{- if or $older $newer }}
+<nav class="post-nav" aria-label="More posts">
+    {{- range $older }}
+    <a class="post-nav-link prev" href="{{ .RelPermalink }}" rel="prev">
+        {{- with .Param "cover.image" }}
+        <img src="{{ . }}" alt="" loading="lazy">
+        {{- end }}
+        <span class="post-nav-label"><span aria-hidden="true">&larr;</span> Previous</span>
+        <span class="post-nav-title">{{ .Title }}</span>
+    </a>
+    {{- end }}
+    {{- range $newer }}
+    <a class="post-nav-link next" href="{{ .RelPermalink }}" rel="next">
+        {{- with .Param "cover.image" }}
+        <img src="{{ . }}" alt="" loading="lazy">
+        {{- end }}
+        <span class="post-nav-label">Next <span aria-hidden="true">&rarr;</span></span>
+        <span class="post-nav-title">{{ .Title }}</span>
+    </a>
+    {{- end }}
+</nav>
+{{- end }}

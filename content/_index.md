@@ -2,9 +2,9 @@
 title = "Home"
 +++
 
-# Brandon Castellano
+# Welcome
 
-Welcome to the internet home of Brandon Castellano.  Here you'll find my projects, tutorials, and articles, plus a few opinions here and there.
+This is the internet home of Brandon Castellano.  Here you'll find my projects, tutorials, and articles, plus a few opinions here and there.
 
 Check out [my projects](/projects/) and [recent articles](/posts/), or [get in touch](/contact/).
 
